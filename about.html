@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ven Perov Photography | Adelaide Photographer | About Me</title>
+    <meta name="description" content="Learn more about Ven Perov, an Adelaide-based photographer. Discover the story, style, and approach behind Ven Perov Photography.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        /* Custom styles - Light Background Aesthetic (Consistent across pages) */
+        body {
+            font-family: 'Oswald', sans-serif;
+            background-color: #f5f5f4; /* stone-100 */
+            color: #44403c; /* stone-700 */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-weight: 400;
+            letter-spacing: 0.025em;
+        }
+        main { flex-grow: 1; }
+        .nav-link { color: #d6d3d1; transition: color 0.3s ease, border-color 0.3s ease; padding-bottom: 4px; border-bottom: 2px solid transparent; text-transform: uppercase; letter-spacing: 0.075em; font-size: 0.875rem; font-weight: 500; }
+        .nav-link:hover { color: #ffffff; border-bottom-color: #a8a29e; }
+        .nav-active { font-weight: 700; color: #ffffff; border-bottom: 2px solid #ffffff; padding-bottom: 2px; }
+        .cta-button { padding: 0.75rem 1.5rem; border-radius: 0.25rem; font-weight: 700; transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.2s ease; display: inline-block; text-align: center; margin: 0.5rem; border: 2px solid; text-transform: uppercase; letter-spacing: 0.075em; font-size: 0.875rem; }
+        .cta-button:focus { outline: 2px solid transparent; outline-offset: 2px; box-shadow: 0 0 0 3px rgba(68, 64, 60, 0.4); }
+        .cta-primary { background-color: #292524; color: #f5f5f4; border-color: #292524; }
+        .cta-primary:hover { background-color: #1c1917; border-color: #1c1917; color: #ffffff; }
+        .cta-secondary { background-color: transparent; color: #292524; border-color: #292524; }
+        .cta-secondary:hover { background-color: rgba(41, 37, 36, 0.05); border-color: #1c1917; color: #1c1917; }
+        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0; }
+        h1, h2, h3 { color: #1c1917; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
+        h1 { letter-spacing: 0.075em; }
+        p { color: #44403c; line-height: 1.7; }
+        /* Space between paragraphs */
+        .content-text p + p { margin-top: 1.25em; }
+        /* About image style */
+        .about-image {
+            border-radius: 50%; /* Keep rounded */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            border: 6px solid #ffffff; /* White border */
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+        .about-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="text-stone-700 bg-stone-100">
+
+    {/* Header - Dark background, light text */}
+    <header class="bg-stone-800 shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold uppercase tracking-wider text-stone-100 hover:text-white transition duration-300 focus:outline-none focus:ring-2 focus:ring-stone-300 focus:ring-offset-2 focus:ring-offset-stone-800 rounded-sm">
+                Ven Perov
+            </a>
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-stone-300 hover:text-white hover:bg-stone-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-stone-300" aria-label="Toggle Menu" aria-expanded="false" aria-controls="mobile-menu">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+            <ul id="desktop-menu" class="hidden md:flex space-x-8 items-center">
+                <li><a href="index.html" class="nav-link" data-page="index">Home</a></li>
+                <li><a href="portfolio.html" class="nav-link" data-page="portfolio">Portfolio</a></li>
+                <li><a href="about.html" class="nav-link" data-page="about">About</a></li>
+                <li><a href="services.html" class="nav-link" data-page="services">Services</a></li>
+                <li><a href="contact.html" class="nav-link" data-page="contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-stone-800 border-t border-stone-700 shadow-lg">
+            <ul class="flex flex-col items-center py-4 space-y-3">
+                 <li><a href="index.html" class="nav-link block w-full text-center py-2 hover:bg-stone-700 transition duration-150" data-page="index">Home</a></li>
+                <li><a href="portfolio.html" class="nav-link block w-full text-center py-2 hover:bg-stone-700 transition duration-150" data-page="portfolio">Portfolio</a></li>
+                <li><a href="about.html" class="nav-link block w-full text-center py-2 hover:bg-stone-700 transition duration-150" data-page="about">About</a></li>
+                <li><a href="services.html" class="nav-link block w-full text-center py-2 hover:bg-stone-700 transition duration-150" data-page="services">Services</a></li>
+                <li><a href="contact.html" class="nav-link block w-full text-center py-2 hover:bg-stone-700 transition duration-150" data-page="contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        {/* About Section - Light background, dark text */}
+        <section id="about-hero" class="py-16 md:py-24 bg-stone-100">
+            <div class="container mx-auto px-6">
+                 <h1 class="text-4xl md:text-5xl font-bold text-center mb-16 text-stone-900">About Me</h1>
+                 <div class="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-16 max-w-6xl mx-auto">
+                    <div class="lg:w-2/5 text-center flex-shrink-0">
+                        {/* Update placeholder color */}
+                        <img src="https://placehold.co/500x500/a8a29e/1c1917?text=VP"
+                             alt="Professional headshot of photographer Ven Perov"
+                             class="about-image mx-auto w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 object-cover"
+                             loading="lazy"
+                             onerror="this.onerror=null; this.src='https://placehold.co/500x500/cccccc/ffffff?text=Photo'; this.alt='Placeholder image of Ven Perov';">
+                    </div>
+                    <div class="lg:w-3/5 text-center lg:text-left">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-stone-800">Hi, I'm Ven Perov</h2>
+                        <div class="text-lg text-stone-700 content-text space-y-5 leading-relaxed">
+                            <p>
+                                G'day! I'm an Adelaide-based photographer, and I've been capturing moments professionally for about ten years now. Like a lot of people, I first picked up a proper camera back in my teens and pretty quickly got hooked on trying to capture the world around me – the landscapes, the city, the people. It evolved from there into a genuine passion and eventually, my career.
+                            </p>
+                            <p>
+                                My approach is pretty relaxed and natural. I focus on capturing genuine moments and authentic expressions, rather than anything too staged. Think clean, vibrant images that really show off the subject or the atmosphere. Whether it's a wedding, family photos, professional headshots, or showcasing a property or product, the aim is always the same: high-quality, memorable photos that tell the right story.
+                            </p>
+                             <p>
+                                Based in Adelaide, I love getting out and making the most of what SA has to offer. When I'm not behind the lens, you'll likely find me pushing my limits somewhere – whether that's training for a marathon, competing in judo, hiking rugged trails, or seeking out the next thrill like cliff diving, skydiving or hitting the road on my motorcycle. That sense of adventure and focus definitely carries over into my photography work. But balancing that out, getting to know my clients and understanding exactly what you're looking for is key to making sure we create photos you'll be stoked with.
+                            </p>
+                        </div>
+                        <div class="mt-10 text-center lg:text-left">
+                            <a href="services.html" class="cta-button cta-secondary">Explore My Services</a>
+                            <a href="contact.html" class="cta-button cta-primary">Get In Touch</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {/* Approach Section - White background for contrast */}
+        <section id="approach" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6 max-w-4xl text-center">
+                 <h2 class="text-3xl md:text-4xl font-bold mb-8 text-stone-900">My Approach</h2>
+                 <div class="text-lg text-stone-700 space-y-5 leading-relaxed max-w-3xl mx-auto content-text">
+                     <p>
+                         Good photos come from good collaboration. I work closely with clients to understand their vision and goals. During a shoot, I aim for a comfortable, easy-going vibe – no awkward posing, just natural interactions and genuine moments captured well.
+                     </p>
+                     <p>
+                         I combine technical know-how with a creative eye to deliver polished, professional images you'll love. From the first enquiry to the final photos, you can expect a straightforward process and clear communication all the way.
+                     </p>
+                 </div>
+                 <div class="mt-10">
+                     <a href="portfolio.html" class="cta-button cta-secondary">See My Work</a>
+                 </div>
+            </div>
+        </section>
+    </main>
+
+    {/* Footer - Dark background */}
+    <footer class="bg-stone-900 text-stone-400 py-10">
+        <div class="container mx-auto px-6 text-center">
+            <div class="mb-6 space-x-4 md:space-x-6 uppercase tracking-wider text-sm">
+                 <a href="index.html" class="hover:text-white transition duration-300" data-page="index">Home</a>
+                 <a href="portfolio.html" class="hover:text-white transition duration-300" data-page="portfolio">Portfolio</a>
+                 <a href="about.html" class="hover:text-white transition duration-300" data-page="about">About</a>
+                 <a href="services.html" class="hover:text-white transition duration-300" data-page="services">Services</a>
+                 <a href="contact.html" class="hover:text-white transition duration-300" data-page="contact">Contact</a>
+            </div>
+             <div class="mb-6 space-x-5">
+                 <a href="#" aria-label="Ven Perov on Instagram" class="hover:text-white transition duration-300 text-xl"><i class="fab fa-instagram"></i></a>
+                 <a href="#" aria-label="Ven Perov on Facebook" class="hover:text-white transition duration-300 text-xl"><i class="fab fa-facebook-f"></i></a>
+             </div>
+            <p class="text-sm text-stone-500">&copy; <span id="current-year"></span> Ven Perov Photography. All Rights Reserved.</p>
+            <p class="text-sm text-stone-500 mt-1">Adelaide Photographer, South Australia</p>
+        </div>
+    </footer>
+
+    {/* JavaScript */}
+    <script>
+        // Javascript remains the same
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navLinksMobile = mobileMenu.querySelectorAll('.nav-link');
+            mobileMenuButton.addEventListener('click', () => { const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true'; mobileMenu.classList.toggle('hidden'); mobileMenuButton.setAttribute('aria-expanded', !isExpanded); });
+            navLinksMobile.forEach(link => { link.addEventListener('click', () => { mobileMenu.classList.add('hidden'); mobileMenuButton.setAttribute('aria-expanded', 'false'); }); });
+            const navLinks = document.querySelectorAll('.nav-link');
+            const currentPage = window.location.pathname.substring(window.location.pathname.lastIndexOf('/') + 1) || 'index.html';
+            navLinks.forEach(link => { const linkHref = link.getAttribute('href'); const linkPage = linkHref.substring(linkHref.lastIndexOf('/') + 1) || 'index.html'; const linkDataPage = link.getAttribute('data-page'); if (linkDataPage === currentPage.replace('.html', '')) { link.classList.add('nav-active'); link.setAttribute('aria-current', 'page'); } else if ((currentPage === 'index.html' || currentPage === '') && (linkPage === 'index.html' || linkDataPage === 'index')) { if (linkDataPage === 'index' || linkPage === 'index.html') { link.classList.add('nav-active'); link.setAttribute('aria-current', 'page'); } } else if (linkPage === currentPage && currentPage !== 'index.html' && currentPage !== '') { link.classList.add('nav-active'); link.setAttribute('aria-current', 'page'); } else { link.classList.remove('nav-active'); link.removeAttribute('aria-current'); } });
+            const currentYearSpan = document.getElementById('current-year'); if (currentYearSpan) { currentYearSpan.textContent = new Date().getFullYear(); }
+        });
+    </script>
+
+</body>
+</html>
