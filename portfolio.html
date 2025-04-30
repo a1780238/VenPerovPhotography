@@ -59,7 +59,6 @@
 </head>
 <body class="text-stone-700 bg-stone-100">
 
-    {/* Header - Dark background, light text */}
     <header class="bg-stone-800 shadow-md sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
             <a href="index.html" class="text-2xl font-bold uppercase tracking-wider text-stone-100 hover:text-white transition duration-300 focus:outline-none focus:ring-2 focus:ring-stone-300 focus:ring-offset-2 focus:ring-offset-stone-800 rounded-sm">
@@ -89,12 +88,10 @@
     </header>
 
     <main>
-        {/* Portfolio Section - Light background, dark text */}
-        <section id="portfolio" class="py-16 md:py-24 bg-stone-100"> {/* Match body background */}
+        <section id="portfolio" class="py-16 md:py-24 bg-stone-100"> 
             <div class="container mx-auto px-6">
                 <h1 class="text-4xl md:text-5xl font-bold text-center mb-12 text-stone-900">Portfolio</h1>
 
-                {/* Portfolio Filters - Updated styles */}
                 <div class="flex justify-center flex-wrap gap-2 md:gap-3 mb-10">
                     <button class="portfolio-filter-button active" data-filter="all">All</button>
                     <button class="portfolio-filter-button" data-filter="weddings">Weddings</button>
@@ -103,51 +100,39 @@
                     <button class="portfolio-filter-button" data-filter="journalism">Journalism</button>
                     <button class="portfolio-filter-button" data-filter="food">Food</button>
                     <button class="portfolio-filter-button" data-filter="realestate">Real Estate</button>
-                    <button class="portfolio-filter-button" data-filter="designs">Designs</button> {/* Simplified name */}
+                    <button class="portfolio-filter-button" data-filter="designs">Designs</button> 
                     <button class="portfolio-filter-button" data-filter="industrial">Industrial</button>
-                    <button class="portfolio-filter-button" data-filter="defence">Defence/Tech</button> {/* Simplified name */}
+                    <button class="portfolio-filter-button" data-filter="defence">Defence/Tech</button> 
                     <button class="portfolio-filter-button" data-filter="aerial">Aerial</button>
                 </div>
 
-                {/* Portfolio Grid - Update placeholder colors */}
                 <div class="portfolio-grid max-w-7xl mx-auto">
-                    {/* Wedding Images */}
                     <div class="portfolio-item" data-category="weddings"><img src="https://placehold.co/600x600/d6d3d1/44403c?text=Wedding+1" alt="Wedding photo 1" class="lightbox-trigger" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/600x600/cccccc/ffffff?text=W1'; this.alt='Placeholder wedding photo 1';"></div>
                     <div class="portfolio-item" data-category="weddings"><img src="https://placehold.co/600x600/d6d3d1/44403c?text=Wedding+2" alt="Wedding photo 2" class="lightbox-trigger" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/600x600/cccccc/ffffff?text=W2'; this.alt='Placeholder wedding photo 2';"></div>
                     <div class="portfolio-item" data-category="weddings"><img src="https://placehold.co/600x400/d6d3d1/44403c?text=Wedding+3" alt="Wedding photo 3" class="lightbox-trigger" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/600x400/cccccc/ffffff?text=W3'; this.alt='Placeholder wedding photo 3';"></div>
                     <div class="portfolio-item" data-category="weddings"><img src="https://placehold.co/400x600/d6d3d1/44403c?text=Wedding+4" alt="Wedding photo 4" class="lightbox-trigger" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/400x600/cccccc/ffffff?text=W4'; this.alt='Placeholder wedding photo 4';"></div>
-                    {/* Portrait Images */}
                     <div class="portfolio-item" data-category="portraits"><img src="https://placehold.co/600x600/d6d3d1/44403c?text=Portrait+1" alt="Portrait photo 1" class="lightbox-trigger" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/600x600/cccccc/ffffff?text=P1'; this.alt='Placeholder portrait photo 1';"></div>
                     <div class="portfolio-item" data-category="portraits"><img src="https://placehold.co/400x600/d6d3d1/44403c?text=Portrait+2" alt="Portrait photo 2" class="lightbox-trigger" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/400x600/cccccc/ffffff?text=P2'; this.alt='Placeholder portrait photo 2';"></div>
                     <div class="portfolio-item" data-category="portraits"><img src="https://placehold.co/600x400/d6d3d1/44403c?text=Portrait+3" alt="Portrait photo 3" class="lightbox-trigger" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/600x400/cccccc/ffffff?text=P3'; this.alt='Placeholder portrait photo 3';"></div>
-                    {/* Landscape Images */}
                     <div class="portfolio-item" data-category="landscapes"><img src="https://placehold.co/600x400/d6d3d1/44403c?text=Landscape+1" alt="Landscape photo 1" class="lightbox-trigger" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/600x400/cccccc/ffffff?text=L1'; this.alt='Placeholder landscape photo 1';"></div>
                     <div class="portfolio-item" data-category="landscapes"><img src="https://placehold.co/600x600/d6d3d1/44403c?text=Landscape+2" alt="Landscape photo 2" class="lightbox-trigger" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/600x600/cccccc/ffffff?text=L2'; this.alt='Placeholder landscape photo 2';"></div>
                     <div class="portfolio-item" data-category="landscapes"><img src="https://placehold.co/600x400/d6d3d1/44403c?text=Landscape+3" alt="Landscape photo 3" class="lightbox-trigger" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/600x400/cccccc/ffffff?text=L3'; this.alt='Placeholder landscape photo 3';"></div>
-                    {/* Journalism Images */}
                     <div class="portfolio-item" data-category="journalism"><img src="https://placehold.co/600x400/d6d3d1/44403c?text=Journalism+1" alt="Journalism photo 1" class="lightbox-trigger" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/600x400/cccccc/ffffff?text=J1'; this.alt='Placeholder journalism photo 1';"></div>
                     <div class="portfolio-item" data-category="journalism"><img src="https://placehold.co/600x600/d6d3d1/44403c?text=Journalism+2" alt="Journalism photo 2" class="lightbox-trigger" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/600x600/cccccc/ffffff?text=J2'; this.alt='Placeholder journalism photo 2';"></div>
-                    {/* Food Images */}
                     <div class="portfolio-item" data-category="food"><img src="https://placehold.co/600x600/d6d3d1/44403c?text=Food+1" alt="Food photo 1" class="lightbox-trigger" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/600x600/cccccc/ffffff?text=F1'; this.alt='Placeholder food photo 1';"></div>
                     <div class="portfolio-item" data-category="food"><img src="https://placehold.co/600x400/d6d3d1/44403c?text=Food+2" alt="Food photo 2" class="lightbox-trigger" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/600x400/cccccc/ffffff?text=F2'; this.alt='Placeholder food photo 2';"></div>
-                    {/* Real Estate Images */}
                     <div class="portfolio-item" data-category="realestate"><img src="https://placehold.co/600x400/d6d3d1/44403c?text=Real+Estate+1" alt="Real Estate photo 1" class="lightbox-trigger" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/600x400/cccccc/ffffff?text=R1'; this.alt='Placeholder real estate photo 1';"></div>
                     <div class="portfolio-item" data-category="realestate"><img src="https://placehold.co/600x600/d6d3d1/44403c?text=Real+Estate+2" alt="Real Estate photo 2" class="lightbox-trigger" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/600x600/cccccc/ffffff?text=R2'; this.alt='Placeholder real estate photo 2';"></div>
-                    {/* Designs Images */}
                     <div class="portfolio-item" data-category="designs"><img src="https://placehold.co/600x600/d6d3d1/44403c?text=Design+1" alt="Design photo 1" class="lightbox-trigger" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/600x600/cccccc/ffffff?text=D1'; this.alt='Placeholder design photo 1';"></div>
                     <div class="portfolio-item" data-category="designs"><img src="https://placehold.co/600x400/d6d3d1/44403c?text=Design+2" alt="Design photo 2" class="lightbox-trigger" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/600x400/cccccc/ffffff?text=D2'; this.alt='Placeholder design photo 2';"></div>
-                    {/* Industrial Images */}
                     <div class="portfolio-item" data-category="industrial"><img src="https://placehold.co/600x400/d6d3d1/44403c?text=Industrial+1" alt="Industrial photo 1" class="lightbox-trigger" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/600x400/cccccc/ffffff?text=I1'; this.alt='Placeholder industrial photo 1';"></div>
                     <div class="portfolio-item" data-category="industrial"><img src="https://placehold.co/600x600/d6d3d1/44403c?text=Industrial+2" alt="Industrial photo 2" class="lightbox-trigger" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/600x600/cccccc/ffffff?text=I2'; this.alt='Placeholder industrial photo 2';"></div>
-                    {/* Defence Images */}
                     <div class="portfolio-item" data-category="defence"><img src="https://placehold.co/600x600/d6d3d1/44403c?text=Defence+1" alt="Defence/Tech photo 1" class="lightbox-trigger" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/600x600/cccccc/ffffff?text=DEF1'; this.alt='Placeholder defence/tech photo 1';"></div>
                     <div class="portfolio-item" data-category="defence"><img src="https://placehold.co/600x400/d6d3d1/44403c?text=Defence+2" alt="Defence/Tech photo 2" class="lightbox-trigger" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/600x400/cccccc/ffffff?text=DEF2'; this.alt='Placeholder defence/tech photo 2';"></div>
-                    {/* Aerial Images */}
                     <div class="portfolio-item" data-category="aerial"><img src="https://placehold.co/600x400/d6d3d1/44403c?text=Aerial+1" alt="Aerial photo 1" class="lightbox-trigger" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/600x400/cccccc/ffffff?text=A1'; this.alt='Placeholder aerial photo 1';"></div>
                     <div class="portfolio-item" data-category="aerial"><img src="https://placehold.co/600x600/d6d3d1/44403c?text=Aerial+2" alt="Aerial photo 2" class="lightbox-trigger" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/600x600/cccccc/ffffff?text=A2'; this.alt='Placeholder aerial photo 2';"></div>
                 </div>
 
-                 {/* CTA */}
                  <div class="text-center mt-16">
                     <p class="text-lg text-stone-700 mb-4">Like what you see? Let's discuss how I can capture your moments.</p>
                     <a href="contact.html" class="cta-button cta-primary">Book a Consultation</a>
@@ -156,7 +141,6 @@
         </section>
     </main>
 
-    {/* Footer - Dark background */}
     <footer class="bg-stone-900 text-stone-400 py-10">
         <div class="container mx-auto px-6 text-center">
             <div class="mb-6 space-x-4 md:space-x-6 uppercase tracking-wider text-sm">
@@ -175,7 +159,6 @@
         </div>
     </footer>
 
-    {/* Lightbox */}
     <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-caption">
         <span class="lightbox-close" id="lightbox-close" aria-label="Close lightbox" tabindex="0">&times;</span>
         <div class="lightbox-content">
@@ -183,7 +166,6 @@
         </div>
     </div>
 
-    {/* JavaScript */}
     <script>
         // Javascript remains the same
         document.addEventListener('DOMContentLoaded', () => {
@@ -260,7 +242,6 @@
 </head>
 <body class="text-stone-700 bg-stone-100">
 
-    {/* Header - Dark background, light text */}
     <header class="bg-stone-800 shadow-md sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
             <a href="index.html" class="text-2xl font-bold uppercase tracking-wider text-stone-100 hover:text-white transition duration-300 focus:outline-none focus:ring-2 focus:ring-stone-300 focus:ring-offset-2 focus:ring-offset-stone-800 rounded-sm">
@@ -290,13 +271,11 @@
     </header>
 
     <main>
-        {/* About Section - Light background, dark text */}
         <section id="about-hero" class="py-16 md:py-24 bg-stone-100">
             <div class="container mx-auto px-6">
                  <h1 class="text-4xl md:text-5xl font-bold text-center mb-16 text-stone-900">About Me</h1>
                  <div class="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-16 max-w-6xl mx-auto">
                     <div class="lg:w-2/5 text-center flex-shrink-0">
-                        {/* Update placeholder color */}
                         <img src="https://placehold.co/500x500/a8a29e/1c1917?text=VP"
                              alt="Professional headshot of photographer Ven Perov"
                              class="about-image mx-auto w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 object-cover"
@@ -325,7 +304,6 @@
             </div>
         </section>
 
-        {/* Approach Section - White background for contrast */}
         <section id="approach" class="py-16 md:py-24 bg-white">
             <div class="container mx-auto px-6 max-w-4xl text-center">
                  <h2 class="text-3xl md:text-4xl font-bold mb-8 text-stone-900">My Approach</h2>
@@ -344,7 +322,6 @@
         </section>
     </main>
 
-    {/* Footer - Dark background */}
     <footer class="bg-stone-900 text-stone-400 py-10">
         <div class="container mx-auto px-6 text-center">
             <div class="mb-6 space-x-4 md:space-x-6 uppercase tracking-wider text-sm">
@@ -363,7 +340,6 @@
         </div>
     </footer>
 
-    {/* JavaScript */}
     <script>
         // Javascript remains the same
         document.addEventListener('DOMContentLoaded', () => {
@@ -453,7 +429,6 @@
 </head>
 <body class="text-stone-700 bg-stone-100">
 
-    {/* Header - Dark background, light text */}
     <header class="bg-stone-800 shadow-md sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
             <a href="index.html" class="text-2xl font-bold uppercase tracking-wider text-stone-100 hover:text-white transition duration-300 focus:outline-none focus:ring-2 focus:ring-stone-300 focus:ring-offset-2 focus:ring-offset-stone-800 rounded-sm">
