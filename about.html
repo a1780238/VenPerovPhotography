@@ -127,72 +127,12 @@
         </div>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // --- Mobile Menu Toggle (Consistent) ---
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const navLinksMobile = mobileMenu ? mobileMenu.querySelectorAll('.nav-link') : [];
-            if (mobileMenuButton && mobileMenu) {
-                const menuIcon = `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>`;
-                const closeIcon = `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>`;
-                const toggleMenu = (show) => { const isExpanded = show; mobileMenu.classList.toggle('hidden', !isExpanded); mobileMenuButton.setAttribute('aria-expanded', isExpanded); mobileMenuButton.innerHTML = isExpanded ? closeIcon : menuIcon; };
-                mobileMenuButton.addEventListener('click', () => { const isCurrentlyExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true'; toggleMenu(!isCurrentlyExpanded); });
-                navLinksMobile.forEach(link => { link.addEventListener('click', () => { toggleMenu(false); }); });
-            } else { console.warn("Mobile menu elements not found."); }
+    <script src="path/to/imagesloaded.pkgd.min.js" defer></script>
+<script src="path/to/isotope.pkgd.min.js" defer></script>
 
-            // --- Active Navigation Link Highlighting (Consistent) ---
-            const navLinks = document.querySelectorAll('.nav-link');
-            const path = window.location.pathname;
-            const pageName = path.substring(path.lastIndexOf('/') + 1) || 'index.html';
-            const currentPageIdentifier = pageName.replace('.html', '');
-            navLinks.forEach(link => { const linkDataPage = link.getAttribute('data-page'); if (linkDataPage === currentPageIdentifier) { link.classList.add('nav-active'); link.setAttribute('aria-current', 'page'); } else { link.classList.remove('nav-active'); link.removeAttribute('aria-current'); } });
-
-            // --- Footer: Update Copyright Year (Consistent) ---
-            const currentYearSpan = document.getElementById('current-year');
-            if (currentYearSpan) { currentYearSpan.textContent = new Date().getFullYear(); }
-
-            // --- Fade-in Animation on Scroll (Task D.4 - Optional) ---
-            const fadeSections = document.querySelectorAll('.fade-in-section');
-            if (fadeSections.length > 0 && 'IntersectionObserver' in window) {
-                const sectionObserver = new IntersectionObserver((entries, observer) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('is-visible');
-                            observer.unobserve(entry.target); // Optional: stop observing once visible
-                        }
-                    });
-                }, { threshold: 0.1 }); // Trigger when 10% visible
-
-                fadeSections.forEach(section => {
-                    sectionObserver.observe(section);
-                });
-            }
-        });
-    </script>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Ven Perov",
-      "jobTitle": "Photographer",
-      "description": "Adelaide-based photographer specializing in adventurous, candid storytelling for weddings and brands.",
-      "url": "https://a1780238.github.io/VenPerovPhotography/about.html", // Replace with actual live URL
-      "image": "https://a1780238.github.io/VenPerovPhotography/assets/images/about/ven-perov-headshot.jpg", // Replace with actual live URL
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Elizabeth South",
-        "addressRegion": "SA",
-        "addressCountry": "AU"
-      },
-      "sameAs": [
-        "https://www.facebook.com/venperovphotography"
-        // Add Instagram URL here when available
-      ],
-      "knowsAbout": ["Wedding Photography", "Portrait Photography", "Commercial Photography", "Event Photography", "Adelaide"]
-    }
-    </script>
+<script src="path/to/photoswipe.umd.min.js" defer></script>
+<script src="path/to/photoswipe-lightbox.umd.min.js" defer></script>
+<script src="js/main.js" defer></script>
 
 </body>
 </html>
