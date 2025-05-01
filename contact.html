@@ -5,16 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ven Perov Photography | Adelaide Photographer | Contact</title>
     <meta name="description" content="Contact Ven Perov Photography for professional photography services in Adelaide. Enquire about weddings, portraits, commercial projects, and more.">
+
     <script src="https://cdn.tailwindcss.com"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
     <style>
-        /* Custom styles - Light Background Aesthetic (Consistent across pages) */
+        /* --- Base Styles (Consistent) --- */
         body {
-            font-family: 'Oswald', sans-serif;
+            font-family: 'Lato', sans-serif;
             background-color: #f5f5f4; /* stone-100 */
             color: #44403c; /* stone-700 */
             display: flex;
@@ -23,98 +30,238 @@
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             font-weight: 400;
-            letter-spacing: 0.025em;
+            line-height: 1.6;
         }
         main { flex-grow: 1; }
-        .nav-link { color: #d6d3d1; transition: color 0.3s ease, border-color 0.3s ease; padding-bottom: 4px; border-bottom: 2px solid transparent; text-transform: uppercase; letter-spacing: 0.075em; font-size: 0.875rem; font-weight: 500; }
-        .nav-link:hover { color: #ffffff; border-bottom-color: #a8a29e; }
-        .nav-active { font-weight: 700; color: #ffffff; border-bottom: 2px solid #ffffff; padding-bottom: 2px; }
-        .cta-button { padding: 0.75rem 1.5rem; border-radius: 0.25rem; font-weight: 700; transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.2s ease; display: inline-block; text-align: center; margin: 0.5rem; border: 2px solid; text-transform: uppercase; letter-spacing: 0.075em; font-size: 0.875rem; cursor: pointer; }
-        .cta-button:focus { outline: 2px solid transparent; outline-offset: 2px; box-shadow: 0 0 0 3px rgba(68, 64, 60, 0.4); }
-        .cta-primary { background-color: #292524; color: #f5f5f4; border-color: #292524; }
-        .cta-primary:hover { background-color: #1c1917; border-color: #1c1917; color: #ffffff; }
-        .cta-secondary { background-color: transparent; color: #292524; border-color: #292524; }
-        .cta-secondary:hover { background-color: rgba(41, 37, 36, 0.05); border-color: #1c1917; color: #1c1917; }
-        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0; }
-        h1, h2, h3 { color: #1c1917; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
-        h1 { letter-spacing: 0.075em; }
-        p { color: #44403c; line-height: 1.7; }
 
-        /* Form Input Styling */
-        .form-input, .form-textarea, .form-select {
-            margin-top: 0.25rem; display: block; width: 100%; padding: 0.75rem 1rem; border: 1px solid #d6d3d1; /* stone-300 */ border-radius: 0.25rem; /* rounded-sm */ box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); transition: border-color 0.2s ease, box-shadow 0.2s ease; background-color: #ffffff; /* White inputs */ color: #1c1917; /* Dark text in inputs */ font-family: 'Oswald', sans-serif; /* Ensure form font */ letter-spacing: 0.025em;
+        /* --- Heading Styles (Consistent) --- */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            color: #1c1917; /* stone-900 */
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.75rem;
         }
-        .form-input::placeholder, .form-textarea::placeholder { color: #a8a29e; /* stone-400 placeholder */ }
-        .form-input:focus, .form-textarea:focus, .form-select:focus { outline: 2px solid transparent; outline-offset: 2px; border-color: #292524; /* stone-800 */ box-shadow: 0 0 0 3px rgba(41, 37, 36, 0.2); }
-        .form-label { display: block; font-weight: 500; color: #292524; /* stone-800 */ margin-bottom: 0.25rem; text-transform: uppercase; font-size: 0.875rem; letter-spacing: 0.05em; }
-        /* Contact Info Styling */
-        .contact-info-box { background-color: #ffffff; padding: 2rem; border-radius: 0.25rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); border: 1px solid #e7e5e4; }
-        .contact-info a { color: #1c1917; /* stone-900 */ transition: color 0.3s ease; word-break: break-word; }
-        .contact-info a:hover { color: #57534e; /* stone-600 */ text-decoration: underline; }
-        .contact-info i.fa-fw { margin-right: 0.75rem; color: #a8a29e; /* stone-400 */ width: 1.25rem; text-align: center; }
-        .contact-info .social-links a { color: #78716c; /* stone-500 */ }
-        .contact-info .social-links a:hover { color: #1c1917; /* stone-900 */ }
+        h1 { letter-spacing: 0.075em; margin-bottom: 1rem; }
+        h2 { margin-bottom: 1.5rem; }
+        h3 { margin-bottom: 1rem; }
+
+        /* --- Paragraph & Text Styles (Consistent) --- */
+        p { color: #44403c; line-height: 1.7; margin-bottom: 1rem; }
+        .content-text p + p { margin-top: 1.25em; }
+
+        /* --- Navigation Styles (Consistent) --- */
+        .nav-link {
+            font-family: 'Montserrat', sans-serif;
+            color: #d6d3d1; /* stone-300 */
+            transition: color 0.3s ease, border-color 0.3s ease;
+            padding-bottom: 4px;
+            border-bottom: 2px solid transparent;
+            text-transform: uppercase;
+            letter-spacing: 0.075em;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        .nav-link:hover, .nav-link:focus { color: #ffffff; border-bottom-color: #a8a29e; outline: none; }
+        .nav-active { font-weight: 700; color: #ffffff; border-bottom: 2px solid #ffffff; padding-bottom: 4px; }
+        #mobile-menu .nav-link { display: block; padding: 0.75rem 1rem; border-bottom: none; }
+        #mobile-menu .nav-active { background-color: #57534e; color: #ffffff; border-bottom: none; }
+
+        /* --- Button Styles (Consistent) --- */
+        .cta-button {
+            font-family: 'Montserrat', sans-serif;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.25rem;
+            font-weight: 700;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.2s ease;
+            display: inline-block;
+            text-align: center;
+            margin: 0.5rem;
+            border: 2px solid;
+            text-transform: uppercase;
+            letter-spacing: 0.075em;
+            font-size: 0.875rem;
+            cursor: pointer;
+        }
+        .cta-primary { background-color: #292524; color: #f5f5f4; border-color: #292524; }
+        .cta-primary:hover, .cta-primary:focus { background-color: #1c1917; border-color: #1c1917; color: #ffffff; }
+        .cta-secondary { background-color: transparent; color: #292524; border-color: #292524; }
+        .cta-secondary:hover, .cta-secondary:focus { background-color: rgba(41, 37, 36, 0.05); border-color: #1c1917; color: #1c1917; }
+
+        /* --- Enhanced Focus Styles (Task C.3) --- */
+        /* Apply to all interactive elements */
+        a:focus-visible,
+        button:focus-visible,
+        input:focus-visible,
+        textarea:focus-visible,
+        select:focus-visible,
+        .nav-link:focus-visible, /* Ensure nav links get it too */
+        .cta-button:focus-visible {
+             outline: 3px solid #7c3aed; /* Example: Vibrant purple */
+             outline-offset: 2px;
+             box-shadow: none; /* Remove potentially conflicting shadows */
+             border-color: transparent; /* Hide default border if needed */
+        }
+        /* Specific adjustments if needed */
+        .nav-link:focus-visible { border-bottom-color: transparent; } /* Hide border focus if outline is enough */
+        .form-input:focus-visible, .form-textarea:focus-visible, .form-select:focus-visible {
+             border-color: #a8a29e; /* Keep subtle border */
+        }
+
+
+        /* --- Helper class for accessibility (Consistent) --- */
+        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0; }
+
+        /* --- Section Styling (Refined - Task C.1) --- */
+        .section-padding { padding-top: 4rem; padding-bottom: 4rem; }
+        .section-content { background-color: #ffffff; }
+        #contact { background-color: #e7e5e4; } /* stone-200 - Slightly darker bg */
+        @media (min-width: 768px) { .section-padding { padding-top: 6rem; padding-bottom: 6rem; } }
+
+        /* --- Form Input Styling (Refined - Task C.1 & C.3) --- */
+        .form-label {
+            display: block;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            color: #292524; /* stone-800 */
+            margin-bottom: 0.25rem;
+            text-transform: uppercase;
+            font-size: 0.875rem;
+            letter-spacing: 0.05em;
+        }
+        /* Task C.1: Integrate required indicator */
+        .form-label .required-indicator {
+            color: #dc2626; /* red-600 */
+            font-weight: 700;
+            margin-left: 0.25rem;
+            /* Alternative: Use ::after pseudo-element */
+            /* content: '*'; margin-left: 0.25rem; color: #dc2626; */
+        }
+
+        .form-input, .form-textarea, .form-select {
+            margin-top: 0.25rem; display: block; width: 100%; padding: 0.75rem 1rem; border: 1px solid #d6d3d1; border-radius: 0.25rem; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); transition: border-color 0.2s ease, box-shadow 0.2s ease; background-color: #ffffff; color: #1c1917; font-family: 'Lato', sans-serif; letter-spacing: 0.025em; font-size: 1rem;
+        }
+        .form-input::placeholder, .form-textarea::placeholder { color: #a8a29e; font-family: 'Lato', sans-serif; }
+
+        /* Task C.1: Custom Select Arrow */
+        .form-select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%2357534e' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e"); /* Darker arrow */
+            background-position: right 0.5rem center; background-repeat: no-repeat; background-size: 1.5em 1.5em; padding-right: 2.5rem;
+        }
+
+        /* Task C.2 & C.3: Error Styling */
+        .form-input[aria-invalid="true"],
+        .form-textarea[aria-invalid="true"],
+        .form-select[aria-invalid="true"] {
+            border-color: #dc2626; /* red-600 */
+            /* Optionally add a subtle red glow */
+             /* box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.2); */
+        }
+        .error-message {
+            color: #b91c1c; /* red-700 */
+            font-size: 0.875rem; /* text-sm */
+            margin-top: 0.25rem;
+            font-weight: 500;
+            display: none; /* Hidden by default, shown by JS */
+        }
+        /* Show error message when input is invalid */
+        [aria-invalid="true"] + .error-message {
+             display: block;
+        }
+
+
+        /* --- Contact Info Styling (Refined - Task C.1 & C.3) --- */
+        .contact-info-box {
+            background-color: #ffffff; padding: 2.5rem; /* Increased padding */ border-radius: 0.25rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); border: 1px solid #e7e5e4;
+        }
+        .contact-info a { color: #1c1917; transition: color 0.3s ease; word-break: break-word; font-family: 'Lato', sans-serif; }
+        .contact-info a:hover, .contact-info a:focus { color: #57534e; text-decoration: underline; outline: none; }
+        .contact-info i.fa-fw { margin-right: 0.75rem; color: #a8a29e; width: 1.25rem; text-align: center; flex-shrink: 0; }
+        .contact-info p { font-family: 'Lato', sans-serif; margin-bottom: 0.75rem; } /* Reduced margin */
+        .contact-info .social-links a { color: #78716c; font-size: 1.5rem; }
+        .contact-info .social-links a:hover, .contact-info .social-links a:focus { color: #1c1917; outline: none; }
+
+        /* --- Footer Styling (Consistent) --- */
+        footer { font-family: 'Lato', sans-serif; }
+        footer a { font-family: 'Montserrat', sans-serif; }
+        .footer-link { text-transform: uppercase; letter-spacing: 0.075em; font-size: 0.875rem; font-weight: 500; color: #a8a29e; transition: color 0.3s ease; }
+        .footer-link:hover, .footer-link:focus { color: #ffffff; outline: none; }
+        .social-link { color: #a8a29e; transition: color 0.3s ease; font-size: 1.25rem; }
+        .social-link:hover, .social-link:focus { color: #ffffff; outline: none; }
+
     </style>
 </head>
 <body class="text-stone-700 bg-stone-100">
 
-     <header class="bg-stone-800 shadow-md sticky top-0 z-50">
-    <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
-
-        <a href="index.html" class="flex items-center focus:outline-none focus:ring-2 focus:ring-stone-300 focus:ring-offset-2 focus:ring-offset-stone-800 rounded-sm" title="Ven Perov Photography - Homepage">
-            <img src="assets/images/global/VPLOGO.png" alt="Ven Perov Photography Logo" class="h-10 w-auto">
-            <span class="ml-3 text-xl font-bold uppercase tracking-wider text-stone-100 hover:text-white transition duration-300">
-                Ven Perov
-            </span>
-        </a>
-        <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-stone-300 hover:text-white hover:bg-stone-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-stone-300" aria-label="Toggle Menu" aria-expanded="false" aria-controls="mobile-menu">
-            <span class="sr-only">Open main menu</span>
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-        </button>
-
-        <ul id="desktop-menu" class="hidden md:flex space-x-8 items-center">
-            <li><a href="index.html" class="nav-link" data-page="index">Home</a></li>
-            <li><a href="portfolio.html" class="nav-link" data-page="portfolio">Portfolio</a></li>
-            <li><a href="about.html" class="nav-link" data-page="about">About</a></li>
-            <li><a href="services.html" class="nav-link" data-page="services">Services</a></li>
-            <li><a href="contact.html" class="nav-link" data-page="contact">Contact</a></li>
-        </ul>
-
-    </nav>
-    <div id="mobile-menu" class="hidden md:hidden bg-stone-800 border-t border-stone-700 shadow-lg">
-       ...
-    </div>
-</header>
+    <header class="bg-stone-800 shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2 focus-visible:ring-offset-stone-800 rounded-sm" title="Ven Perov Photography - Homepage">
+                <img src="assets/images/global/VPLOGO.png" alt="Ven Perov Photography Logo" class="h-10 w-auto" onerror="this.onerror=null; this.src='https://placehold.co/120x40/292524/f5f5f4?text=VP'; this.alt='VP Logo Placeholder';">
+            </a>
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-stone-300 hover:text-white hover:bg-stone-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-purple-500" aria-label="Toggle Menu" aria-expanded="false" aria-controls="mobile-menu">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+            <ul id="desktop-menu" class="hidden md:flex space-x-8 items-center">
+                <li><a href="index.html" class="nav-link" data-page="index">Home</a></li>
+                <li><a href="portfolio.html" class="nav-link" data-page="portfolio">Portfolio</a></li>
+                <li><a href="about.html" class="nav-link" data-page="about">About</a></li>
+                <li><a href="services.html" class="nav-link" data-page="services">Services</a></li>
+                <li><a href="contact.html" class="nav-link" data-page="contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-stone-800 border-t border-stone-700 shadow-lg">
+            <ul class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <li><a href="index.html" class="nav-link" data-page="index">Home</a></li>
+                <li><a href="portfolio.html" class="nav-link" data-page="portfolio">Portfolio</a></li>
+                <li><a href="about.html" class="nav-link" data-page="about">About</a></li>
+                <li><a href="services.html" class="nav-link" data-page="services">Services</a></li>
+                <li><a href="contact.html" class="nav-link" data-page="contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
 
     <main>
-        <section id="contact" class="py-16 md:py-24 bg-stone-100">
+        <section id="contact" class="section-padding bg-stone-200">
             <div class="container mx-auto px-6">
-                <h1 class="text-4xl md:text-5xl font-bold text-center mb-8 text-stone-900">Get In Touch</h1>
-                <p class="text-lg md:text-xl text-center text-stone-600 mb-16 max-w-3xl mx-auto">
-                    Ready to discuss your photography needs or have a question? Fill out the form below or use the contact details provided. I look forward to hearing from you!
+                <h1 class="text-4xl md:text-5xl font-bold text-center mb-8">Get In Touch</h1>
+                <p class="text-lg md:text-xl text-center text-stone-600 mb-12 md:mb-16 max-w-3xl mx-auto">
+                    Have a project in mind, a question about my services, or just want to say hello? Please use the form below or reach out directly via email or phone. I'm excited to connect!
                 </p>
 
                 <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-12 items-start">
 
-                    <div class="lg:col-span-3 bg-white p-8 rounded-sm shadow-lg border border-stone-200 order-2 lg:order-1">
-                        <h2 class="text-2xl font-bold text-stone-800 mb-6">Send a Message</h2>
-                        <form id="contact-form" action="#" method="POST" class="space-y-5">
-                            <div class="hidden"><label for="honeypot">Don't fill this out</label><input type="text" name="honeypot" id="honeypot" tabindex="-1" autocomplete="off"></div>
+                    <div class="lg:col-span-3 bg-white p-8 md:p-10 rounded-sm shadow-lg border border-stone-200 order-2 lg:order-1">
+                        <h2 class="text-2xl font-bold mb-8">Send a Message</h2>
+                        <form id="contact-form"
+                              name="contact"
+                              method="POST"
+                              data-netlify="true"
+                              data-netlify-honeypot="bot-field"
+                              class="space-y-6"
+                              novalidate> <input type="hidden" name="form-name" value="contact" />
+                            <p class="hidden"><label>Don’t fill this out: <input name="bot-field" /></label></p>
+
                             <div>
-                                <label for="name" class="form-label">Full Name <span class="text-red-600">*</span></label>
-                                <input type="text" name="name" id="name" required autocomplete="name" class="form-input" placeholder="Your Name">
+                                <label for="name" class="form-label">Full Name <span class="required-indicator">*</span></label>
+                                <input type="text" name="name" id="name" required autocomplete="name" class="form-input" placeholder="Your Name" aria-required="true" aria-invalid="false" aria-describedby="name-error">
+                                <p id="name-error" class="error-message" aria-live="assertive"></p>
                             </div>
                             <div>
-                                <label for="email" class="form-label">Email Address <span class="text-red-600">*</span></label>
-                                <input type="email" name="email" id="email" required autocomplete="email" class="form-input" placeholder="you@example.com">
+                                <label for="email" class="form-label">Email Address <span class="required-indicator">*</span></label>
+                                <input type="email" name="email" id="email" required autocomplete="email" class="form-input" placeholder="you@example.com" aria-required="true" aria-invalid="false" aria-describedby="email-error">
+                                <p id="email-error" class="error-message" aria-live="assertive"></p>
                             </div>
                             <div>
                                 <label for="phone" class="form-label">Phone Number</label>
-                                <input type="tel" name="phone" id="phone" autocomplete="tel" class="form-input" placeholder="Optional">
+                                <input type="tel" name="phone" id="phone" autocomplete="tel" class="form-input" placeholder="Optional" aria-invalid="false" aria-describedby="phone-error">
+                                <p id="phone-error" class="error-message" aria-live="assertive"></p>
                             </div>
                             <div>
                                 <label for="service" class="form-label">Service Interested In</label>
-                                <select id="service" name="service" autocomplete="service-name" class="form-select">
+                                <select id="service" name="service" autocomplete="off" class="form-select" aria-invalid="false" aria-describedby="service-error">
                                     <option value="">-- Select a Service --</option>
                                     <option value="Wedding">Wedding Photography</option>
                                     <option value="Portrait">Portraits</option>
@@ -127,84 +274,179 @@
                                     <option value="Aerial">Aerial Photography</option>
                                     <option value="Other">Other / Custom Project</option>
                                 </select>
-                            </div>
+                                <p id="service-error" class="error-message" aria-live="assertive"></p> </div>
                             <div>
-                                <label for="message" class="form-label">Your Message <span class="text-red-600">*</span></label>
-                                <textarea id="message" name="message" rows="5" required class="form-textarea" placeholder="Tell me a bit about your project or question..."></textarea>
+                                <label for="message" class="form-label">Your Message <span class="required-indicator">*</span></label>
+                                <textarea id="message" name="message" rows="5" required class="form-textarea" placeholder="Tell me a bit about your project or question..." aria-required="true" aria-invalid="false" aria-describedby="message-error"></textarea>
+                                <p id="message-error" class="error-message" aria-live="assertive"></p>
                             </div>
-                            <div class="text-left">
-                                <button type="submit" class="cta-button cta-primary">Send Message</button>
+                            <div class="text-left pt-2"> <button type="submit" class="cta-button cta-primary">Send Message</button>
                             </div>
-                            <div id="form-status" class="mt-4 text-center text-sm"></div>
+                            <div id="form-status" role="status" aria-live="polite" class="mt-4 text-left text-sm font-medium"></div>
                         </form>
                     </div>
 
                     <div class="lg:col-span-2 space-y-8 order-1 lg:order-2">
                         <div class="contact-info-box contact-info">
-                             <h2 class="text-2xl font-bold text-stone-800 mb-6">Contact Details</h2>
-                             <div class="space-y-4 text-lg text-stone-700">
-                                 <p class="flex items-center">
-                                     <i class="fas fa-map-marker-alt fa-fw"></i>
-                                     <span>Based in Adelaide, SA</span>
-                                 </p>
-                                 <p class="flex items-center">
-                                     <i class="fas fa-envelope fa-fw"></i>
-                                     <a href="mailto:venperov@gmail.com">venperov@gmail.com</a>
-                                 </p>
-                                 <p class="flex items-center">
-                                     <i class="fas fa-phone fa-fw"></i>
-                                     <a href="tel:+614XXXXXXXX">+61 4XX XXX XXX</a> 
-                                 </p>
-                             </div>
-                             <div class="mt-8 pt-6 border-t border-stone-200 social-links">
-                                  <h3 class="text-xl font-semibold text-stone-800 mb-4">Connect Online</h3>
-                                  <div class="flex space-x-5">
-                                      <a href="#" aria-label="Ven Perov on Instagram" class="transition duration-300 text-2xl"><i class="fab fa-instagram"></i></a>
-                                      <a href="#" aria-label="Ven Perov on Facebook" class="transition duration-300 text-2xl"><i class="fab fa-facebook-f"></i></a>
-                                  </div>
-                             </div>
+                            <h2 class="text-2xl font-bold mb-6">Contact Details</h2>
+                            <div class="space-y-3 text-lg text-stone-700"> <p class="flex items-start">
+                                    <i class="fas fa-map-marker-alt fa-fw mt-1" aria-hidden="true"></i>
+                                    <span>Based in Elizabeth South, Adelaide, SA</span>
+                                </p>
+                                <p class="flex items-start">
+                                    <i class="fas fa-envelope fa-fw mt-1" aria-hidden="true"></i>
+                                    <a href="mailto:venperov@gmail.com">venperov@gmail.com</a>
+                                </p>
+                                <p class="flex items-start">
+                                    <i class="fas fa-phone fa-fw mt-1" aria-hidden="true"></i>
+                                    <span>Phone: <a href="tel:+61400000000">0400 000 000</a></span> </p>
+                            </div>
+                            <div class="mt-8 pt-6 border-t border-stone-200 social-links">
+                                <h3 class="text-xl font-semibold text-stone-800 mb-4">Connect Online</h3>
+                                <div class="flex space-x-5">
+                                    <a href="#" aria-label="Ven Perov on Instagram" class="social-link"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                                    <a href="https://www.facebook.com/venperovphotography" aria-label="Ven Perov on Facebook" class="social-link"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
                         </div>
-                         </div>
+                    </div>
 
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="bg-stone-900 text-stone-400 py-10">
+    <footer class="bg-stone-900 text-stone-400 py-10 mt-16">
         <div class="container mx-auto px-6 text-center">
-            <div class="mb-6 space-x-4 md:space-x-6 uppercase tracking-wider text-sm">
-                 <a href="index.html" class="hover:text-white transition duration-300" data-page="index">Home</a>
-                 <a href="portfolio.html" class="hover:text-white transition duration-300" data-page="portfolio">Portfolio</a>
-                 <a href="about.html" class="hover:text-white transition duration-300" data-page="about">About</a>
-                 <a href="services.html" class="hover:text-white transition duration-300" data-page="services">Services</a>
-                 <a href="contact.html" class="hover:text-white transition duration-300" data-page="contact">Contact</a>
+            <div class="mb-6 space-x-4 md:space-x-6">
+                 <a href="index.html" class="footer-link" data-page="index">Home</a>
+                 <a href="portfolio.html" class="footer-link" data-page="portfolio">Portfolio</a>
+                 <a href="about.html" class="footer-link" data-page="about">About</a>
+                 <a href="services.html" class="footer-link" data-page="services">Services</a>
+                 <a href="contact.html" class="footer-link" data-page="contact">Contact</a>
             </div>
-             <div class="mb-6 space-x-5">
-                 <a href="#" aria-label="Ven Perov on Instagram" class="hover:text-white transition duration-300 text-xl"><i class="fab fa-instagram"></i></a>
-                 <a href="#" aria-label="Ven Perov on Facebook" class="hover:text-white transition duration-300 text-xl"><i class="fab fa-facebook-f"></i></a>
-             </div>
-            <p class="text-sm text-stone-500">&copy; <span id="current-year"></span> Ven Perov Photography. All Rights Reserved.</p>
-            <p class="text-sm text-stone-500 mt-1">Adelaide Photographer, South Australia</p>
+            <div class="mb-6 space-x-5">
+                 <a href="#" aria-label="Ven Perov on Instagram" class="social-link"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                 <a href="https://www.facebook.com/venperovphotography" aria-label="Ven Perov on Facebook" class="social-link"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+            </div>
+            <p class="text-sm text-stone-500">© <span id="current-year"></span> Ven Perov Photography. All Rights Reserved.</p>
+            <p class="text-sm text-stone-500 mt-1">Based in Elizabeth South, Adelaide Photographer, South Australia</p>
         </div>
     </footer>
 
     <script>
-        // Javascript remains the same
         document.addEventListener('DOMContentLoaded', () => {
+            // --- Mobile Menu Toggle (Consistent) ---
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
-            const navLinksMobile = mobileMenu.querySelectorAll('.nav-link');
-            mobileMenuButton.addEventListener('click', () => { const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true'; mobileMenu.classList.toggle('hidden'); mobileMenuButton.setAttribute('aria-expanded', !isExpanded); });
-            navLinksMobile.forEach(link => { link.addEventListener('click', () => { mobileMenu.classList.add('hidden'); mobileMenuButton.setAttribute('aria-expanded', 'false'); }); });
+            const navLinksMobile = mobileMenu ? mobileMenu.querySelectorAll('.nav-link') : [];
+            if (mobileMenuButton && mobileMenu) {
+                const menuIcon = `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>`;
+                const closeIcon = `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>`;
+                const toggleMenu = (show) => { const isExpanded = show; mobileMenu.classList.toggle('hidden', !isExpanded); mobileMenuButton.setAttribute('aria-expanded', isExpanded); mobileMenuButton.innerHTML = isExpanded ? closeIcon : menuIcon; };
+                mobileMenuButton.addEventListener('click', () => { const isCurrentlyExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true'; toggleMenu(!isCurrentlyExpanded); });
+                navLinksMobile.forEach(link => { link.addEventListener('click', () => { toggleMenu(false); }); });
+            } else { console.warn("Mobile menu elements not found."); }
+
+            // --- Active Navigation Link Highlighting (Consistent) ---
             const navLinks = document.querySelectorAll('.nav-link');
-            const currentPage = window.location.pathname.substring(window.location.pathname.lastIndexOf('/') + 1) || 'index.html';
-            navLinks.forEach(link => { const linkHref = link.getAttribute('href'); const linkPage = linkHref.substring(linkHref.lastIndexOf('/') + 1) || 'index.html'; const linkDataPage = link.getAttribute('data-page'); if (linkDataPage === currentPage.replace('.html', '')) { link.classList.add('nav-active'); link.setAttribute('aria-current', 'page'); } else if ((currentPage === 'index.html' || currentPage === '') && (linkPage === 'index.html' || linkDataPage === 'index')) { if (linkDataPage === 'index' || linkPage === 'index.html') { link.classList.add('nav-active'); link.setAttribute('aria-current', 'page'); } } else if (linkPage === currentPage && currentPage !== 'index.html' && currentPage !== '') { link.classList.add('nav-active'); link.setAttribute('aria-current', 'page'); } else { link.classList.remove('nav-active'); link.removeAttribute('aria-current'); } });
+            const path = window.location.pathname;
+            const pageName = path.substring(path.lastIndexOf('/') + 1) || 'index.html';
+            const currentPageIdentifier = pageName.replace('.html', '');
+            navLinks.forEach(link => { const linkDataPage = link.getAttribute('data-page'); if (linkDataPage === currentPageIdentifier) { link.classList.add('nav-active'); link.setAttribute('aria-current', 'page'); } else { link.classList.remove('nav-active'); link.removeAttribute('aria-current'); } });
+
+            // --- Pre-select Service Dropdown (Consistent) ---
             const serviceSelect = document.getElementById('service');
-            if (serviceSelect) { const urlParams = new URLSearchParams(window.location.search); const serviceParam = urlParams.get('service'); if (serviceParam) { const optionToSelect = Array.from(serviceSelect.options).find(option => option.value.toLowerCase() === serviceParam.toLowerCase()); if (optionToSelect) { serviceSelect.value = optionToSelect.value; } } }
-            const contactForm = document.getElementById('contact-form'); const formStatus = document.getElementById('form-status');
-            if (contactForm && formStatus) { contactForm.addEventListener('submit', (e) => { e.preventDefault(); const name = document.getElementById('name').value; const email = document.getElementById('email').value; const message = document.getElementById('message').value; if (!name || !email || !message) { formStatus.textContent = 'Please fill in all required fields.'; formStatus.className = 'mt-4 text-center text-sm text-red-600'; return; } formStatus.textContent = 'Sending message...'; formStatus.className = 'mt-4 text-center text-sm text-blue-600'; setTimeout(() => { formStatus.textContent = 'Message sent successfully! I\'ll be in touch soon.'; formStatus.className = 'mt-4 text-center text-sm text-green-600'; contactForm.reset(); }, 1500); }); }
-            const currentYearSpan = document.getElementById('current-year'); if (currentYearSpan) { currentYearSpan.textContent = new Date().getFullYear(); }
+            if (serviceSelect) { try { const urlParams = new URLSearchParams(window.location.search); const serviceParam = urlParams.get('service'); if (serviceParam) { const optionToSelect = Array.from(serviceSelect.options).find(option => option.value.toLowerCase() === serviceParam.toLowerCase()); if (optionToSelect) { serviceSelect.value = optionToSelect.value; } else { console.warn(`Service parameter "${serviceParam}" not found.`); } } } catch (error) { console.error("Error processing service selection:", error); } }
+
+            // --- Advanced Form Validation & Handling (Task C.2 & C.3) ---
+            const contactForm = document.getElementById('contact-form');
+            const formStatus = document.getElementById('form-status');
+            const formElements = contactForm ? Array.from(contactForm.elements).filter(el => ['INPUT', 'TEXTAREA', 'SELECT'].includes(el.tagName)) : [];
+
+            // Validation Functions
+            const isRequired = value => value.trim() !== '';
+            const isEmail = value => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+            // Basic phone check (allows various formats, adjust regex if needed)
+            const isPhone = value => /^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$/.test(value);
+
+            const validateField = (field) => {
+                const value = field.value;
+                const errorElement = document.getElementById(`${field.id}-error`);
+                let isValid = true;
+                let errorMessage = '';
+
+                // Reset previous error state
+                field.setAttribute('aria-invalid', 'false');
+                if (errorElement) errorElement.textContent = '';
+
+                // Required check
+                if (field.required && !isRequired(value)) {
+                    isValid = false;
+                    errorMessage = 'This field is required.';
+                }
+                // Email format check
+                else if (field.type === 'email' && value && !isEmail(value)) {
+                    isValid = false;
+                    errorMessage = 'Please enter a valid email address.';
+                }
+                // Phone format check (only if value entered)
+                else if (field.type === 'tel' && value && !isPhone(value)) {
+                     isValid = false;
+                     errorMessage = 'Please enter a valid phone number.';
+                }
+
+                // Update ARIA and display error if invalid
+                if (!isValid) {
+                    field.setAttribute('aria-invalid', 'true');
+                    if (errorElement) errorElement.textContent = errorMessage;
+                }
+                return isValid;
+            };
+
+            if (contactForm && formStatus && formElements.length > 0) {
+                // Add blur listeners for instant validation
+                formElements.forEach(field => {
+                    // Skip validation on honeypot or hidden fields
+                    if (field.type !== 'hidden' && field.name !== 'bot-field') {
+                         field.addEventListener('blur', () => validateField(field));
+                    }
+                });
+
+                contactForm.addEventListener('submit', (e) => {
+                    // Prevent default only if JS validation fails
+                    formStatus.textContent = ''; // Clear previous status
+                    let isFormValid = true;
+
+                    // Validate all fields on submit
+                    formElements.forEach(field => {
+                         if (field.type !== 'hidden' && field.name !== 'bot-field') {
+                            if (!validateField(field)) {
+                                isFormValid = false;
+                                // Optionally focus the first invalid field
+                                // if (isFormValid === false) { field.focus(); } // Be careful with focus jumps
+                            }
+                        }
+                    });
+
+                    if (!isFormValid) {
+                        e.preventDefault(); // Stop submission if client-side validation fails
+                        formStatus.textContent = 'Please correct the errors above.';
+                        formStatus.className = 'mt-4 text-left text-sm font-medium text-red-600';
+                    } else {
+                        // Allow Netlify (or other handler) to process the valid form
+                        formStatus.textContent = 'Sending message...';
+                        formStatus.className = 'mt-4 text-left text-sm font-medium text-blue-600';
+                        // Netlify will handle the redirect on success.
+                        // No need for fake success message here unless using AJAX.
+                        // For AJAX: handle success/error response here.
+                    }
+                });
+            }
+
+            // --- Footer: Update Copyright Year (Consistent) ---
+            const currentYearSpan = document.getElementById('current-year');
+            if (currentYearSpan) { currentYearSpan.textContent = new Date().getFullYear(); }
         });
     </script>
 
