@@ -4,36 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ven Perov Photography | Adelaide Photographer | Home</title>
-    <meta name="description" content="Ven Perov Photography, based in Adelaide, South Australia. Specializing in professional photography services. Capturing life's moments beautifully.">
+    <meta name="description" content="Professional Adelaide photographer Ven Perov captures stunning wedding, portrait, and commercial moments. Based in Elizabeth South, serving South Australia.">
+
     <script src="https://cdn.tailwindcss.com"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
     <style>
-        /* Custom styles - Light Background Aesthetic */
+        /* --- Base Styles --- */
         body {
-            font-family: 'Oswald', sans-serif;
-            background-color: #f5f5f4; /* stone-100 - Light background */
-            color: #44403c; /* stone-700 - Dark text */
+            /* Task 1.1.2 & 1.2: Set primary body font to Lato */
+            font-family: 'Lato', sans-serif;
+            /* Task 1.1.1: Consistent color palette (Stone) */
+            background-color: #f5f5f4; /* stone-100 */
+            color: #44403c; /* stone-700 */
             display: flex;
             flex-direction: column;
             min-height: 100vh;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
-            font-weight: 400;
-            letter-spacing: 0.025em;
+            font-weight: 400; /* Default weight for Lato */
+            line-height: 1.6; /* Improved readability */
         }
         main {
             flex-grow: 1;
         }
 
-        /* Navigation Styles - Dark text on dark background */
+        /* --- Heading Styles --- */
+        /* Task 1.1.2 & 1.2: Set heading font to Montserrat */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            color: #1c1917; /* stone-900 */
+            font-weight: 700; /* Bold for headings */
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.75rem; /* Consistent spacing below headings */
+        }
+        h1 { letter-spacing: 0.075em; margin-bottom: 1rem; }
+        h2 { margin-bottom: 1.5rem; } /* More space below H2 */
+        h3 { margin-bottom: 1rem; }
+
+        /* --- Paragraph & Text Styles --- */
+        p {
+            color: #44403c; /* stone-700 */
+            line-height: 1.7; /* Increased line height for readability */
+            margin-bottom: 1rem; /* Space below paragraphs */
+        }
+        /* Task 3.4: Testimonial Styling */
+        blockquote {
+            color: #57534e; /* stone-600 */
+            border-left: 4px solid #a8a29e; /* stone-400 */
+            padding-left: 1rem;
+            margin-left: 0; /* Reset margin */
+            margin-bottom: 0.5rem;
+            font-style: italic;
+        }
+        .testimonial-name {
+            color: #292524; /* stone-800 */
+            font-weight: 700; /* Use Lato bold */
+            font-style: normal;
+            margin-bottom: 1.5rem; /* Space after testimonial attribution */
+        }
+
+        /* --- Navigation Styles (Task 1.4) --- */
         .nav-link {
+            font-family: 'Montserrat', sans-serif; /* Heading font for nav */
             color: #d6d3d1; /* stone-300 */
             transition: color 0.3s ease, border-color 0.3s ease;
             padding-bottom: 4px;
@@ -41,94 +84,151 @@
             text-transform: uppercase;
             letter-spacing: 0.075em;
             font-size: 0.875rem; /* 14px */
-            font-weight: 500;
+            font-weight: 500; /* Medium weight for Montserrat */
         }
-        .nav-link:hover {
+        .nav-link:hover, .nav-link:focus {
             color: #ffffff; /* white */
             border-bottom-color: #a8a29e; /* stone-400 */
+            outline: none; /* Remove default focus outline if needed */
         }
+        /* Style for the active page link */
         .nav-active {
-            font-weight: 700;
+            font-weight: 700; /* Bold for active link */
             color: #ffffff; /* white */
             border-bottom: 2px solid #ffffff;
-            padding-bottom: 2px; /* Adjust padding to align baseline */
+            padding-bottom: 4px; /* Match non-active padding */
+        }
+        /* Mobile menu link styling */
+        #mobile-menu .nav-link {
+            display: block;
+            padding: 0.75rem 1rem; /* py-3 px-4 */
+            border-bottom: none; /* Remove bottom border for mobile */
+        }
+        #mobile-menu .nav-active {
+             background-color: #57534e; /* stone-600 */
+             color: #ffffff;
+             border-bottom: none;
         }
 
-        /* Button Styles - Dark primary, outline secondary */
+
+        /* --- Button Styles (Task 2.3) --- */
         .cta-button {
-             padding: 0.75rem 1.5rem; /* py-3 px-6 */
-             border-radius: 0.25rem; /* rounded-sm */
-             font-weight: 700;
-             transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.2s ease;
-             display: inline-block;
-             text-align: center;
-             margin: 0.5rem; /* m-2 */
-             border: 2px solid;
-             text-transform: uppercase;
-             letter-spacing: 0.075em;
-             font-size: 0.875rem; /* text-sm */
+            font-family: 'Montserrat', sans-serif; /* Heading font for buttons */
+            padding: 0.75rem 1.5rem; /* py-3 px-6 */
+            border-radius: 0.25rem; /* rounded-sm */
+            font-weight: 700; /* Bold Montserrat */
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.2s ease;
+            display: inline-block;
+            text-align: center;
+            margin: 0.5rem; /* m-2 */
+            border: 2px solid;
+            text-transform: uppercase;
+            letter-spacing: 0.075em;
+            font-size: 0.875rem; /* text-sm */
+            cursor: pointer;
         }
-         .cta-button:focus {
-             outline: 2px solid transparent;
+        /* Improved focus state for accessibility */
+        .cta-button:focus-visible {
+             outline: 2px solid #57534e; /* stone-600 */
              outline-offset: 2px;
-             box-shadow: 0 0 0 3px rgba(68, 64, 60, 0.4); /* Focus ring using text color */
+             box-shadow: none; /* Remove default potentially */
         }
         /* Primary: Dark background, light text */
         .cta-primary {
-             background-color: #292524; /* stone-800 */
-             color: #f5f5f4; /* stone-100 */
-             border-color: #292524; /* stone-800 */
+            background-color: #292524; /* stone-800 */
+            color: #f5f5f4; /* stone-100 */
+            border-color: #292524; /* stone-800 */
         }
-        .cta-primary:hover {
-             background-color: #1c1917; /* stone-900 */
-             border-color: #1c1917; /* stone-900 */
-             color: #ffffff; /* white */
+        .cta-primary:hover, .cta-primary:focus-visible {
+            background-color: #1c1917; /* stone-900 */
+            border-color: #1c1917; /* stone-900 */
+            color: #ffffff; /* white */
         }
-        /* Secondary: Outline style (dark border/text) */
+        /* Secondary: Outline style (dark border/text on light background) */
         .cta-secondary {
-             background-color: transparent;
-             color: #292524; /* stone-800 */
-             border-color: #292524; /* stone-800 */
+            background-color: transparent;
+            color: #292524; /* stone-800 */
+            border-color: #292524; /* stone-800 */
         }
-        .cta-secondary:hover {
-              background-color: rgba(41, 37, 36, 0.05); /* Slightly transparent dark */
-              border-color: #1c1917; /* stone-900 */
-              color: #1c1917; /* stone-900 */
+        .cta-secondary:hover, .cta-secondary:focus-visible {
+            background-color: rgba(41, 37, 36, 0.05); /* Slightly transparent dark */
+            border-color: #1c1917; /* stone-900 */
+            color: #1c1917; /* stone-900 */
         }
 
-        /* Lightbox */
+        /* --- Lightbox Styles (Task 2.2 - Using existing basic lightbox) --- */
         .lightbox { display: none; position: fixed; z-index: 999; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.9); animation: fadeIn 0.3s ease-in-out; justify-content: center; align-items: center; }
         .lightbox-content { position: relative; max-width: 90vw; max-height: 90vh; }
         .lightbox-content img { display: block; width: auto; height: auto; max-width: 100%; max-height: 85vh; object-fit: contain; border-radius: 4px; }
-        .lightbox-close { position: absolute; top: -5px; right: 0px; color: #ccc; font-size: 35px; font-weight: bold; transition: 0.3s; cursor: pointer; z-index: 1000; background: rgba(0,0,0,0.5); border-radius: 50%; width: 30px; height: 30px; display: flex; justify-content: center; align-items: center; line-height: 1;}
-        .lightbox-close:hover, .lightbox-close:focus { color: #fff; background: rgba(0,0,0,0.8); }
+        .lightbox-close { position: absolute; top: 10px; right: 15px; color: #ccc; font-size: 35px; font-weight: bold; transition: 0.3s; cursor: pointer; z-index: 1000; background: rgba(0,0,0,0.5); border-radius: 50%; width: 35px; height: 35px; display: flex; justify-content: center; align-items: center; line-height: 1; border: none;}
+        .lightbox-close:hover, .lightbox-close:focus { color: #fff; background: rgba(0,0,0,0.8); outline: none; }
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        /* Add cursor pointer to images that trigger lightbox */
+        .lightbox-trigger { cursor: pointer; }
 
-        /* Featured Work Image Hover */
-         .featured-img:hover { opacity: 0.85; transform: scale(1.03); }
-         .featured-img { transition: transform 0.3s ease, opacity 0.3s ease; border-radius: 0.25rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
+        /* --- Featured Work Image Hover (Task 1.3.2 - Basic hover for homepage example) --- */
+        .featured-img {
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            border-radius: 0.25rem; /* rounded-sm */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            display: block; /* Ensure images behave like blocks */
+            width: 100%; /* Make images fill grid cells */
+            height: auto; /* Maintain aspect ratio */
+        }
+        .featured-img:hover {
+            opacity: 0.85;
+            transform: scale(1.03);
+        }
 
-        /* Helper class for accessibility */
+        /* --- Helper class for accessibility --- */
         .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0; }
 
-        /* Section Styling Adjustments */
-        .section-content { background-color: #ffffff; padding-top: 4rem; padding-bottom: 4rem; } /* White sections */
-        @media (min-width: 768px) { .section-content { padding-top: 6rem; padding-bottom: 6rem; } }
-        #home { background-color: #f5f5f4; } /* Match body background for hero */
-
-        /* Heading Styles - Dark Text */
-        h1, h2, h3 {
-            color: #1c1917; /* stone-900 */
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
+        /* --- Section Styling --- */
+        /* Task 1.3.1: Define section padding */
+        .section-padding {
+             padding-top: 4rem; /* py-16 */
+             padding-bottom: 4rem; /* py-16 */
         }
-        h1 { letter-spacing: 0.075em; }
+        .section-content { /* For sections with white background */
+            background-color: #ffffff; /* white */
+        }
+        @media (min-width: 768px) {
+            .section-padding {
+                 padding-top: 6rem; /* md:py-24 */
+                 padding-bottom: 6rem; /* md:py-24 */
+            }
+        }
+         /* Ensure hero section matches body background */
+        #home-hero { background-color: inherit; }
 
-        /* Paragraph Text - Dark Text */
-        p { color: #44403c; line-height: 1.7; } /* stone-700 */
-        blockquote { color: #57534e; border-left-color: #a8a29e; } /* stone-600 text, stone-400 border */
-        .testimonial-name { color: #292524; font-weight: 500; } /* stone-800 */
+        /* --- Footer Styling (Task 1.5) --- */
+        footer {
+            font-family: 'Lato', sans-serif; /* Body font for footer text */
+        }
+        footer a {
+            font-family: 'Montserrat', sans-serif; /* Heading font for footer links */
+        }
+        .footer-link {
+            text-transform: uppercase;
+            letter-spacing: 0.075em;
+            font-size: 0.875rem; /* 14px */
+            font-weight: 500;
+            color: #a8a29e; /* stone-400 */
+            transition: color 0.3s ease;
+        }
+        .footer-link:hover, .footer-link:focus {
+            color: #ffffff; /* white */
+            outline: none;
+        }
+        .social-link {
+            color: #a8a29e; /* stone-400 */
+            transition: color 0.3s ease;
+            font-size: 1.25rem; /* text-xl */
+        }
+        .social-link:hover, .social-link:focus {
+            color: #ffffff; /* white */
+            outline: none;
+        }
 
     </style>
 </head>
@@ -136,14 +236,11 @@
 
     <header class="bg-stone-800 shadow-md sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="index.html" class="flex items-center focus:outline-none focus:ring-2 focus:ring-stone-300 focus:ring-offset-2 focus:ring-offset-stone-800 rounded-sm" title="Ven Perov Photography - Homepage">
-                <img src="assets/images/global/VPLOGO.png" alt="Ven Perov Photography Logo" class="h-10 w-auto" onerror="this.onerror=null; this.src='https://placehold.co/40x40/292524/ffffff?text=VP'; this.alt='VP Logo Placeholder';">
-                <span class="ml-3 text-xl font-bold uppercase tracking-wider text-stone-100 hover:text-white transition duration-300">
-                    Ven Perov
-                </span>
-            </a>
+            <a href="index.html" class="flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-300 focus-visible:ring-offset-2 focus-visible:ring-offset-stone-800 rounded-sm" title="Ven Perov Photography - Homepage">
+                <img src="assets/images/global/VPLOGO.png" alt="Ven Perov Photography Logo" class="h-10 w-auto" onerror="this.onerror=null; this.src='https://placehold.co/120x40/292524/f5f5f4?text=VP'; this.alt='VP Logo Placeholder';">
+                </a>
 
-            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-stone-300 hover:text-white hover:bg-stone-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-stone-300" aria-label="Toggle Menu" aria-expanded="false" aria-controls="mobile-menu">
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-stone-300 hover:text-white hover:bg-stone-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-stone-300" aria-label="Toggle Menu" aria-expanded="false" aria-controls="mobile-menu">
                 <span class="sr-only">Open main menu</span>
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
             </button>
@@ -159,23 +256,23 @@
 
         <div id="mobile-menu" class="hidden md:hidden bg-stone-800 border-t border-stone-700 shadow-lg">
             <ul class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <li><a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium nav-link" data-page="index">Home</a></li>
-                <li><a href="portfolio.html" class="block px-3 py-2 rounded-md text-base font-medium nav-link" data-page="portfolio">Portfolio</a></li>
-                <li><a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium nav-link" data-page="about">About</a></li>
-                <li><a href="services.html" class="block px-3 py-2 rounded-md text-base font-medium nav-link" data-page="services">Services</a></li>
-                <li><a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium nav-link" data-page="contact">Contact</a></li>
+                <li><a href="index.html" class="nav-link" data-page="index">Home</a></li>
+                <li><a href="portfolio.html" class="nav-link" data-page="portfolio">Portfolio</a></li>
+                <li><a href="about.html" class="nav-link" data-page="about">About</a></li>
+                <li><a href="services.html" class="nav-link" data-page="services">Services</a></li>
+                <li><a href="contact.html" class="nav-link" data-page="contact">Contact</a></li>
             </ul>
         </div>
     </header>
 
     <main>
-        <section id="home" class="pt-16 pb-16 md:pt-24 md:pb-24">
+        <section id="home-hero" class="section-padding">
             <div class="container mx-auto px-6 text-center">
                 <div class="mb-12">
-                     <img src="assets/images/index/20250430_1606_Archetypal Symbolism_remix_01jt2pfxy9eskak5zjw580kra2.png" alt="Hero image showcasing Ven Perov's photography style" class="w-full max-w-4xl mx-auto h-auto object-cover rounded-sm shadow-lg border-4 border-white"
-                          onerror="this.onerror=null; this.src='https://placehold.co/1200x600/cccccc/ffffff?text=Image+Not+Available'; this.alt='Placeholder image indicating Ven Perov photography style';">
+                     <img src="assets/images/index/20250430_1606_Archetypal Symbolism_remix_01jt2pfxy9eskak5zjw580kra2.png" alt="Stylized portrait representing Ven Perov's artistic photography style" class="w-full max-w-4xl mx-auto h-auto object-cover rounded-sm shadow-lg border-4 border-white"
+                         onerror="this.onerror=null; this.src='https://placehold.co/1200x600/cccccc/1c1917?text=Ven+Perov+Photography'; this.alt='Placeholder image for Ven Perov Photography';">
                 </div>
-                <h1 class="text-4xl md:text-5xl font-bold uppercase tracking-wider mb-4 text-stone-900">Ven Perov</h1>
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Ven Perov</h1>
                 <p class="text-lg md:text-xl font-medium uppercase tracking-widest text-stone-600 mb-4">Photography</p>
                 <p class="text-lg md:text-xl text-stone-700 mb-8 max-w-3xl mx-auto">
                     Adelaide-based photographer capturing moments across weddings, portraits, commercial projects, and more.
@@ -183,110 +280,120 @@
                 <a href="portfolio.html" class="cta-button cta-secondary">View My Work</a>
                 <a href="contact.html" class="cta-button cta-primary">Get In Touch</a>
             </div>
+        </section>
 
-            <div class="section-content mt-16 md:mt-24">
-                <div class="container mx-auto px-6">
-                    <h2 class="text-3xl font-bold text-center mb-12 text-stone-900 uppercase tracking-wider">Featured Work</h2>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                        <img src="assets/images/index/assets_task_01jt0sayqmf8jsb3kgetrzb87f_1745930865_img_1.webp" alt="Featured photograph example 1" class="featured-img cursor-pointer lightbox-trigger" onerror="this.onerror=null; this.src='https://placehold.co/600x400/cccccc/ffffff?text=Image+1'; this.alt='Placeholder for featured photograph 1';">
-                        <img src="assets/images/index/20250430_0844_Stoic Man Portrait_simple_compose_01jt1x8frje08v1rcfx5gnmfqh.png" alt="Featured photograph example 2" class="featured-img cursor-pointer lightbox-trigger" onerror="this.onerror=null; this.src='https://placehold.co/600x400/cccccc/ffffff?text=Image+2'; this.alt='Placeholder for featured photograph 2';">
-                        <img src="assets/images/index/20250430_0900_Barossa Valley Sunset_remix_01jt1y33f1e8182abdhp9dcw6t.png" alt="Featured photograph example 3" class="featured-img cursor-pointer lightbox-trigger" onerror="this.onerror=null; this.src='https://placehold.co/600x400/cccccc/ffffff?text=Image+3'; this.alt='Placeholder for featured photograph 3';">
-                    </div>
-                     <div class="text-center mt-12">
-                         <a href="portfolio.html" class="cta-button cta-secondary">See Full Portfolio</a>
-                     </div>
+        <section id="featured-work" class="section-padding section-content">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12">Featured Work</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                    <img src="assets/images/index/assets_task_01jt0sayqmf8jsb3kgetrzb87f_1745930865_img_1.webp" alt="Featured portrait example: Woman in natural light" class="featured-img lightbox-trigger" onerror="this.onerror=null; this.src='https://placehold.co/600x400/cccccc/1c1917?text=Featured+1'; this.alt='Placeholder for featured photograph 1';">
+                    <img src="assets/images/index/20250430_0844_Stoic Man Portrait_simple_compose_01jt1x8frje08v1rcfx5gnmfqh.png" alt="Featured portrait example: Black and white stoic man" class="featured-img lightbox-trigger" onerror="this.onerror=null; this.src='https://placehold.co/600x400/cccccc/1c1917?text=Featured+2'; this.alt='Placeholder for featured photograph 2';">
+                    <img src="assets/images/index/20250430_0900_Barossa Valley Sunset_remix_01jt1y33f1e8182abdhp9dcw6t.png" alt="Featured landscape example: Sunset over Barossa Valley vineyards" class="featured-img lightbox-trigger" onerror="this.onerror=null; this.src='https://placehold.co/600x400/cccccc/1c1917?text=Featured+3'; this.alt='Placeholder for featured photograph 3';">
+                </div>
+                 <div class="text-center mt-12">
+                      <a href="portfolio.html" class="cta-button cta-secondary">See Full Portfolio</a>
                  </div>
-            </div>
+              </div>
+        </section>
 
-            <div class="container mx-auto px-6 mt-16 md:mt-24 text-center">
-                 <h3 class="text-2xl font-bold mb-8 text-stone-900 uppercase tracking-wider">What Clients Say</h3>
-                 <blockquote class="max-w-2xl mx-auto italic text-stone-600 mb-4 border-l-4 border-stone-400 pl-4 text-left">
-                    "Working with Ven was a wonderful experience. He is extremely talented at what he does and is easy to work with. He is open to new ideas and possibilities, he made me feel comfortable and is respectful as well. He has a good eye and the photos speak for themselves. I would work with him again."
-                 </blockquote>
-                 <p class="max-w-2xl mx-auto font-semibold testimonial-name text-stone-800 text-left pl-5 mb-8">- Jasmine McWatters, Actress</p>
+        <section id="testimonials" class="section-padding">
+            <div class="container mx-auto px-6 text-center">
+                 <h2 class="text-3xl font-bold text-center mb-12">What Clients Say</h2>
 
-                 <hr class="my-8 lg:my-12 mx-auto w-1/2 border-t border-stone-300">
-                 <blockquote class="max-w-2xl mx-auto italic text-stone-600 mb-4 border-l-4 border-stone-400 pl-4 text-left">
-                    "Ven is such a talented photographer and can truly capture the essence of the moments he photographs. He's very professional, passionate, and creative, making him very easy to work with"
-                 </blockquote>
-                 <p class="max-w-2xl mx-auto font-semibold testimonial-name text-stone-800 text-left pl-5 mb-8">- Yasya King, Miss World, Australia Nominee</p>
+                 <div class="max-w-3xl mx-auto mb-12">
+                    <blockquote>
+                      "Working with Ven was a wonderful experience. He is extremely talented at what he does and is easy to work with. He is open to new ideas and possibilities, he made me feel comfortable and is respectful as well. He has a good eye and the photos speak for themselves. I would work with him again."
+                    </blockquote>
+                    <p class="testimonial-name text-right pr-4">- Jasmine McWatters, Actress</p>
+                 </div>
 
-                 <hr class="my-8 lg:my-12 mx-auto w-1/2 border-t border-stone-300">
-                 <blockquote class="max-w-2xl mx-auto italic text-stone-600 mb-4 border-l-4 border-stone-400 pl-4 text-left">
-                    "He has got skills to capture right photo at the the right moment"
-                 </blockquote>
-                 <p class="max-w-2xl mx-auto font-semibold testimonial-name text-stone-800 text-left pl-5">- Ivan, Farmer</p>
-             </div>
+                 <div class="max-w-3xl mx-auto mb-12">
+                    <hr class="mb-12 mx-auto w-1/4 border-t border-stone-300">
+                    <blockquote>
+                      "Ven is such a talented photographer and can truly capture the essence of the moments he photographs. He's very professional, passionate, and creative, making him very easy to work with"
+                    </blockquote>
+                    <p class="testimonial-name text-right pr-4">- Yasya King, Miss World Australia Nominee</p>
+                 </div>
+
+                 <div class="max-w-3xl mx-auto">
+                    <hr class="mb-12 mx-auto w-1/4 border-t border-stone-300">
+                    <blockquote>
+                      "He has got skills to capture right photo at the the right moment"
+                    </blockquote>
+                    <p class="testimonial-name text-right pr-4">- Ivan, Farmer</p>
+                 </div>
+              </div>
         </section>
     </main>
 
-    <footer class="bg-stone-900 text-stone-400 py-10">
-        <div class="container mx-auto px-6 text-center">
-            <div class="mb-6 space-x-4 md:space-x-6 uppercase tracking-wider text-sm">
-                 <a href="index.html" class="hover:text-white transition duration-300" data-page="index">Home</a>
-                 <a href="portfolio.html" class="hover:text-white transition duration-300" data-page="portfolio">Portfolio</a>
-                 <a href="about.html" class="hover:text-white transition duration-300" data-page="about">About</a>
-                 <a href="services.html" class="hover:text-white transition duration-300" data-page="services">Services</a>
-                 <a href="contact.html" class="hover:text-white transition duration-300" data-page="contact">Contact</a>
+    <footer class="bg-stone-900 text-stone-400 py-10 mt-16"> <div class="container mx-auto px-6 text-center">
+            <div class="mb-6 space-x-4 md:space-x-6">
+                 <a href="index.html" class="footer-link" data-page="index">Home</a>
+                 <a href="portfolio.html" class="footer-link" data-page="portfolio">Portfolio</a>
+                 <a href="about.html" class="footer-link" data-page="about">About</a>
+                 <a href="services.html" class="footer-link" data-page="services">Services</a>
+                 <a href="contact.html" class="footer-link" data-page="contact">Contact</a>
             </div>
             <div class="mb-6 space-x-5">
-                 <a href="#" aria-label="Ven Perov on Instagram" class="hover:text-white transition duration-300 text-xl"><i class="fab fa-instagram"></i></a>
-                 <a href="https://www.facebook.com/venperovphotography" aria-label="Ven Perov on Facebook" class="hover:text-white transition duration-300 text-xl"><i class="fab fa-facebook-f"></i></a>
+                 <a href="#" aria-label="Ven Perov on Instagram" class="social-link"><i class="fab fa-instagram"></i></a>
+                 <a href="https://www.facebook.com/venperovphotography" aria-label="Ven Perov on Facebook" class="social-link"><i class="fab fa-facebook-f"></i></a>
                  </div>
-             <p class="text-sm text-stone-500">&copy; <span id="current-year"></span> Ven Perov Photography. All Rights Reserved.</p>
-            <p class="text-sm text-stone-500 mt-1">Adelaide Photographer, South Australia</p>
+            <p class="text-sm text-stone-500">&copy; <span id="current-year"></span> Ven Perov Photography. All Rights Reserved.</p>
+            <p class="text-sm text-stone-500 mt-1">Based in Elizabeth South, Adelaide Photographer, South Australia</p>
         </div>
     </footer>
 
-    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-caption">
-        <span class="lightbox-close" id="lightbox-close" aria-label="Close lightbox" tabindex="0">&times;</span>
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="lightbox-alt">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close lightbox" tabindex="0">&times;</button>
         <div class="lightbox-content">
-            <img id="lightbox-img" src="" alt="Enlarged portfolio image">
-            </div>
+            <img id="lightbox-img" src="" alt="">
+            <span id="lightbox-alt" class="sr-only">Enlarged image view</span>
+        </div>
     </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // --- Mobile Menu Toggle ---
+            // --- Mobile Menu Toggle (Task 2.4.3) ---
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
             const navLinksMobile = mobileMenu.querySelectorAll('.nav-link'); // Get mobile links
 
             if (mobileMenuButton && mobileMenu) {
+                const menuIcon = `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>`;
+                const closeIcon = `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>`;
+
+                const toggleMenu = (show) => {
+                    const isExpanded = show;
+                    mobileMenu.classList.toggle('hidden', !isExpanded);
+                    mobileMenuButton.setAttribute('aria-expanded', isExpanded);
+                    mobileMenuButton.innerHTML = isExpanded ? closeIcon : menuIcon;
+                };
+
                 mobileMenuButton.addEventListener('click', () => {
-                    const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
-                    mobileMenu.classList.toggle('hidden');
-                    mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
-                    // Toggle icon (optional)
-                    mobileMenuButton.innerHTML = !isExpanded
-                        ? `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>` // Close icon
-                        : `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>`; // Menu icon
+                    const isCurrentlyExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+                    toggleMenu(!isCurrentlyExpanded);
                 });
 
                 // Close mobile menu when a link is clicked
                 navLinksMobile.forEach(link => {
-                     link.addEventListener('click', () => {
-                         mobileMenu.classList.add('hidden');
-                         mobileMenuButton.setAttribute('aria-expanded', 'false');
-                         // Reset icon to menu icon
-                         mobileMenuButton.innerHTML = `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>`;
-                     });
-                 });
+                    link.addEventListener('click', () => {
+                        toggleMenu(false); // Close menu
+                    });
+                });
+            } else {
+                console.warn("Mobile menu elements not found.");
             }
 
             // --- Active Navigation Link Highlighting ---
             const navLinks = document.querySelectorAll('.nav-link');
-            // Get the current page filename (e.g., "index.html", "portfolio.html")
-            // Handle cases where the URL might end with / or be just the domain
-            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-            const currentPageName = currentPage.replace('.html', ''); // e.g., "index", "portfolio"
+            // More robust way to get current page name, handling potential trailing slashes
+            const path = window.location.pathname;
+            const pageName = path.substring(path.lastIndexOf('/') + 1) || 'index.html'; // Default to index.html if path ends in /
+            const currentPageIdentifier = pageName.replace('.html', ''); // e.g., "index", "portfolio"
 
             navLinks.forEach(link => {
-                const linkDataPage = link.getAttribute('data-page'); // Get the page identifier from data-page
-
-                // Check if the link's data-page matches the current page name
-                // Special case for 'index' when the URL might be empty or just '/'
-                if (linkDataPage === currentPageName || (currentPageName === 'index' && linkDataPage === 'index')) {
+                const linkDataPage = link.getAttribute('data-page');
+                if (linkDataPage === currentPageIdentifier) {
                     link.classList.add('nav-active');
                     link.setAttribute('aria-current', 'page');
                 } else {
@@ -295,74 +402,82 @@
                 }
             });
 
-
-            // --- Lightbox Functionality ---
+            // --- Lightbox Functionality (Task 2.2 - Basic Implementation) ---
             const lightbox = document.getElementById('lightbox');
             const lightboxImg = document.getElementById('lightbox-img');
             const lightboxClose = document.getElementById('lightbox-close');
             const lightboxTriggers = document.querySelectorAll('.lightbox-trigger');
+            const lightboxAlt = document.getElementById('lightbox-alt'); // For screen reader description
 
-            if (lightbox && lightboxImg && lightboxClose && lightboxTriggers.length > 0) {
+            if (lightbox && lightboxImg && lightboxClose && lightboxTriggers.length > 0 && lightboxAlt) {
                 let focusedElementBeforeLightbox = null; // To restore focus
 
-                lightboxTriggers.forEach(trigger => {
-                    trigger.style.cursor = 'pointer'; // Indicate clickable
-                    trigger.setAttribute('tabindex', '0'); // Make focusable
+                const openLightbox = (trigger) => {
+                    focusedElementBeforeLightbox = document.activeElement; // Store focus
+                    const imgSrc = trigger.getAttribute('src');
+                    const imgAlt = trigger.getAttribute('alt') || 'Enlarged image'; // Fallback alt text
+                    lightboxImg.setAttribute('src', imgSrc);
+                    lightboxImg.setAttribute('alt', imgAlt); // Set alt text for visual users
+                    lightboxAlt.textContent = `Enlarged view: ${imgAlt}`; // Set text for screen readers
+                    lightbox.style.display = 'flex'; // Show lightbox
+                    lightbox.setAttribute('aria-hidden', 'false'); // Make visible to screen readers
+                    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+                    lightboxClose.focus(); // Set focus to close button
+                };
 
-                    // Open lightbox on click
-                    trigger.addEventListener('click', () => {
-                        focusedElementBeforeLightbox = document.activeElement; // Store focus
-                        const imgSrc = trigger.getAttribute('src');
-                        const imgAlt = trigger.getAttribute('alt') || 'Enlarged image'; // Fallback alt text
-                        lightboxImg.setAttribute('src', imgSrc);
-                        lightboxImg.setAttribute('alt', `Enlarged view: ${imgAlt}`);
-                        // Optional: Set caption if needed
-                        // const caption = trigger.dataset.caption || '';
-                        // document.getElementById('lightbox-caption').textContent = caption;
-                        lightbox.style.display = 'flex'; // Show lightbox
-                        document.body.style.overflow = 'hidden'; // Prevent background scrolling
-                        lightboxClose.focus(); // Set focus to close button
-                    });
-
-                    // Open lightbox on Enter/Space key press
-                    trigger.addEventListener('keydown', (e) => {
-                        if (e.key === 'Enter' || e.key === ' ') {
-                            e.preventDefault(); // Prevent default space scroll
-                            trigger.click(); // Trigger the click event
-                        }
-                    });
-                });
-
-                // Function to close the lightbox
                 const closeLightbox = () => {
                     lightbox.style.display = 'none'; // Hide lightbox
+                    lightbox.setAttribute('aria-hidden', 'true'); // Hide from screen readers
                     lightboxImg.setAttribute('src', ''); // Clear image source
                     lightboxImg.setAttribute('alt', ''); // Clear alt text
+                    lightboxAlt.textContent = ''; // Clear screen reader text
                     document.body.style.overflow = ''; // Restore scrolling
                     if (focusedElementBeforeLightbox) {
                         focusedElementBeforeLightbox.focus(); // Restore focus
                     }
                 };
 
+                lightboxTriggers.forEach(trigger => {
+                    // Ensure trigger images are focusable if they aren't links
+                    if (trigger.tagName.toLowerCase() === 'img') {
+                         trigger.setAttribute('tabindex', '0');
+                    }
+
+                    // Open lightbox on click
+                    trigger.addEventListener('click', (e) => {
+                        e.preventDefault(); // Prevent default if it's a link
+                        openLightbox(trigger);
+                    });
+
+                    // Open lightbox on Enter/Space key press
+                    trigger.addEventListener('keydown', (e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault(); // Prevent default space scroll / link activation
+                            openLightbox(trigger);
+                        }
+                    });
+                });
+
                 // Close lightbox via close button (click or keydown)
                 lightboxClose.addEventListener('click', closeLightbox);
                 lightboxClose.addEventListener('keydown', (e) => {
                     if (e.key === 'Enter' || e.key === ' ') {
-                         e.preventDefault();
-                         closeLightbox();
+                        e.preventDefault();
+                        closeLightbox();
                     }
                 });
 
-                // Close lightbox by clicking outside the image
+                // Close lightbox by clicking outside the image content
                 lightbox.addEventListener('click', (e) => {
-                    if (e.target === lightbox) { // Check if the click is on the background overlay
+                    // Check if the click is directly on the background overlay, not the image/content area
+                    if (e.target === lightbox) {
                         closeLightbox();
                     }
                 });
 
                 // Close lightbox with the Escape key
                 document.addEventListener('keydown', (e) => {
-                    if (e.key === "Escape" && lightbox.style.display === 'flex') {
+                    if (e.key === "Escape" && lightbox.getAttribute('aria-hidden') === 'false') {
                         closeLightbox();
                     }
                 });
@@ -380,3 +495,4 @@
 
 </body>
 </html>
+
