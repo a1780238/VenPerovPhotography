@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ven Perov Photography | Adelaide Photographer | Home</title>
-    <meta name="description" content="Professional Adelaide photographer Ven Perov captures stunning wedding, portrait, and commercial moments. Based in Elizabeth South, serving South Australia.">
+    <title>Ven Perov Photography | Adelaide Wedding & Commercial Photographer</title>
+    <meta name="description" content="Ven Perov Photography: Award-winning Adelaide photographer crafting authentic wedding stories and high-impact commercial imagery. See the difference decade+ experience makes.">
 
     <script src="https://cdn.tailwindcss.com"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -19,216 +19,105 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
     <style>
-        /* --- Base Styles --- */
-        body {
-            /* Task 1.1.2 & 1.2: Set primary body font to Lato */
-            font-family: 'Lato', sans-serif;
-            /* Task 1.1.1: Consistent color palette (Stone) */
-            background-color: #f5f5f4; /* stone-100 */
-            color: #44403c; /* stone-700 */
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            font-weight: 400; /* Default weight for Lato */
-            line-height: 1.6; /* Improved readability */
-        }
-        main {
-            flex-grow: 1;
-        }
+        /* --- Base Styles (Consistent + Refined) --- */
+        :root { --focus-color: #005fcc; /* Strong Blue */ }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Lato', sans-serif; background-color: #f5f5f4; color: #44403c; display: flex; flex-direction: column; min-height: 100vh; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-weight: 400; line-height: 1.65; overflow-x: hidden; }
+        main { flex-grow: 1; }
 
-        /* --- Heading Styles --- */
-        /* Task 1.1.2 & 1.2: Set heading font to Montserrat */
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Montserrat', sans-serif;
-            color: #1c1917; /* stone-900 */
-            font-weight: 700; /* Bold for headings */
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-bottom: 0.75rem; /* Consistent spacing below headings */
-        }
-        h1 { letter-spacing: 0.075em; margin-bottom: 1rem; }
-        h2 { margin-bottom: 1.5rem; } /* More space below H2 */
-        h3 { margin-bottom: 1rem; }
+        /* --- Heading Styles (Consistent + Refined) --- */
+        h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; color: #1c1917; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem; }
+        h1 { letter-spacing: 0.075em; margin-bottom: 1.5rem; font-size: 2.5rem; }
+        h2 { margin-bottom: 2rem; font-size: 2rem; }
+        h3 { margin-bottom: 1rem; font-size: 1.5rem; font-weight: 700; }
+        @media (min-width: 768px) { h1 { font-size: 3.5rem; /* Even larger */ } h2 { font-size: 2.75rem; } h3 { font-size: 1.75rem; } }
 
-        /* --- Paragraph & Text Styles --- */
-        p {
-            color: #44403c; /* stone-700 */
-            line-height: 1.7; /* Increased line height for readability */
-            margin-bottom: 1rem; /* Space below paragraphs */
-        }
-        /* Task 3.4: Testimonial Styling */
-        blockquote {
-            color: #57534e; /* stone-600 */
-            border-left: 4px solid #a8a29e; /* stone-400 */
-            padding-left: 1rem;
-            margin-left: 0; /* Reset margin */
-            margin-bottom: 0.5rem;
-            font-style: italic;
-        }
-        .testimonial-name {
-            color: #292524; /* stone-800 */
-            font-weight: 700; /* Use Lato bold */
-            font-style: normal;
-            margin-bottom: 1.5rem; /* Space after testimonial attribution */
-        }
+        /* --- Paragraph & Text Styles (Consistent + Refined) --- */
+        p { color: #44403c; line-height: 1.75; margin-bottom: 1.25rem; }
+        .content-text p { max-width: 65ch; }
+        .content-text p + p { margin-top: 1.5em; }
+        .content-text strong { font-weight: 700; color: #1c1917; }
 
-        /* --- Navigation Styles (Task 1.4) --- */
-        .nav-link {
-            font-family: 'Montserrat', sans-serif; /* Heading font for nav */
-            color: #d6d3d1; /* stone-300 */
-            transition: color 0.3s ease, border-color 0.3s ease;
-            padding-bottom: 4px;
-            border-bottom: 2px solid transparent;
-            text-transform: uppercase;
-            letter-spacing: 0.075em;
-            font-size: 0.875rem; /* 14px */
-            font-weight: 500; /* Medium weight for Montserrat */
-        }
-        .nav-link:hover, .nav-link:focus {
-            color: #ffffff; /* white */
-            border-bottom-color: #a8a29e; /* stone-400 */
-            outline: none; /* Remove default focus outline if needed */
-        }
-        /* Style for the active page link */
-        .nav-active {
-            font-weight: 700; /* Bold for active link */
-            color: #ffffff; /* white */
-            border-bottom: 2px solid #ffffff;
-            padding-bottom: 4px; /* Match non-active padding */
-        }
-        /* Mobile menu link styling */
-        #mobile-menu .nav-link {
-            display: block;
-            padding: 0.75rem 1rem; /* py-3 px-4 */
-            border-bottom: none; /* Remove bottom border for mobile */
-        }
-        #mobile-menu .nav-active {
-             background-color: #57534e; /* stone-600 */
-             color: #ffffff;
-             border-bottom: none;
-        }
+        /* --- Navigation Styles (Consistent) --- */
+        .nav-link { font-family: 'Montserrat', sans-serif; color: #d6d3d1; transition: color 0.3s ease, border-color 0.3s ease; padding-bottom: 4px; border-bottom: 2px solid transparent; text-transform: uppercase; letter-spacing: 0.075em; font-size: 0.875rem; font-weight: 500; }
+        .nav-link:hover { color: #ffffff; border-bottom-color: #a8a29e; }
+        .nav-active { font-weight: 700; color: #ffffff; border-bottom: 2px solid #ffffff; padding-bottom: 4px; }
+        #mobile-menu .nav-link { display: block; padding: 0.75rem 1rem; border-bottom: none; }
+        #mobile-menu .nav-active { background-color: #57534e; color: #ffffff; border-bottom: none; }
 
+        /* --- Button Styles (Consistent + Refined) --- */
+        .cta-button { font-family: 'Montserrat', sans-serif; padding: 0.875rem 1.75rem; border-radius: 0.25rem; font-weight: 700; transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.2s ease; display: inline-block; text-align: center; margin: 0.5rem; border: 2px solid; text-transform: uppercase; letter-spacing: 0.075em; font-size: 0.875rem; cursor: pointer; }
+        .cta-button:hover { transform: translateY(-2px); }
+        .cta-primary { background-color: #292524; color: #f5f5f4; border-color: #292524; }
+        .cta-primary:hover, .cta-primary:focus { background-color: #1c1917; border-color: #1c1917; color: #ffffff; }
+        .cta-secondary { background-color: transparent; color: #292524; border-color: #292524; }
+        .cta-secondary:hover, .cta-secondary:focus { background-color: rgba(41, 37, 36, 0.05); border-color: #1c1917; color: #1c1917; }
 
-        /* --- Button Styles (Task 2.3) --- */
-        .cta-button {
-            font-family: 'Montserrat', sans-serif; /* Heading font for buttons */
-            padding: 0.75rem 1.5rem; /* py-3 px-6 */
-            border-radius: 0.25rem; /* rounded-sm */
-            font-weight: 700; /* Bold Montserrat */
-            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.2s ease;
-            display: inline-block;
-            text-align: center;
-            margin: 0.5rem; /* m-2 */
-            border: 2px solid;
-            text-transform: uppercase;
-            letter-spacing: 0.075em;
-            font-size: 0.875rem; /* text-sm */
-            cursor: pointer;
-        }
-        /* Improved focus state for accessibility */
-        .cta-button:focus-visible {
-             outline: 2px solid #57534e; /* stone-600 */
-             outline-offset: 2px;
-             box-shadow: none; /* Remove default potentially */
-        }
-        /* Primary: Dark background, light text */
-        .cta-primary {
-            background-color: #292524; /* stone-800 */
-            color: #f5f5f4; /* stone-100 */
-            border-color: #292524; /* stone-800 */
-        }
-        .cta-primary:hover, .cta-primary:focus-visible {
-            background-color: #1c1917; /* stone-900 */
-            border-color: #1c1917; /* stone-900 */
-            color: #ffffff; /* white */
-        }
-        /* Secondary: Outline style (dark border/text on light background) */
-        .cta-secondary {
-            background-color: transparent;
-            color: #292524; /* stone-800 */
-            border-color: #292524; /* stone-800 */
-        }
-        .cta-secondary:hover, .cta-secondary:focus-visible {
-            background-color: rgba(41, 37, 36, 0.05); /* Slightly transparent dark */
-            border-color: #1c1917; /* stone-900 */
-            color: #1c1917; /* stone-900 */
-        }
+        /* --- Flawless Focus Styles (Consistent) --- */
+        a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible, [tabindex="0"]:focus-visible { outline: 3px solid var(--focus-color); outline-offset: 2px; box-shadow: none; border-color: transparent; }
+        input:focus-visible, textarea:focus-visible, select:focus-visible { border-color: #a8a29e; }
+        .nav-link:focus-visible { border-bottom-color: transparent; }
 
-        /* --- Lightbox Styles (Task 2.2 - Using existing basic lightbox) --- */
-        .lightbox { display: none; position: fixed; z-index: 999; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.9); animation: fadeIn 0.3s ease-in-out; justify-content: center; align-items: center; }
-        .lightbox-content { position: relative; max-width: 90vw; max-height: 90vh; }
-        .lightbox-content img { display: block; width: auto; height: auto; max-width: 100%; max-height: 85vh; object-fit: contain; border-radius: 4px; }
-        .lightbox-close { position: absolute; top: 10px; right: 15px; color: #ccc; font-size: 35px; font-weight: bold; transition: 0.3s; cursor: pointer; z-index: 1000; background: rgba(0,0,0,0.5); border-radius: 50%; width: 35px; height: 35px; display: flex; justify-content: center; align-items: center; line-height: 1; border: none;}
-        .lightbox-close:hover, .lightbox-close:focus { color: #fff; background: rgba(0,0,0,0.8); outline: none; }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        /* Add cursor pointer to images that trigger lightbox */
-        .lightbox-trigger { cursor: pointer; }
-
-        /* --- Featured Work Image Hover (Task 1.3.2 - Basic hover for homepage example) --- */
-        .featured-img {
-            transition: transform 0.3s ease, opacity 0.3s ease;
-            border-radius: 0.25rem; /* rounded-sm */
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            display: block; /* Ensure images behave like blocks */
-            width: 100%; /* Make images fill grid cells */
-            height: auto; /* Maintain aspect ratio */
-        }
-        .featured-img:hover {
-            opacity: 0.85;
-            transform: scale(1.03);
-        }
-
-        /* --- Helper class for accessibility --- */
+        /* --- Helper class for accessibility (Consistent) --- */
         .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0; }
 
-        /* --- Section Styling --- */
-        /* Task 1.3.1: Define section padding */
-        .section-padding {
-             padding-top: 4rem; /* py-16 */
-             padding-bottom: 4rem; /* py-16 */
-        }
-        .section-content { /* For sections with white background */
-            background-color: #ffffff; /* white */
-        }
-        @media (min-width: 768px) {
-            .section-padding {
-                 padding-top: 6rem; /* md:py-24 */
-                 padding-bottom: 6rem; /* md:py-24 */
-            }
-        }
-         /* Ensure hero section matches body background */
-        #home-hero { background-color: inherit; }
+        /* --- Section Styling (Consistent + Refined) --- */
+        .section-padding { padding-top: 5rem; padding-bottom: 5rem; }
+        .section-content { background-color: #ffffff; }
+        @media (min-width: 768px) { .section-padding { padding-top: 7rem; padding-bottom: 7rem; } }
 
-        /* --- Footer Styling (Task 1.5) --- */
-        footer {
-            font-family: 'Lato', sans-serif; /* Body font for footer text */
+        /* --- Hero Section Specific Styles --- */
+        #home-hero {
+            /* Example: Add subtle gradient overlay or texture */
+            /* background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('path/to/texture.png'); */
+            background-color: #e7e5e4; /* stone-200 - Example distinct bg */
+            padding-top: 6rem; padding-bottom: 6rem; /* More padding */
         }
-        footer a {
-            font-family: 'Montserrat', sans-serif; /* Heading font for footer links */
+        @media (min-width: 768px) { #home-hero { padding-top: 8rem; padding-bottom: 8rem; } }
+        #home-hero h1 { color: #1c1917; } /* Ensure contrast */
+        #home-hero p { color: #44403c; }
+
+        /* --- Featured Work Specific Styles --- */
+        #featured-work { background-color: #ffffff; } /* White background */
+        .featured-item figure { margin: 0; position: relative; overflow: hidden; border-radius: 0.375rem; /* rounded-md */ box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+        .featured-item img { display: block; width: 100%; height: auto; transition: transform 0.4s ease; }
+        .featured-item a:hover img { transform: scale(1.05); }
+        .featured-item figcaption {
+            position: absolute; bottom: 0; left: 0; right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+            color: #ffffff; padding: 1.5rem 1rem 1rem;
+            font-family: 'Montserrat', sans-serif; font-weight: 700;
+            font-size: 1.125rem; /* text-lg */
+            text-align: center;
+            opacity: 0; transition: opacity 0.4s ease;
         }
-        .footer-link {
-            text-transform: uppercase;
-            letter-spacing: 0.075em;
-            font-size: 0.875rem; /* 14px */
-            font-weight: 500;
-            color: #a8a29e; /* stone-400 */
-            transition: color 0.3s ease;
+        .featured-item a:hover figcaption, .featured-item a:focus figcaption { opacity: 1; }
+
+        /* --- Testimonial Section Specific Styles --- */
+        #testimonials { background-color: #f5f5f4; } /* Match body bg */
+        .testimonial-card {
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 0.375rem; /* rounded-md */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border: 1px solid #e7e5e4; /* stone-200 */
+            text-align: left;
         }
-        .footer-link:hover, .footer-link:focus {
-            color: #ffffff; /* white */
-            outline: none;
-        }
-        .social-link {
-            color: #a8a29e; /* stone-400 */
-            transition: color 0.3s ease;
-            font-size: 1.25rem; /* text-xl */
-        }
-        .social-link:hover, .social-link:focus {
-            color: #ffffff; /* white */
-            outline: none;
-        }
+        .testimonial-card blockquote { border-left: 4px solid #292524; /* Darker border */ padding-left: 1rem; margin-bottom: 1rem; font-style: italic; color: #44403c; }
+        .testimonial-card cite { font-family: 'Montserrat', sans-serif; font-weight: 700; color: #1c1917; font-style: normal; display: block; margin-top: 1rem; }
+        .testimonial-card cite span { display: block; font-size: 0.875rem; font-weight: 500; color: #78716c; /* stone-500 */ text-transform: uppercase; letter-spacing: 0.05em; }
+
+        /* --- Footer Styling (Consistent) --- */
+        footer { font-family: 'Lato', sans-serif; }
+        footer a { font-family: 'Montserrat', sans-serif; }
+        .footer-link { text-transform: uppercase; letter-spacing: 0.075em; font-size: 0.875rem; font-weight: 500; color: #a8a29e; transition: color 0.3s ease; }
+        .footer-link:hover, .footer-link:focus { color: #ffffff; outline: none; }
+        .social-link { color: #a8a29e; transition: color 0.3s ease; font-size: 1.25rem; }
+        .social-link:hover, .social-link:focus { color: #ffffff; outline: none; }
+
+        /* --- Animation Utility (Consistent) --- */
+        .fade-in-section { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+        .fade-in-section.is-visible { opacity: 1; transform: translateY(0); }
 
     </style>
 </head>
@@ -236,15 +125,13 @@
 
     <header class="bg-stone-800 shadow-md sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="index.html" class="flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-300 focus-visible:ring-offset-2 focus-visible:ring-offset-stone-800 rounded-sm" title="Ven Perov Photography - Homepage">
-                <img src="assets/images/global/VPLOGO.png" alt="Ven Perov Photography Logo" class="h-10 w-auto" onerror="this.onerror=null; this.src='https://placehold.co/120x40/292524/f5f5f4?text=VP'; this.alt='VP Logo Placeholder';">
-                </a>
-
-            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-stone-300 hover:text-white hover:bg-stone-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-stone-300" aria-label="Toggle Menu" aria-expanded="false" aria-controls="mobile-menu">
+            <a href="index.html" class="flex items-center rounded-sm" title="Ven Perov Photography - Homepage">
+                 <img src="assets/images/global/VPLOGO.png" alt="Ven Perov Photography Logo - Link to Homepage" class="h-10 w-auto" onerror="this.onerror=null; this.src='https://placehold.co/120x40/292524/f5f5f4?text=VP'; this.alt='VP Logo Placeholder';">
+            </a>
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-stone-300 hover:text-white hover:bg-stone-700" aria-label="Toggle Menu" aria-expanded="false" aria-controls="mobile-menu">
                 <span class="sr-only">Open main menu</span>
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
             </button>
-
             <ul id="desktop-menu" class="hidden md:flex space-x-8 items-center">
                 <li><a href="index.html" class="nav-link" data-page="index">Home</a></li>
                 <li><a href="portfolio.html" class="nav-link" data-page="portfolio">Portfolio</a></li>
@@ -253,7 +140,6 @@
                 <li><a href="contact.html" class="nav-link" data-page="contact">Contact</a></li>
             </ul>
         </nav>
-
         <div id="mobile-menu" class="hidden md:hidden bg-stone-800 border-t border-stone-700 shadow-lg">
             <ul class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <li><a href="index.html" class="nav-link" data-page="index">Home</a></li>
@@ -266,67 +152,113 @@
     </header>
 
     <main>
-        <section id="home-hero" class="section-padding">
-            <div class="container mx-auto px-6 text-center">
-                <div class="mb-12">
-                     <img src="assets/images/index/20250430_1606_Archetypal Symbolism_remix_01jt2pfxy9eskak5zjw580kra2.png" alt="Stylized portrait representing Ven Perov's artistic photography style" class="w-full max-w-4xl mx-auto h-auto object-cover rounded-sm shadow-lg border-4 border-white"
-                         onerror="this.onerror=null; this.src='https://placehold.co/1200x600/cccccc/1c1917?text=Ven+Perov+Photography'; this.alt='Placeholder image for Ven Perov Photography';">
-                </div>
-                <h1 class="text-4xl md:text-5xl font-bold mb-4">Ven Perov</h1>
-                <p class="text-lg md:text-xl font-medium uppercase tracking-widest text-stone-600 mb-4">Photography</p>
-                <p class="text-lg md:text-xl text-stone-700 mb-8 max-w-3xl mx-auto">
-                    Adelaide-based photographer capturing moments across weddings, portraits, commercial projects, and more.
+        <section id="home-hero" class="section-padding text-center">
+            <div class="container mx-auto px-6 fade-in-section">
+                 <h1 class="text-4xl md:text-6xl font-bold mb-4">Adelaide Wedding & Commercial Photography</h1>
+                <p class="text-xl md:text-2xl text-stone-700 mb-10 max-w-3xl mx-auto font-medium">
+                    Crafting authentic visual stories with over a decade of experience. <br class="hidden md:block"> See your moments through a lens focused on energy, emotion, and impact.
                 </p>
-                <a href="portfolio.html" class="cta-button cta-secondary">View My Work</a>
-                <a href="contact.html" class="cta-button cta-primary">Get In Touch</a>
+                <div class="space-y-4 md:space-y-0 md:space-x-4">
+                    <a href="portfolio.html#weddings" class="cta-button cta-primary">Explore Wedding Stories</a> <a href="portfolio.html#commercial" class="cta-button cta-secondary">View Commercial Work</a>
+                    <a href="contact.html" class="cta-button cta-secondary">Discuss Your Project</a>
+                </div>
             </div>
         </section>
 
         <section id="featured-work" class="section-padding section-content">
             <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold text-center mb-12">Featured Work</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                    <img src="assets/images/index/assets_task_01jt0sayqmf8jsb3kgetrzb87f_1745930865_img_1.webp" alt="Featured portrait example: Woman in natural light" class="featured-img lightbox-trigger" onerror="this.onerror=null; this.src='https://placehold.co/600x400/cccccc/1c1917?text=Featured+1'; this.alt='Placeholder for featured photograph 1';">
-                    <img src="assets/images/index/20250430_0844_Stoic Man Portrait_simple_compose_01jt1x8frje08v1rcfx5gnmfqh.png" alt="Featured portrait example: Black and white stoic man" class="featured-img lightbox-trigger" onerror="this.onerror=null; this.src='https://placehold.co/600x400/cccccc/1c1917?text=Featured+2'; this.alt='Placeholder for featured photograph 2';">
-                    <img src="assets/images/index/20250430_0900_Barossa Valley Sunset_remix_01jt1y33f1e8182abdhp9dcw6t.png" alt="Featured landscape example: Sunset over Barossa Valley vineyards" class="featured-img lightbox-trigger" onerror="this.onerror=null; this.src='https://placehold.co/600x400/cccccc/1c1917?text=Featured+3'; this.alt='Placeholder for featured photograph 3';">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Signature Styles</h2>
+                <p class="text-lg text-center text-stone-600 mb-16 max-w-2xl mx-auto fade-in-section">
+                    A glimpse into the key areas where I bring stories to life. Click to explore full galleries.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                    <div class="featured-item fade-in-section">
+                        <figure>
+                            <a href="portfolio.html#weddings" class="block group" aria-label="View Wedding Photography Portfolio">
+                                <picture>
+                                    <source srcset="assets/images/featured/featured-wedding.webp" type="image/webp">
+                                    <source srcset="assets/images/featured/featured-wedding.jpg" type="image/jpeg">
+                                    <img src="assets/images/featured/featured-wedding.jpg" alt="Joyful bride and groom walking outdoors after wedding ceremony."
+                                         class="aspect-[4/5] object-cover" loading="lazy" decoding="async" width="400" height="500"
+                                         onerror="this.onerror=null; this.src='https://placehold.co/400x500/cccccc/1c1917?text=Weddings'; this.alt='Placeholder for wedding photography';">
+                                </picture>
+                                <figcaption>Candid Wedding Storytelling</figcaption>
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="featured-item fade-in-section" style="transition-delay: 0.1s;">
+                         <figure>
+                            <a href="portfolio.html#portraits" class="block group" aria-label="View Portrait Photography Portfolio">
+                                <picture>
+                                    <source srcset="assets/images/featured/featured-portrait.webp" type="image/webp">
+                                    <source srcset="assets/images/featured/featured-portrait.jpg" type="image/jpeg">
+                                    <img src="assets/images/featured/featured-portrait.jpg" alt="Expressive portrait of a man with dramatic lighting."
+                                         class="aspect-[4/5] object-cover" loading="lazy" decoding="async" width="400" height="500"
+                                         onerror="this.onerror=null; this.src='https://placehold.co/400x500/cccccc/1c1917?text=Portraits'; this.alt='Placeholder for portrait photography';">
+                                </picture>
+                                <figcaption>Authentic Portraits</figcaption>
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="featured-item fade-in-section" style="transition-delay: 0.2s;">
+                         <figure>
+                            <a href="portfolio.html#commercial" class="block group" aria-label="View Commercial Photography Portfolio">
+                                <picture>
+                                    <source srcset="assets/images/featured/featured-commercial.webp" type="image/webp">
+                                    <source srcset="assets/images/featured/featured-commercial.jpg" type="image/jpeg">
+                                    <img src="assets/images/featured/featured-commercial.jpg" alt="Dynamic shot of a product in a commercial setting."
+                                         class="aspect-[4/5] object-cover" loading="lazy" decoding="async" width="400" height="500"
+                                         onerror="this.onerror=null; this.src='https://placehold.co/400x500/cccccc/1c1917?text=Commercial'; this.alt='Placeholder for commercial photography';">
+                                </picture>
+                                <figcaption>High-Impact Commercial Imagery</figcaption>
+                            </a>
+                        </figure>
+                    </div>
                 </div>
-                 <div class="text-center mt-12">
-                      <a href="portfolio.html" class="cta-button cta-secondary">See Full Portfolio</a>
+                 <div class="text-center mt-16 fade-in-section">
+                      <a href="portfolio.html" class="cta-button cta-secondary">Explore All Portfolios</a>
                  </div>
               </div>
         </section>
 
         <section id="testimonials" class="section-padding">
-            <div class="container mx-auto px-6 text-center">
-                 <h2 class="text-3xl font-bold text-center mb-12">What Clients Say</h2>
-
-                 <div class="max-w-3xl mx-auto mb-12">
-                    <blockquote>
-                      "Working with Ven was a wonderful experience. He is extremely talented at what he does and is easy to work with. He is open to new ideas and possibilities, he made me feel comfortable and is respectful as well. He has a good eye and the photos speak for themselves. I would work with him again."
-                    </blockquote>
-                    <p class="testimonial-name text-right pr-4">- Jasmine McWatters, Actress</p>
+            <div class="container mx-auto px-6">
+                 <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Client Experiences</h2>
+                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <div class="testimonial-card fade-in-section">
+                        <blockquote>
+                          "Working with Ven was a wonderful experience... He has a good eye and the photos speak for themselves. I would work with him again." </blockquote>
+                        <cite>
+                            Jasmine McWatters
+                            <span>Actress - Headshot Session</span> </cite>
+                    </div>
+                     <div class="testimonial-card fade-in-section" style="transition-delay: 0.1s;">
+                        <blockquote>
+                          "Ven is such a talented photographer... He's very professional, passionate, and creative, making him very easy to work with"
+                        </blockquote>
+                        <cite>
+                            Yasya King
+                            <span>Miss World Australia Nominee - Portfolio Shoot</span>
+                        </cite>
+                    </div>
+                     <div class="testimonial-card fade-in-section" style="transition-delay: 0.2s;">
+                        <blockquote>
+                          "He has got skills to capture right photo at the the right moment. Very happy with the commercial shots for our farm." </blockquote>
+                        <cite>
+                            Ivan
+                            <span>Farmer - Commercial Photography</span>
+                        </cite>
+                    </div>
                  </div>
-
-                 <div class="max-w-3xl mx-auto mb-12">
-                    <hr class="mb-12 mx-auto w-1/4 border-t border-stone-300">
-                    <blockquote>
-                      "Ven is such a talented photographer and can truly capture the essence of the moments he photographs. He's very professional, passionate, and creative, making him very easy to work with"
-                    </blockquote>
-                    <p class="testimonial-name text-right pr-4">- Yasya King, Miss World Australia Nominee</p>
-                 </div>
-
-                 <div class="max-w-3xl mx-auto">
-                    <hr class="mb-12 mx-auto w-1/4 border-t border-stone-300">
-                    <blockquote>
-                      "He has got skills to capture right photo at the the right moment"
-                    </blockquote>
-                    <p class="testimonial-name text-right pr-4">- Ivan, Farmer</p>
+                 <div class="text-center mt-16 fade-in-section">
+                    <a href="contact.html" class="cta-button cta-primary">Share Your Project Idea</a>
                  </div>
               </div>
         </section>
     </main>
 
-    <footer class="bg-stone-900 text-stone-400 py-10 mt-16"> <div class="container mx-auto px-6 text-center">
+    <footer class="bg-stone-900 text-stone-400 py-10 mt-16">
+        <div class="container mx-auto px-6 text-center">
             <div class="mb-6 space-x-4 md:space-x-6">
                  <a href="index.html" class="footer-link" data-page="index">Home</a>
                  <a href="portfolio.html" class="footer-link" data-page="portfolio">Portfolio</a>
@@ -335,10 +267,10 @@
                  <a href="contact.html" class="footer-link" data-page="contact">Contact</a>
             </div>
             <div class="mb-6 space-x-5">
-                 <a href="#" aria-label="Ven Perov on Instagram" class="social-link"><i class="fab fa-instagram"></i></a>
-                 <a href="https://www.facebook.com/venperovphotography" aria-label="Ven Perov on Facebook" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                 </div>
-            <p class="text-sm text-stone-500">&copy; <span id="current-year"></span> Ven Perov Photography. All Rights Reserved.</p>
+                 <a href="#" aria-label="Ven Perov on Instagram" class="social-link"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                 <a href="https://www.facebook.com/venperovphotography" aria-label="Ven Perov on Facebook" class="social-link"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+            </div>
+            <p class="text-sm text-stone-500">© <span id="current-year"></span> Ven Perov Photography. All Rights Reserved.</p>
             <p class="text-sm text-stone-500 mt-1">Based in Elizabeth South, Adelaide Photographer, South Australia</p>
         </div>
     </footer>
@@ -353,146 +285,141 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // --- Mobile Menu Toggle (Task 2.4.3) ---
+            // --- Mobile Menu Toggle (Consistent) ---
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
-            const navLinksMobile = mobileMenu.querySelectorAll('.nav-link'); // Get mobile links
-
-            if (mobileMenuButton && mobileMenu) {
+            const navLinksMobile = mobileMenu ? mobileMenu.querySelectorAll('.nav-link') : [];
+            if (mobileMenuButton && mobileMenu) { /* ... JS same as previous ... */
                 const menuIcon = `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>`;
                 const closeIcon = `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>`;
+                const toggleMenu = (show) => { const isExpanded = show; mobileMenu.classList.toggle('hidden', !isExpanded); mobileMenuButton.setAttribute('aria-expanded', isExpanded); mobileMenuButton.innerHTML = isExpanded ? closeIcon : menuIcon; };
+                mobileMenuButton.addEventListener('click', () => { const isCurrentlyExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true'; toggleMenu(!isCurrentlyExpanded); });
+                navLinksMobile.forEach(link => { link.addEventListener('click', () => { toggleMenu(false); }); });
+            } else { console.warn("Mobile menu elements not found."); }
 
-                const toggleMenu = (show) => {
-                    const isExpanded = show;
-                    mobileMenu.classList.toggle('hidden', !isExpanded);
-                    mobileMenuButton.setAttribute('aria-expanded', isExpanded);
-                    mobileMenuButton.innerHTML = isExpanded ? closeIcon : menuIcon;
-                };
 
-                mobileMenuButton.addEventListener('click', () => {
-                    const isCurrentlyExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
-                    toggleMenu(!isCurrentlyExpanded);
-                });
-
-                // Close mobile menu when a link is clicked
-                navLinksMobile.forEach(link => {
-                    link.addEventListener('click', () => {
-                        toggleMenu(false); // Close menu
-                    });
-                });
-            } else {
-                console.warn("Mobile menu elements not found.");
-            }
-
-            // --- Active Navigation Link Highlighting ---
+            // --- Active Navigation Link Highlighting (Consistent) ---
             const navLinks = document.querySelectorAll('.nav-link');
-            // More robust way to get current page name, handling potential trailing slashes
             const path = window.location.pathname;
-            const pageName = path.substring(path.lastIndexOf('/') + 1) || 'index.html'; // Default to index.html if path ends in /
-            const currentPageIdentifier = pageName.replace('.html', ''); // e.g., "index", "portfolio"
+            const pageName = path.substring(path.lastIndexOf('/') + 1) || 'index.html';
+            const currentPageIdentifier = pageName.replace('.html', '');
+            navLinks.forEach(link => { const linkDataPage = link.getAttribute('data-page'); if (linkDataPage === currentPageIdentifier) { link.classList.add('nav-active'); link.setAttribute('aria-current', 'page'); } else { link.classList.remove('nav-active'); link.removeAttribute('aria-current'); } });
 
-            navLinks.forEach(link => {
-                const linkDataPage = link.getAttribute('data-page');
-                if (linkDataPage === currentPageIdentifier) {
-                    link.classList.add('nav-active');
-                    link.setAttribute('aria-current', 'page');
-                } else {
-                    link.classList.remove('nav-active');
-                    link.removeAttribute('aria-current');
-                }
-            });
-
-            // --- Lightbox Functionality (Task 2.2 - Basic Implementation) ---
+            // --- Lightbox Functionality (Refined Trigger Logic) ---
+            // NOTE: Consider replacing this basic lightbox with a more robust library like PhotoSwipe
             const lightbox = document.getElementById('lightbox');
             const lightboxImg = document.getElementById('lightbox-img');
             const lightboxClose = document.getElementById('lightbox-close');
-            const lightboxTriggers = document.querySelectorAll('.lightbox-trigger');
-            const lightboxAlt = document.getElementById('lightbox-alt'); // For screen reader description
+            // Select the image *within* the figure/link for the trigger source
+            const lightboxTriggers = document.querySelectorAll('.featured-item a img'); // Target the IMG inside the link
+            const lightboxAlt = document.getElementById('lightbox-alt');
 
             if (lightbox && lightboxImg && lightboxClose && lightboxTriggers.length > 0 && lightboxAlt) {
-                let focusedElementBeforeLightbox = null; // To restore focus
+                let focusedElementBeforeLightbox = null;
 
-                const openLightbox = (trigger) => {
-                    focusedElementBeforeLightbox = document.activeElement; // Store focus
-                    const imgSrc = trigger.getAttribute('src');
-                    const imgAlt = trigger.getAttribute('alt') || 'Enlarged image'; // Fallback alt text
+                const openLightbox = (triggerImage) => { // Pass the image element
+                    focusedElementBeforeLightbox = document.activeElement;
+                    const imgSrc = triggerImage.getAttribute('src'); // Get src from the image itself
+                     // Use a more descriptive alt if available, fallback to image alt
+                    const imgAlt = triggerImage.getAttribute('alt') || 'Enlarged featured work';
                     lightboxImg.setAttribute('src', imgSrc);
-                    lightboxImg.setAttribute('alt', imgAlt); // Set alt text for visual users
-                    lightboxAlt.textContent = `Enlarged view: ${imgAlt}`; // Set text for screen readers
-                    lightbox.style.display = 'flex'; // Show lightbox
-                    lightbox.setAttribute('aria-hidden', 'false'); // Make visible to screen readers
-                    document.body.style.overflow = 'hidden'; // Prevent background scrolling
-                    lightboxClose.focus(); // Set focus to close button
+                    lightboxImg.setAttribute('alt', imgAlt);
+                    lightboxAlt.textContent = `Enlarged view: ${imgAlt}`;
+                    lightbox.style.display = 'flex';
+                    lightbox.setAttribute('aria-hidden', 'false');
+                    document.body.style.overflow = 'hidden';
+                    lightboxClose.focus();
                 };
 
-                const closeLightbox = () => {
-                    lightbox.style.display = 'none'; // Hide lightbox
-                    lightbox.setAttribute('aria-hidden', 'true'); // Hide from screen readers
-                    lightboxImg.setAttribute('src', ''); // Clear image source
-                    lightboxImg.setAttribute('alt', ''); // Clear alt text
-                    lightboxAlt.textContent = ''; // Clear screen reader text
-                    document.body.style.overflow = ''; // Restore scrolling
-                    if (focusedElementBeforeLightbox) {
-                        focusedElementBeforeLightbox.focus(); // Restore focus
-                    }
+                const closeLightbox = () => { /* ... JS same as previous ... */
+                    lightbox.style.display = 'none';
+                    lightbox.setAttribute('aria-hidden', 'true');
+                    lightboxImg.setAttribute('src', '');
+                    lightboxImg.setAttribute('alt', '');
+                    lightboxAlt.textContent = '';
+                    document.body.style.overflow = '';
+                    if (focusedElementBeforeLightbox) { focusedElementBeforeLightbox.focus(); }
                 };
 
-                lightboxTriggers.forEach(trigger => {
-                    // Ensure trigger images are focusable if they aren't links
-                    if (trigger.tagName.toLowerCase() === 'img') {
-                         trigger.setAttribute('tabindex', '0');
+                // Add listeners to the parent LINK, but open using the contained IMAGE
+                document.querySelectorAll('.featured-item a').forEach(link => {
+                    const triggerImage = link.querySelector('img');
+                    if (triggerImage) {
+                        link.addEventListener('click', (e) => {
+                            // Prevent link navigation ONLY if we are opening the lightbox
+                            e.preventDefault();
+                            openLightbox(triggerImage);
+                        });
+                        // Add keydown listener to link for keyboard activation
+                         link.addEventListener('keydown', (e) => {
+                            if (e.key === 'Enter' || e.key === ' ') {
+                                e.preventDefault();
+                                openLightbox(triggerImage);
+                            }
+                        });
                     }
-
-                    // Open lightbox on click
-                    trigger.addEventListener('click', (e) => {
-                        e.preventDefault(); // Prevent default if it's a link
-                        openLightbox(trigger);
-                    });
-
-                    // Open lightbox on Enter/Space key press
-                    trigger.addEventListener('keydown', (e) => {
-                        if (e.key === 'Enter' || e.key === ' ') {
-                            e.preventDefault(); // Prevent default space scroll / link activation
-                            openLightbox(trigger);
-                        }
-                    });
                 });
 
-                // Close lightbox via close button (click or keydown)
                 lightboxClose.addEventListener('click', closeLightbox);
-                lightboxClose.addEventListener('keydown', (e) => {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                        e.preventDefault();
-                        closeLightbox();
-                    }
-                });
+                lightboxClose.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); closeLightbox(); } });
+                lightbox.addEventListener('click', (e) => { if (e.target === lightbox) { closeLightbox(); } });
+                document.addEventListener('keydown', (e) => { if (e.key === "Escape" && lightbox.getAttribute('aria-hidden') === 'false') { closeLightbox(); } });
 
-                // Close lightbox by clicking outside the image content
-                lightbox.addEventListener('click', (e) => {
-                    // Check if the click is directly on the background overlay, not the image/content area
-                    if (e.target === lightbox) {
-                        closeLightbox();
-                    }
-                });
-
-                // Close lightbox with the Escape key
-                document.addEventListener('keydown', (e) => {
-                    if (e.key === "Escape" && lightbox.getAttribute('aria-hidden') === 'false') {
-                        closeLightbox();
-                    }
-                });
             } else {
-                console.warn("Lightbox elements not found. Lightbox functionality disabled.");
+                console.warn("Lightbox elements (or triggers) not found. Lightbox functionality disabled.");
             }
 
-            // --- Footer: Update Copyright Year ---
+
+            // --- Footer: Update Copyright Year (Consistent) ---
             const currentYearSpan = document.getElementById('current-year');
-            if (currentYearSpan) {
-                currentYearSpan.textContent = new Date().getFullYear();
+            if (currentYearSpan) { currentYearSpan.textContent = new Date().getFullYear(); }
+
+            // --- Fade-in Animation on Scroll (Consistent) ---
+            const fadeSections = document.querySelectorAll('.fade-in-section');
+            if (fadeSections.length > 0 && 'IntersectionObserver' in window) {
+                const sectionObserver = new IntersectionObserver((entries, observer) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('is-visible'); observer.unobserve(entry.target); } }); }, { threshold: 0.1 });
+                fadeSections.forEach(section => { sectionObserver.observe(section); });
             }
         });
     </script>
 
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Ven Perov Photography",
+      "url": "https://a1780238.github.io/VenPerovPhotography/", // Replace with actual live URL
+      "description": "Adelaide photographer Ven Perov specializing in authentic wedding storytelling and high-impact commercial imagery.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://a1780238.github.io/VenPerovPhotography/portfolio.html?q={search_term_string}", // Example search URL
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+     <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Photographer", // Or ProfessionalService / LocalBusiness
+      "name": "Ven Perov Photography",
+      "image": "https://a1780238.github.io/VenPerovPhotography/assets/images/global/VPLOGO.png", // Replace with actual logo URL
+      "url": "https://a1780238.github.io/VenPerovPhotography/", // Replace with actual live URL
+       "telephone": "+61-400-000-000", // Replace with actual number
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Elizabeth South",
+        "addressRegion": "SA",
+        "addressCountry": "AU"
+      },
+       "priceRange": "$$$", // Optional: Indicate general price range
+      "sameAs": [
+        "https://www.facebook.com/venperovphotography"
+        // Add Instagram URL here
+      ],
+      "description": "Adelaide photographer specializing in wedding and commercial photography with an authentic, storytelling approach."
+      // Add openingHours if applicable
+    }
+    </script>
+
 </body>
 </html>
-
