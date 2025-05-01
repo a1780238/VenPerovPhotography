@@ -3,25 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ven Perov Photography | Adelaide Photographer | About Me</title>
-    <meta name="description" content="Learn more about Ven Perov, an Adelaide-based photographer. Discover the story, style, and approach behind Ven Perov Photography.">
+    <title>About Ven Perov | Adelaide Photographer | My Story & Style</title>
+    <meta name="description" content="Meet Ven Perov, Adelaide photographer specializing in adventurous, candid storytelling for weddings and brands. Discover my decade of experience and commitment to capturing authentic moments.">
 
     <script src="https://cdn.tailwindcss.com"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
     <style>
-        /* --- Base Styles (Consistent with homepage) --- */
+        /* --- Base Styles --- */
+        :root {
+             /* Define high-contrast focus color (WCAG AA compliant on light/dark) */
+            --focus-color: #005fcc; /* Example: Strong Blue */
+        }
+        html { scroll-behavior: smooth; }
         body {
-            font-family: 'Lato', sans-serif; /* FIXED: Use Lato */
+            font-family: 'Lato', sans-serif;
             background-color: #f5f5f4; /* stone-100 */
             color: #44403c; /* stone-700 */
             display: flex;
@@ -30,118 +33,99 @@
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             font-weight: 400;
-            line-height: 1.6;
+            line-height: 1.65; /* Slightly increased line height */
+            overflow-x: hidden; /* Prevent horizontal scroll */
         }
         main { flex-grow: 1; }
 
-        /* --- Heading Styles (Consistent with homepage) --- */
+        /* --- Heading Styles (Refined Hierarchy) --- */
         h1, h2, h3, h4, h5, h6 {
-            font-family: 'Montserrat', sans-serif; /* FIXED: Use Montserrat */
+            font-family: 'Montserrat', sans-serif;
             color: #1c1917; /* stone-900 */
-            font-weight: 700;
+            font-weight: 800; /* Extra Bold for impact */
             text-transform: uppercase;
             letter-spacing: 0.05em;
             margin-bottom: 0.75rem;
         }
-        h1 { letter-spacing: 0.075em; margin-bottom: 1rem; }
-        h2 { margin-bottom: 1.5rem; }
-        h3 { margin-bottom: 1rem; }
-
-        /* --- Paragraph & Text Styles (Consistent with homepage) --- */
-        p {
-            color: #44403c; /* stone-700 */
-            line-height: 1.7;
-            margin-bottom: 1rem;
-        }
-        /* Space between paragraphs in content blocks */
-        .content-text p + p { margin-top: 1.25em; }
-        /* Blockquote styling (if needed on this page, keep consistent) */
-        blockquote {
-            color: #57534e; /* stone-600 */
-            border-left: 4px solid #a8a29e; /* stone-400 */
-            padding-left: 1rem;
-            margin-left: 0;
-            margin-bottom: 0.5rem;
-            font-style: italic;
+        h1 { letter-spacing: 0.075em; margin-bottom: 1.5rem; font-size: 2.5rem; } /* Larger H1 */
+        h2 { margin-bottom: 2rem; font-size: 2rem; } /* Larger H2, more margin */
+        h3 { margin-bottom: 1rem; font-size: 1.5rem; font-weight: 700; } /* Slightly smaller H3 */
+        @media (min-width: 768px) {
+            h1 { font-size: 3rem; }
+            h2 { font-size: 2.5rem; }
+            h3 { font-size: 1.75rem; }
         }
 
-        /* --- Navigation Styles (Consistent with homepage - Task A.2) --- */
-        .nav-link {
-            font-family: 'Montserrat', sans-serif; /* FIXED: Use Montserrat */
-            color: #d6d3d1; /* stone-300 */
-            transition: color 0.3s ease, border-color 0.3s ease;
-            padding-bottom: 4px;
-            border-bottom: 2px solid transparent;
-            text-transform: uppercase;
-            letter-spacing: 0.075em;
-            font-size: 0.875rem; /* 14px */
-            font-weight: 500;
-        }
-        .nav-link:hover, .nav-link:focus {
-            color: #ffffff; /* white */
-            border-bottom-color: #a8a29e; /* stone-400 */
-            outline: none;
-        }
-        .nav-active {
-            font-weight: 700;
-            color: #ffffff; /* white */
-            border-bottom: 2px solid #ffffff;
-            padding-bottom: 4px; /* Match non-active padding */
-        }
+        /* --- Paragraph & Text Styles (Refined Readability) --- */
+        p { color: #44403c; line-height: 1.75; margin-bottom: 1.25rem; } /* Increased line height & margin */
+        /* Limit text width for optimal reading */
+        .content-text p { max-width: 65ch; /* Approx 65 characters wide */ }
+        .content-text p + p { margin-top: 1.5em; }
+        .content-text strong { font-weight: 700; color: #1c1917; }
+
+        /* --- Navigation Styles (Consistent) --- */
+        .nav-link { font-family: 'Montserrat', sans-serif; color: #d6d3d1; transition: color 0.3s ease, border-color 0.3s ease; padding-bottom: 4px; border-bottom: 2px solid transparent; text-transform: uppercase; letter-spacing: 0.075em; font-size: 0.875rem; font-weight: 500; }
+        .nav-link:hover { color: #ffffff; border-bottom-color: #a8a29e; }
+        .nav-active { font-weight: 700; color: #ffffff; border-bottom: 2px solid #ffffff; padding-bottom: 4px; }
         #mobile-menu .nav-link { display: block; padding: 0.75rem 1rem; border-bottom: none; }
         #mobile-menu .nav-active { background-color: #57534e; color: #ffffff; border-bottom: none; }
 
+        /* --- Button Styles (Consistent) --- */
+        .cta-button { font-family: 'Montserrat', sans-serif; padding: 0.875rem 1.75rem; /* Slightly larger padding */ border-radius: 0.25rem; font-weight: 700; transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.2s ease; display: inline-block; text-align: center; margin: 0.5rem; border: 2px solid; text-transform: uppercase; letter-spacing: 0.075em; font-size: 0.875rem; cursor: pointer; }
+        .cta-button:hover { transform: translateY(-2px); } /* Subtle lift on hover */
+        .cta-primary { background-color: #292524; color: #f5f5f4; border-color: #292524; }
+        .cta-primary:hover, .cta-primary:focus { background-color: #1c1917; border-color: #1c1917; color: #ffffff; }
+        .cta-secondary { background-color: transparent; color: #292524; border-color: #292524; }
+        .cta-secondary:hover, .cta-secondary:focus { background-color: rgba(41, 37, 36, 0.05); border-color: #1c1917; color: #1c1917; }
 
-        /* --- Button Styles (Consistent with homepage - Task A.2) --- */
-        .cta-button {
-            font-family: 'Montserrat', sans-serif; /* FIXED: Use Montserrat */
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.25rem;
-            font-weight: 700;
-            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.2s ease;
-            display: inline-block;
-            text-align: center;
-            margin: 0.5rem;
-            border: 2px solid;
-            text-transform: uppercase;
-            letter-spacing: 0.075em;
-            font-size: 0.875rem;
-            cursor: pointer;
-        }
-        .cta-button:focus-visible {
-             outline: 2px solid #57534e; /* stone-600 */
+        /* --- Flawless Focus Styles (Task D.4 - High Contrast) --- */
+        a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible, [tabindex="0"]:focus-visible {
+             outline: 3px solid var(--focus-color);
              outline-offset: 2px;
              box-shadow: none;
+             border-color: transparent; /* Hide border that might interfere */
         }
-        .cta-primary { background-color: #292524; color: #f5f5f4; border-color: #292524; }
-        .cta-primary:hover, .cta-primary:focus-visible { background-color: #1c1917; border-color: #1c1917; color: #ffffff; }
-        .cta-secondary { background-color: transparent; color: #292524; border-color: #292524; }
-        .cta-secondary:hover, .cta-secondary:focus-visible { background-color: rgba(41, 37, 36, 0.05); border-color: #1c1917; color: #1c1917; }
+        /* Reset border for form elements */
+        input:focus-visible, textarea:focus-visible, select:focus-visible {
+             border-color: #a8a29e; /* Keep subtle original border */
+        }
+        /* Ensure nav links don't have double indicators */
+        .nav-link:focus-visible { border-bottom-color: transparent; }
+
 
         /* --- Helper class for accessibility (Consistent) --- */
         .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0; }
 
         /* --- Section Styling (Consistent) --- */
-        .section-padding { padding-top: 4rem; padding-bottom: 4rem; }
-        .section-content { background-color: #ffffff; } /* For white background sections */
-        @media (min-width: 768px) { .section-padding { padding-top: 6rem; padding-bottom: 6rem; } }
+        .section-padding { padding-top: 5rem; padding-bottom: 5rem; } /* Increased padding */
+        .section-content { background-color: #ffffff; }
+        @media (min-width: 768px) { .section-padding { padding-top: 7rem; padding-bottom: 7rem; } }
 
-        /* --- About Page Specific Styles --- */
-        /* Task A.6: Image Style - Kept circular as per original, but added comment */
+        /* --- About Page Specific Styles (Visual Overhaul - Task D.3) --- */
+        .about-image-container {
+             position: relative; /* For potential overlap */
+        }
         .about-image {
-            border-radius: 50%; /* Original style - Keep or change to 0.25rem for consistency */
+            border-radius: 0.375rem; /* rounded-md - Consistent corners */
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            border: 6px solid #ffffff; /* White border */
+            border: 8px solid #ffffff; /* Thicker border */
             transition: transform 0.4s ease, box-shadow 0.4s ease;
-            object-fit: cover; /* Ensure image covers the area well */
-            aspect-ratio: 1 / 1; /* Maintain square aspect ratio for circle */
+            object-fit: cover;
+            aspect-ratio: 4 / 5; /* Slightly taller portrait aspect */
+             width: 100%; /* Ensure it fills container */
+             max-width: 400px; /* Limit max size */
+             display: block; /* Remove potential inline space */
+             margin-left: auto; /* Center if needed */
+             margin-right: auto;
         }
-        .about-image:hover {
-            transform: scale(1.05);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+         /* Optional overlap effect on larger screens */
+        @media (min-width: 1024px) {
+            .about-image-container {
+                 transform: translateX(-2rem); /* Pull image slightly left */
+            }
         }
 
-        /* --- Footer Styling (Consistent with homepage) --- */
+        /* --- Footer Styling (Consistent) --- */
         footer { font-family: 'Lato', sans-serif; }
         footer a { font-family: 'Montserrat', sans-serif; }
         .footer-link { text-transform: uppercase; letter-spacing: 0.075em; font-size: 0.875rem; font-weight: 500; color: #a8a29e; transition: color 0.3s ease; }
@@ -149,23 +133,35 @@
         .social-link { color: #a8a29e; transition: color 0.3s ease; font-size: 1.25rem; }
         .social-link:hover, .social-link:focus { color: #ffffff; outline: none; }
 
+        /* --- Animation Utility (Task D.4 - Optional) --- */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
     </style>
 </head>
 <body class="text-stone-700 bg-stone-100">
 
     <header class="bg-stone-800 shadow-md sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="index.html" class="flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-300 focus-visible:ring-offset-2 focus-visible:ring-offset-stone-800 rounded-sm" title="Ven Perov Photography - Homepage">
-                <img src="assets/images/global/VPLOGO.png" alt="Ven Perov Photography Logo" class="h-10 w-auto" onerror="this.onerror=null; this.src='https://placehold.co/120x40/292524/f5f5f4?text=VP'; this.alt='VP Logo Placeholder';">
-                </a>
-            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-stone-300 hover:text-white hover:bg-stone-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-stone-300" aria-label="Toggle Menu" aria-expanded="false" aria-controls="mobile-menu">
+            <a href="index.html" class="flex items-center rounded-sm" title="Ven Perov Photography - Homepage">
+                <img src="assets/images/global/VPLOGO.png" alt="Ven Perov Photography Logo - Link to Homepage" class="h-10 w-auto" onerror="this.onerror=null; this.src='https://placehold.co/120x40/292524/f5f5f4?text=VP'; this.alt='VP Logo Placeholder';">
+            </a>
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-stone-300 hover:text-white hover:bg-stone-700" aria-label="Toggle Menu" aria-expanded="false" aria-controls="mobile-menu">
                 <span class="sr-only">Open main menu</span>
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
             </button>
             <ul id="desktop-menu" class="hidden md:flex space-x-8 items-center">
                 <li><a href="index.html" class="nav-link" data-page="index">Home</a></li>
                 <li><a href="portfolio.html" class="nav-link" data-page="portfolio">Portfolio</a></li>
-                <li><a href="about.html" class="nav-link" data-page="about">About</a></li> <li><a href="services.html" class="nav-link" data-page="services">Services</a></li>
+                <li><a href="about.html" class="nav-link" data-page="about">About</a></li>
+                <li><a href="services.html" class="nav-link" data-page="services">Services</a></li>
                 <li><a href="contact.html" class="nav-link" data-page="contact">Contact</a></li>
             </ul>
         </nav>
@@ -181,57 +177,69 @@
     </header>
 
     <main>
-        <section id="about-hero" class="section-padding bg-stone-100">
-            <div class="container mx-auto px-6">
-                <h1 class="text-4xl md:text-5xl font-bold text-center mb-12 md:mb-16">About Me</h1>
-                <div class="flex flex-col lg:flex-row items-center lg:items-start justify-center gap-12 lg:gap-16 max-w-6xl mx-auto">
-                    <div class="lg:w-2/5 text-center flex-shrink-0">
-                        <img src="assets/images/about/Screen Shot 2025-04-30 at 9.45.14 pm.png"
-                             alt="Professional headshot of photographer Ven Perov"
-                             class="about-image mx-auto w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96"
-                             loading="lazy"
-                             onerror="this.onerror=null; this.src='https://placehold.co/400x400/cccccc/1c1917?text=Ven+Perov'; this.alt='Placeholder headshot of Ven Perov';">
+        <section id="about-intro" class="section-padding bg-stone-100 overflow-hidden"> <div class="container mx-auto px-6">
+                <h1 class="text-4xl md:text-5xl font-bold text-center mb-12 md:mb-20">Capturing Adelaide's Authentic Stories</h1>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-7xl mx-auto">
+                    <div class="about-image-container lg:order-last fade-in-section">
+                        <picture>
+                            <source srcset="assets/images/about/ven-perov-headshot.webp" type="image/webp">
+                            <source srcset="assets/images/about/ven-perov-headshot.jpg" type="image/jpeg">
+                            <img src="assets/images/about/ven-perov-headshot.jpg"
+                                 alt="Ven Perov, professional Adelaide photographer, smiling outdoors."
+                                 class="about-image mx-auto"
+                                 width="400" height="500" /* Intrinsic size */
+                                 onerror="this.onerror=null; this.src='https://placehold.co/400x500/cccccc/1c1917?text=Ven+Perov'; this.alt='Placeholder headshot of Ven Perov';">
+                        </picture>
                     </div>
-                    <div class="lg:w-3/5 text-center lg:text-left">
-                        <h2 class="text-3xl md:text-4xl font-bold mb-6">Hi, I'm Ven Perov</h2>
-                        <div class="text-lg text-stone-700 content-text space-y-5 leading-relaxed">
+
+                    <div class="lg:order-first fade-in-section">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6">Ven Perov: More Than Just Photos</h2>
+                        <div class="text-lg text-stone-700 content-text space-y-6 leading-relaxed">
                             <p>
-                                G'day! I'm an Adelaide-based photographer, and I've been capturing moments professionally for about ten years now. Like a lot of people, I first picked up a proper camera back in my teens and pretty quickly got hooked on trying to capture the world around me – the landscapes, the city, the people. It evolved from there into a genuine passion and eventually, my career.
+                                G'day! I'm Ven, an Adelaide-based photographer with <strong>over a decade of experience</strong> turning fleeting moments into lasting visual stories. My journey started like many – a teenager fascinated by the camera's power. But it quickly evolved into a relentless pursuit: capturing the raw energy and authentic emotion that makes South Australia, and its people, so unique.
                             </p>
                             <p>
-                                My approach is pretty relaxed and natural. I focus on capturing genuine moments and authentic expressions, rather than anything too staged. Think clean, vibrant images that really show off the subject or the atmosphere. Whether it's a wedding, family photos, professional headshots, or showcasing a property or product, the aim is always the same: high-quality, memorable photos that tell the right story.
+                                My approach? Think <strong>candid storytelling meets adventurous spirit</strong>. Forget stiff poses and forced smiles. I thrive on genuine interactions, anticipating the laugh, the glance, the subtle detail that speaks volumes. Whether I'm navigating a bustling wedding day, finding the perfect light for a portrait, or tackling a challenging commercial brief, my goal is unwavering: to deliver vibrant, compelling images that don't just look good, but *feel* right.
                             </p>
+                             <h3 class="text-2xl font-bold !mt-10 !mb-4 normal-case tracking-normal">Why Choose Me? It's About Trust & Tenacity.</h3>
                              <p>
-                                Based right here in Elizabeth South, Adelaide, I love getting out and making the most of what SA has to offer. When I'm not behind the lens, you'll likely find me pushing my limits somewhere – whether that's training for a marathon, competing in judo, hiking rugged trails, or seeking out the next thrill like cliff diving, skydiving or hitting the road on my motorcycle. That sense of adventure and focus definitely carries over into my photography work. But balancing that out, getting to know my clients and understanding exactly what you're looking for is key to making sure we create photos you'll be stoked with.
+                                Clients often tell me they appreciate my calm focus, especially during high-energy events. Years competing in judo and pushing personal limits through marathons and adventure sports have ingrained in me a dedication and resilience that translates directly to my work. It means I'm comfortable thinking on my feet, adapting to any situation, and yes, sometimes going that extra mile (literally!) to get the shot that truly matters.
+                            </p>
+                            <p>
+                                I believe exceptional photography comes from collaboration. I take the time to understand <strong>your vision, your brand, your story</strong>. Based right here in Elizabeth South, I'm passionate about showcasing the best of Adelaide and beyond. If you're looking for a photographer who combines technical skill with genuine enthusiasm and a commitment to authenticity, let's connect.
                             </p>
                         </div>
                         <div class="mt-10 text-center lg:text-left">
-                            <a href="services.html" class="cta-button cta-secondary">Explore My Services</a>
-                            <a href="contact.html" class="cta-button cta-primary">Get In Touch</a>
+                            <a href="portfolio.html" class="cta-button cta-secondary">View My Storytelling Portfolio</a>
+                            <a href="contact.html" class="cta-button cta-primary">Start Your Project Today</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="approach" class="section-padding section-content"> <div class="container mx-auto px-6 max-w-4xl text-center">
-                 <h2 class="text-3xl md:text-4xl font-bold mb-8">My Approach</h2>
-                 <div class="text-lg text-stone-700 space-y-5 leading-relaxed max-w-3xl mx-auto content-text">
+        <section id="process" class="section-padding section-content">
+            <div class="container mx-auto px-6 max-w-4xl text-center">
+                 <h2 class="text-3xl md:text-4xl font-bold mb-12">My Collaborative Process</h2>
+                 <div class="text-lg text-stone-700 space-y-5 leading-relaxed max-w-3xl mx-auto content-text fade-in-section">
                     <p>
-                       Good photos come from good collaboration. I work closely with clients to understand their vision and goals. During a shoot, I aim for a comfortable, easy-going vibe – no awkward posing, just natural interactions and genuine moments captured well.
-                    </p>
-                    <p>
-                       I combine technical know-how with a creative eye to deliver polished, professional images you'll love. From the first enquiry to the final photos, you can expect a straightforward process and clear communication all the way.
+                       <strong>1. Consultation:</strong> We start with a conversation to understand your needs, style, and goals. <br>
+                       <strong>2. Planning:</strong> We outline the shoot details, locations, and key moments. <br>
+                       <strong>3. The Shoot:</strong> Relaxed, natural direction ensures authentic results. <br>
+                       <strong>4. Editing & Delivery:</strong> Meticulous post-processing and timely delivery of your stunning images via an online gallery.
                     </p>
                  </div>
-                 <div class="mt-10">
-                    <a href="portfolio.html" class="cta-button cta-secondary">See My Work</a>
+                 <div class="mt-10 fade-in-section">
+                    <a href="services.html" class="cta-button cta-secondary">Learn About Specific Services</a>
                  </div>
             </div>
         </section>
+
     </main>
 
-    <footer class="bg-stone-900 text-stone-400 py-10 mt-16"> <div class="container mx-auto px-6 text-center">
+    <footer class="bg-stone-900 text-stone-400 py-10 mt-16">
+        <div class="container mx-auto px-6 text-center">
             <div class="mb-6 space-x-4 md:space-x-6">
                  <a href="index.html" class="footer-link" data-page="index">Home</a>
                  <a href="portfolio.html" class="footer-link" data-page="portfolio">Portfolio</a>
@@ -240,76 +248,79 @@
                  <a href="contact.html" class="footer-link" data-page="contact">Contact</a>
             </div>
             <div class="mb-6 space-x-5">
-                 <a href="#" aria-label="Ven Perov on Instagram" class="social-link"><i class="fab fa-instagram"></i></a>
-                 <a href="https://www.facebook.com/venperovphotography" aria-label="Ven Perov on Facebook" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                 <a href="#" aria-label="Ven Perov on Instagram" class="social-link"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                 <a href="https://www.facebook.com/venperovphotography" aria-label="Ven Perov on Facebook" class="social-link"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
             </div>
-            <p class="text-sm text-stone-500">&copy; <span id="current-year"></span> Ven Perov Photography. All Rights Reserved.</p>
+            <p class="text-sm text-stone-500">© <span id="current-year"></span> Ven Perov Photography. All Rights Reserved.</p>
             <p class="text-sm text-stone-500 mt-1">Based in Elizabeth South, Adelaide Photographer, South Australia</p>
         </div>
     </footer>
 
     <script>
-        // Copied directly from website_homepage_updated for consistency
         document.addEventListener('DOMContentLoaded', () => {
-            // --- Mobile Menu Toggle (Task 2.4.3) ---
+            // --- Mobile Menu Toggle (Consistent) ---
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
-            const navLinksMobile = mobileMenu ? mobileMenu.querySelectorAll('.nav-link') : []; // Check if mobileMenu exists
-
+            const navLinksMobile = mobileMenu ? mobileMenu.querySelectorAll('.nav-link') : [];
             if (mobileMenuButton && mobileMenu) {
                 const menuIcon = `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>`;
                 const closeIcon = `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>`;
+                const toggleMenu = (show) => { const isExpanded = show; mobileMenu.classList.toggle('hidden', !isExpanded); mobileMenuButton.setAttribute('aria-expanded', isExpanded); mobileMenuButton.innerHTML = isExpanded ? closeIcon : menuIcon; };
+                mobileMenuButton.addEventListener('click', () => { const isCurrentlyExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true'; toggleMenu(!isCurrentlyExpanded); });
+                navLinksMobile.forEach(link => { link.addEventListener('click', () => { toggleMenu(false); }); });
+            } else { console.warn("Mobile menu elements not found."); }
 
-                const toggleMenu = (show) => {
-                    const isExpanded = show;
-                    mobileMenu.classList.toggle('hidden', !isExpanded);
-                    mobileMenuButton.setAttribute('aria-expanded', isExpanded);
-                    mobileMenuButton.innerHTML = isExpanded ? closeIcon : menuIcon;
-                };
-
-                mobileMenuButton.addEventListener('click', () => {
-                    const isCurrentlyExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
-                    toggleMenu(!isCurrentlyExpanded);
-                });
-
-                // Close mobile menu when a link is clicked
-                navLinksMobile.forEach(link => {
-                    link.addEventListener('click', () => {
-                        toggleMenu(false); // Close menu
-                    });
-                });
-            } else {
-                console.warn("Mobile menu elements not found.");
-            }
-
-            // --- Active Navigation Link Highlighting ---
+            // --- Active Navigation Link Highlighting (Consistent) ---
             const navLinks = document.querySelectorAll('.nav-link');
             const path = window.location.pathname;
             const pageName = path.substring(path.lastIndexOf('/') + 1) || 'index.html';
             const currentPageIdentifier = pageName.replace('.html', '');
+            navLinks.forEach(link => { const linkDataPage = link.getAttribute('data-page'); if (linkDataPage === currentPageIdentifier) { link.classList.add('nav-active'); link.setAttribute('aria-current', 'page'); } else { link.classList.remove('nav-active'); link.removeAttribute('aria-current'); } });
 
-            navLinks.forEach(link => {
-                const linkDataPage = link.getAttribute('data-page');
-                if (linkDataPage === currentPageIdentifier) {
-                    link.classList.add('nav-active');
-                    link.setAttribute('aria-current', 'page');
-                } else {
-                    link.classList.remove('nav-active');
-                    link.removeAttribute('aria-current');
-                }
-            });
-
-            // --- Footer: Update Copyright Year ---
+            // --- Footer: Update Copyright Year (Consistent) ---
             const currentYearSpan = document.getElementById('current-year');
-            if (currentYearSpan) {
-                currentYearSpan.textContent = new Date().getFullYear();
-            }
+            if (currentYearSpan) { currentYearSpan.textContent = new Date().getFullYear(); }
 
-            // NOTE: Lightbox JS is not needed on this page unless images here trigger it.
-            // If images in the 'About' content should open the lightbox,
-            // copy the lightbox JS logic from the homepage script here
-            // and add the 'lightbox-trigger' class to the relevant images.
+            // --- Fade-in Animation on Scroll (Task D.4 - Optional) ---
+            const fadeSections = document.querySelectorAll('.fade-in-section');
+            if (fadeSections.length > 0 && 'IntersectionObserver' in window) {
+                const sectionObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('is-visible');
+                            observer.unobserve(entry.target); // Optional: stop observing once visible
+                        }
+                    });
+                }, { threshold: 0.1 }); // Trigger when 10% visible
+
+                fadeSections.forEach(section => {
+                    sectionObserver.observe(section);
+                });
+            }
         });
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ven Perov",
+      "jobTitle": "Photographer",
+      "description": "Adelaide-based photographer specializing in adventurous, candid storytelling for weddings and brands.",
+      "url": "https://a1780238.github.io/VenPerovPhotography/about.html", // Replace with actual live URL
+      "image": "https://a1780238.github.io/VenPerovPhotography/assets/images/about/ven-perov-headshot.jpg", // Replace with actual live URL
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Elizabeth South",
+        "addressRegion": "SA",
+        "addressCountry": "AU"
+      },
+      "sameAs": [
+        "https://www.facebook.com/venperovphotography"
+        // Add Instagram URL here when available
+      ],
+      "knowsAbout": ["Wedding Photography", "Portrait Photography", "Commercial Photography", "Event Photography", "Adelaide"]
+    }
     </script>
 
 </body>
