@@ -161,121 +161,12 @@
         </div>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // --- Mobile Menu Toggle (Consistent) ---
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const navLinksMobile = mobileMenu ? mobileMenu.querySelectorAll('.nav-link') : [];
-            if (mobileMenuButton && mobileMenu) {
-                const menuIcon = `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>`;
-                const closeIcon = `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>`;
-                const toggleMenu = (show) => { const isExpanded = show; mobileMenu.classList.toggle('hidden', !isExpanded); mobileMenuButton.setAttribute('aria-expanded', isExpanded); mobileMenuButton.innerHTML = isExpanded ? closeIcon : menuIcon; };
-                mobileMenuButton.addEventListener('click', () => { const isCurrentlyExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true'; toggleMenu(!isCurrentlyExpanded); });
-                navLinksMobile.forEach(link => { link.addEventListener('click', () => { toggleMenu(false); }); });
-            } else { console.warn("Mobile menu elements not found."); }
+    <script src="path/to/imagesloaded.pkgd.min.js" defer></script>
+<script src="path/to/isotope.pkgd.min.js" defer></script>
 
-            // --- Active Navigation Link Highlighting (Consistent) ---
-            const navLinks = document.querySelectorAll('.nav-link');
-            const path = window.location.pathname;
-            const pageName = path.substring(path.lastIndexOf('/') + 1) || 'index.html';
-            const currentPageIdentifier = pageName.replace('.html', '');
-            navLinks.forEach(link => { const linkDataPage = link.getAttribute('data-page'); if (linkDataPage === currentPageIdentifier) { link.classList.add('nav-active'); link.setAttribute('aria-current', 'page'); } else { link.classList.remove('nav-active'); link.removeAttribute('aria-current'); } });
-
-            // --- Pre-select Service Dropdown (Consistent) ---
-            const serviceSelect = document.getElementById('service');
-            if (serviceSelect) { try { const urlParams = new URLSearchParams(window.location.search); const serviceParam = urlParams.get('service'); if (serviceParam) { const optionToSelect = Array.from(serviceSelect.options).find(option => option.value.toLowerCase() === serviceParam.toLowerCase()); if (optionToSelect) { serviceSelect.value = optionToSelect.value; } else { console.warn(`Service parameter "${serviceParam}" not found.`); } } } catch (error) { console.error("Error processing service selection:", error); } }
-
-            // --- Advanced Form Validation & Handling (Task C.2 & C.3) ---
-            const contactForm = document.getElementById('contact-form');
-            const formStatus = document.getElementById('form-status');
-            const formElements = contactForm ? Array.from(contactForm.elements).filter(el => ['INPUT', 'TEXTAREA', 'SELECT'].includes(el.tagName)) : [];
-
-            // Validation Functions
-            const isRequired = value => value.trim() !== '';
-            const isEmail = value => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
-            // Basic phone check (allows various formats, adjust regex if needed)
-            const isPhone = value => /^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$/.test(value);
-
-            const validateField = (field) => {
-                const value = field.value;
-                const errorElement = document.getElementById(`${field.id}-error`);
-                let isValid = true;
-                let errorMessage = '';
-
-                // Reset previous error state
-                field.setAttribute('aria-invalid', 'false');
-                if (errorElement) errorElement.textContent = '';
-
-                // Required check
-                if (field.required && !isRequired(value)) {
-                    isValid = false;
-                    errorMessage = 'This field is required.';
-                }
-                // Email format check
-                else if (field.type === 'email' && value && !isEmail(value)) {
-                    isValid = false;
-                    errorMessage = 'Please enter a valid email address.';
-                }
-                // Phone format check (only if value entered)
-                else if (field.type === 'tel' && value && !isPhone(value)) {
-                     isValid = false;
-                     errorMessage = 'Please enter a valid phone number.';
-                }
-
-                // Update ARIA and display error if invalid
-                if (!isValid) {
-                    field.setAttribute('aria-invalid', 'true');
-                    if (errorElement) errorElement.textContent = errorMessage;
-                }
-                return isValid;
-            };
-
-            if (contactForm && formStatus && formElements.length > 0) {
-                // Add blur listeners for instant validation
-                formElements.forEach(field => {
-                    // Skip validation on honeypot or hidden fields
-                    if (field.type !== 'hidden' && field.name !== 'bot-field') {
-                         field.addEventListener('blur', () => validateField(field));
-                    }
-                });
-
-                contactForm.addEventListener('submit', (e) => {
-                    // Prevent default only if JS validation fails
-                    formStatus.textContent = ''; // Clear previous status
-                    let isFormValid = true;
-
-                    // Validate all fields on submit
-                    formElements.forEach(field => {
-                         if (field.type !== 'hidden' && field.name !== 'bot-field') {
-                            if (!validateField(field)) {
-                                isFormValid = false;
-                                // Optionally focus the first invalid field
-                                // if (isFormValid === false) { field.focus(); } // Be careful with focus jumps
-                            }
-                        }
-                    });
-
-                    if (!isFormValid) {
-                        e.preventDefault(); // Stop submission if client-side validation fails
-                        formStatus.textContent = 'Please correct the errors above.';
-                        formStatus.className = 'mt-4 text-left text-sm font-medium text-red-600';
-                    } else {
-                        // Allow Netlify (or other handler) to process the valid form
-                        formStatus.textContent = 'Sending message...';
-                        formStatus.className = 'mt-4 text-left text-sm font-medium text-blue-600';
-                        // Netlify will handle the redirect on success.
-                        // No need for fake success message here unless using AJAX.
-                        // For AJAX: handle success/error response here.
-                    }
-                });
-            }
-
-            // --- Footer: Update Copyright Year (Consistent) ---
-            const currentYearSpan = document.getElementById('current-year');
-            if (currentYearSpan) { currentYearSpan.textContent = new Date().getFullYear(); }
-        });
-    </script>
+<script src="path/to/photoswipe.umd.min.js" defer></script>
+<script src="path/to/photoswipe-lightbox.umd.min.js" defer></script>
+<script src="js/main.js" defer></script>
 
 </body>
 </html>
