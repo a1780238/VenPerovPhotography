@@ -3,240 +3,430 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ven Perov Photography | Adelaide Photographer | Services</title>
-    <meta name="description" content="Discover the photography services offered by Ven Perov in Adelaide, including weddings, portraits, commercial, industrial, defence, aerial photography, and more.">
+    <title>Photography Services | Ven Perov Photography | Adelaide</title>
+    <meta name="description" content="Explore professional photography services by Ven Perov in Adelaide: Specializing in authentic wedding storytelling, high-impact commercial imagery, compelling portraits, and more.">
+
     <script src="https://cdn.tailwindcss.com"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <style>
-        /* Custom styles - Light Background Aesthetic (Consistent across pages) */
-        body {
-            font-family: 'Oswald', sans-serif;
-            background-color: #f5f5f4; /* stone-100 */
-            color: #44403c; /* stone-700 */
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            font-weight: 400;
-            letter-spacing: 0.025em;
-        }
-        main { flex-grow: 1; }
-        .nav-link { color: #d6d3d1; transition: color 0.3s ease, border-color 0.3s ease; padding-bottom: 4px; border-bottom: 2px solid transparent; text-transform: uppercase; letter-spacing: 0.075em; font-size: 0.875rem; font-weight: 500; }
-        .nav-link:hover { color: #ffffff; border-bottom-color: #a8a29e; }
-        .nav-active { font-weight: 700; color: #ffffff; border-bottom: 2px solid #ffffff; padding-bottom: 2px; }
-        .cta-button { padding: 0.75rem 1.5rem; border-radius: 0.25rem; font-weight: 700; transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.2s ease; display: inline-block; text-align: center; margin: 0.5rem; border: 2px solid; text-transform: uppercase; letter-spacing: 0.075em; font-size: 0.875rem; }
-        .cta-button:focus { outline: 2px solid transparent; outline-offset: 2px; box-shadow: 0 0 0 3px rgba(68, 64, 60, 0.4); }
-        .cta-primary { background-color: #292524; color: #f5f5f4; border-color: #292524; }
-        .cta-primary:hover { background-color: #1c1917; border-color: #1c1917; color: #ffffff; }
-        .cta-secondary { background-color: transparent; color: #292524; border-color: #292524; }
-        .cta-secondary:hover { background-color: rgba(41, 37, 36, 0.05); border-color: #1c1917; color: #1c1917; }
-        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0; }
-        h1, h2, h3 { color: #1c1917; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
-        h1 { letter-spacing: 0.075em; }
-        p { color: #44403c; line-height: 1.7; }
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-        /* Service Card Styles */
+    <style>
+        /* --- Base Styles (Consistent) --- */
+        :root { --focus-color: #005fcc; /* Strong Blue */ }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Lato', sans-serif; background-color: #f5f5f4; color: #44403c; display: flex; flex-direction: column; min-height: 100vh; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-weight: 400; line-height: 1.65; overflow-x: hidden; }
+        main { flex-grow: 1; }
+
+        /* --- Heading Styles (Consistent) --- */
+        h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; color: #1c1917; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem; }
+        h1 { letter-spacing: 0.075em; margin-bottom: 1.5rem; font-size: 2.5rem; }
+        h2 { margin-bottom: 2rem; font-size: 2rem; }
+        h3 { margin-bottom: 1.25rem; /* More space below H3 */ font-size: 1.5rem; font-weight: 700; }
+        @media (min-width: 768px) { h1 { font-size: 3.5rem; } h2 { font-size: 2.75rem; } h3 { font-size: 1.75rem; } }
+
+        /* --- Paragraph & Text Styles (Consistent) --- */
+        p { color: #44403c; line-height: 1.75; margin-bottom: 1.25rem; }
+        .content-text p { max-width: 65ch; }
+        .content-text p + p { margin-top: 1.5em; }
+        .content-text strong { font-weight: 700; color: #1c1917; }
+
+        /* --- Navigation Styles (Consistent) --- */
+        .nav-link { font-family: 'Montserrat', sans-serif; color: #d6d3d1; transition: color 0.3s ease, border-color 0.3s ease; padding-bottom: 4px; border-bottom: 2px solid transparent; text-transform: uppercase; letter-spacing: 0.075em; font-size: 0.875rem; font-weight: 500; }
+        .nav-link:hover { color: #ffffff; border-bottom-color: #a8a29e; }
+        .nav-active { font-weight: 700; color: #ffffff; border-bottom: 2px solid #ffffff; padding-bottom: 4px; }
+        #mobile-menu .nav-link { display: block; padding: 0.75rem 1rem; border-bottom: none; }
+        #mobile-menu .nav-active { background-color: #57534e; color: #ffffff; border-bottom: none; }
+
+        /* --- Button Styles (Consistent) --- */
+        .cta-button { font-family: 'Montserrat', sans-serif; padding: 0.875rem 1.75rem; border-radius: 0.25rem; font-weight: 700; transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.2s ease; display: inline-block; text-align: center; margin: 0.5rem; border: 2px solid; text-transform: uppercase; letter-spacing: 0.075em; font-size: 0.875rem; cursor: pointer; }
+        .cta-button:hover { transform: translateY(-2px); }
+        .cta-primary { background-color: #292524; color: #f5f5f4; border-color: #292524; }
+        .cta-primary:hover, .cta-primary:focus { background-color: #1c1917; border-color: #1c1917; color: #ffffff; }
+        .cta-secondary { background-color: transparent; color: #292524; border-color: #292524; }
+        .cta-secondary:hover, .cta-secondary:focus { background-color: rgba(41, 37, 36, 0.05); border-color: #1c1917; color: #1c1917; }
+
+        /* --- Flawless Focus Styles (Consistent) --- */
+        a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible, [tabindex="0"]:focus-visible { outline: 3px solid var(--focus-color); outline-offset: 2px; box-shadow: none; border-color: transparent; }
+        input:focus-visible, textarea:focus-visible, select:focus-visible { border-color: #a8a29e; }
+        .nav-link:focus-visible { border-bottom-color: transparent; }
+
+        /* --- Helper class for accessibility (Consistent) --- */
+        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0; }
+
+        /* --- Section Styling (Consistent) --- */
+        .section-padding { padding-top: 5rem; padding-bottom: 5rem; }
+        .section-content { background-color: #ffffff; }
+        @media (min-width: 768px) { .section-padding { padding-top: 7rem; padding-bottom: 7rem; } }
+
+        /* --- Services Page Specific Styles --- */
+        #services-intro { background-color: #e7e5e4; /* stone-200 */ }
+
+        /* Enhanced Service Card Styles */
         .service-card {
-            background-color: #ffffff; /* White background for cards */
-            border-radius: 0.25rem; /* rounded-sm */
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            background-color: #ffffff;
+            border-radius: 0.375rem; /* rounded-md */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.04); /* Softer shadow */
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             overflow: hidden;
             display: flex;
             flex-direction: column;
-            border: 1px solid #e7e5e4; /* stone-200 border */
+            border: 1px solid #e7e5e4; /* stone-200 */
+            height: 100%; /* Ensure cards in a row are same height */
         }
         .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transform: translateY(-6px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.08); /* Enhanced hover shadow */
         }
+        .service-card picture, .service-card img { display: block; width: 100%; }
         .service-card img { aspect-ratio: 16 / 10; object-fit: cover; }
-        .service-card-content { padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
-        .service-card-content h3 { margin-bottom: 0.75rem; color: #1c1917; /* stone-900 */ }
-        .service-card-content p { margin-bottom: 1.25rem; color: #44403c; /* stone-700 */ flex-grow: 1; }
-        .service-card-content .compliance-note { font-size: 0.875rem; color: #78716c; /* stone-500 */ margin-top: -0.75rem; margin-bottom: 1.25rem; font-weight: 400; text-transform: none; letter-spacing: 0.025em;} /* Reset heading styles */
-        .service-card-content .cta-button { margin-top: auto; align-self: center; }
+        .service-card-content {
+            padding: 1.75rem; /* Increased padding */
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .service-card-content h3 { margin-bottom: 0.75rem; /* Reduced margin below H3 */ }
+        .service-card-content p { margin-bottom: 1.5rem; flex-grow: 1; /* Allow description to push button down */ }
+        .service-card-content .compliance-note {
+            font-size: 0.875rem; color: #57534e; /* stone-600 */ margin-top: -0.75rem; margin-bottom: 1.5rem; font-weight: 700; /* Make it stand out */ text-transform: none; letter-spacing: 0.025em; border-left: 3px solid #a8a29e; padding-left: 0.75rem;
+        }
+        .service-card-content .cta-container { margin-top: auto; /* Pushes button to bottom */ text-align: center; padding-top: 1rem; }
+
+        /* --- Footer Styling (Consistent) --- */
+        footer { font-family: 'Lato', sans-serif; }
+        footer a { font-family: 'Montserrat', sans-serif; }
+        .footer-link { text-transform: uppercase; letter-spacing: 0.075em; font-size: 0.875rem; font-weight: 500; color: #a8a29e; transition: color 0.3s ease; }
+        .footer-link:hover, .footer-link:focus { color: #ffffff; outline: none; }
+        .social-link { color: #a8a29e; transition: color 0.3s ease; font-size: 1.25rem; }
+        .social-link:hover, .social-link:focus { color: #ffffff; outline: none; }
+
+        /* --- Animation Utility (Consistent) --- */
+        .fade-in-section { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+        .fade-in-section.is-visible { opacity: 1; transform: translateY(0); }
+
     </style>
 </head>
 <body class="text-stone-700 bg-stone-100">
 
-     <header class="bg-stone-800 shadow-md sticky top-0 z-50">
-    <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
-
-        <a href="index.html" class="flex items-center focus:outline-none focus:ring-2 focus:ring-stone-300 focus:ring-offset-2 focus:ring-offset-stone-800 rounded-sm" title="Ven Perov Photography - Homepage">
-            <img src="assets/images/global/VPLOGO.png" alt="Ven Perov Photography Logo" class="h-10 w-auto">
-            <span class="ml-3 text-xl font-bold uppercase tracking-wider text-stone-100 hover:text-white transition duration-300">
-                Ven Perov
-            </span>
-        </a>
-        <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-stone-300 hover:text-white hover:bg-stone-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-stone-300" aria-label="Toggle Menu" aria-expanded="false" aria-controls="mobile-menu">
-            <span class="sr-only">Open main menu</span>
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-        </button>
-
-        <ul id="desktop-menu" class="hidden md:flex space-x-8 items-center">
-            <li><a href="index.html" class="nav-link" data-page="index">Home</a></li>
-            <li><a href="portfolio.html" class="nav-link" data-page="portfolio">Portfolio</a></li>
-            <li><a href="about.html" class="nav-link" data-page="about">About</a></li>
-            <li><a href="services.html" class="nav-link" data-page="services">Services</a></li>
-            <li><a href="contact.html" class="nav-link" data-page="contact">Contact</a></li>
-        </ul>
-
-    </nav>
-    <div id="mobile-menu" class="hidden md:hidden bg-stone-800 border-t border-stone-700 shadow-lg">
-       ...
-    </div>
-</header>
+    <header class="bg-stone-800 shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center rounded-sm" title="Ven Perov Photography - Homepage">
+                 <img src="assets/images/global/VPLOGO.png" alt="Ven Perov Photography Logo - Link to Homepage" class="h-10 w-auto" onerror="this.onerror=null; this.src='https://placehold.co/120x40/292524/f5f5f4?text=VP'; this.alt='VP Logo Placeholder';">
+            </a>
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-stone-300 hover:text-white hover:bg-stone-700" aria-label="Toggle Menu" aria-expanded="false" aria-controls="mobile-menu">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+            <ul id="desktop-menu" class="hidden md:flex space-x-8 items-center">
+                <li><a href="index.html" class="nav-link" data-page="index">Home</a></li>
+                <li><a href="portfolio.html" class="nav-link" data-page="portfolio">Portfolio</a></li>
+                <li><a href="about.html" class="nav-link" data-page="about">About</a></li>
+                <li><a href="services.html" class="nav-link" data-page="services">Services</a></li>
+                <li><a href="contact.html" class="nav-link" data-page="contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-stone-800 border-t border-stone-700 shadow-lg">
+            <ul class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <li><a href="index.html" class="nav-link" data-page="index">Home</a></li>
+                <li><a href="portfolio.html" class="nav-link" data-page="portfolio">Portfolio</a></li>
+                <li><a href="about.html" class="nav-link" data-page="about">About</a></li>
+                <li><a href="services.html" class="nav-link" data-page="services">Services</a></li>
+                <li><a href="contact.html" class="nav-link" data-page="contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
 
     <main>
-        <section id="services" class="py-16 md:py-24 bg-stone-100">
-            <div class="container mx-auto px-6">
-                <h1 class="text-4xl md:text-5xl font-bold text-center mb-8 text-stone-900">My Services</h1>
-                <p class="text-lg md:text-xl text-center text-stone-600 mb-16 max-w-3xl mx-auto">
-                    Offering a range of professional photography services across Adelaide and South Australia. Explore the options below or get in touch for a custom quote.
+        <section id="services-intro" class="section-padding bg-stone-200">
+            <div class="container mx-auto px-6 text-center fade-in-section">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Professional Photography Services</h1>
+                <p class="text-lg md:text-xl text-stone-700 mb-10 max-w-3xl mx-auto">
+                    Leveraging over a decade of expertise and a passion for visual storytelling, I offer a comprehensive suite of photography services tailored to meet your unique needs in Adelaide and across South Australia. Explore how we can capture your vision.
                 </p>
+            </div>
+        </section>
 
+        <section id="services-grid" class="section-padding bg-stone-100">
+            <div class="container mx-auto px-6">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 max-w-7xl mx-auto">
-                    <div class="service-card">
-                        <img src="https://placehold.co/600x375/d6d3d1/44403c?text=Wedding+Photography" alt="Wedding photography example" class="w-full h-auto" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/600x375/cccccc/ffffff?text=Weddings'; this.alt='Placeholder for wedding photography service';">
+
+                    <article class="service-card fade-in-section">
+                        <picture>
+                            <source srcset="assets/images/services/service-wedding.webp" type="image/webp">
+                            <source srcset="assets/images/services/service-wedding.jpg" type="image/jpeg">
+                            <img src="assets/images/services/service-wedding.jpg" alt="Candid moment of a bride laughing during her Adelaide wedding."
+                                 loading="lazy" decoding="async" width="600" height="375"
+                                 onerror="this.onerror=null; this.src='https://placehold.co/600x375/cccccc/1c1917?text=Weddings'; this.alt='Placeholder image for wedding photography';">
+                        </picture>
                         <div class="service-card-content">
                             <div>
-                                <h3 class="text-2xl font-bold">Wedding Photography</h3>
-                                <p>Capturing the genuine moments and emotions of your special day, from start to finish. Packages available to suit different coverage needs and budgets.</p>
+                                <h3 class="text-2xl font-bold">Wedding Storytelling</h3>
+                                <p>Preserve the authentic joy and emotion of your wedding day with candid, documentary-style coverage. From intimate moments to grand celebrations, receive a timeless collection of images reflecting your unique love story.</p>
                             </div>
-                            <a href="contact.html?service=Wedding" class="cta-button cta-secondary">Enquire About Weddings</a>
+                            <div class="cta-container">
+                                <a href="contact.html?service=Wedding" class="cta-button cta-secondary">Capture Your Unforgettable Day</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="service-card">
-                         <img src="https://placehold.co/600x375/d6d3d1/44403c?text=Portrait+Photography" alt="Portrait photography example" class="w-full h-auto" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/600x375/cccccc/ffffff?text=Portraits'; this.alt='Placeholder for portrait photography service';">
+                    </article>
+
+                    <article class="service-card fade-in-section" style="transition-delay: 0.05s;">
+                         <picture>
+                            <source srcset="assets/images/services/service-portrait.webp" type="image/webp">
+                            <source srcset="assets/images/services/service-portrait.jpg" type="image/jpeg">
+                            <img src="assets/images/services/service-portrait.jpg" alt="Professional headshot portrait taken in an Adelaide studio setting."
+                                 loading="lazy" decoding="async" width="600" height="375"
+                                 onerror="this.onerror=null; this.src='https://placehold.co/600x375/cccccc/1c1917?text=Portraits'; this.alt='Placeholder image for portrait photography';">
+                        </picture>
                         <div class="service-card-content">
                             <div>
-                                <h3 class="text-2xl font-bold">Portraits</h3>
-                                <p>Relaxed and authentic portrait sessions designed to capture personality. Perfect for families, individuals needing headshots, or couples celebrating milestones.</p>
+                                <h3 class="text-2xl font-bold">Authentic Portraits</h3>
+                                <p>Whether for professional headshots, family milestones, or personal branding, my relaxed sessions focus on capturing genuine personality and creating portraits you'll treasure. Studio and on-location options available.</p>
                             </div>
-                             <a href="contact.html?service=Portrait" class="cta-button cta-secondary">Book a Portrait Session</a>
+                            <div class="cta-container">
+                                <a href="contact.html?service=Portrait" class="cta-button cta-secondary">Book Your Portrait Session</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="service-card">
-                         <img src="https://placehold.co/600x375/d6d3d1/44403c?text=Commercial+Photography" alt="Commercial photography example" class="w-full h-auto" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/600x375/cccccc/ffffff?text=Commercial'; this.alt='Placeholder for commercial photography service';">
+                    </article>
+
+                    <article class="service-card fade-in-section" style="transition-delay: 0.1s;">
+                         <picture>
+                            <source srcset="assets/images/services/service-commercial.webp" type="image/webp">
+                            <source srcset="assets/images/services/service-commercial.jpg" type="image/jpeg">
+                            <img src="assets/images/services/service-commercial.jpg" alt="High-impact commercial photograph showcasing a product with dynamic lighting."
+                                 loading="lazy" decoding="async" width="600" height="375"
+                                 onerror="this.onerror=null; this.src='https://placehold.co/600x375/cccccc/1c1917?text=Commercial'; this.alt='Placeholder image for commercial photography';">
+                        </picture>
                         <div class="service-card-content">
                             <div>
                                 <h3 class="text-2xl font-bold">Commercial & Branding</h3>
-                                <p>High-quality imagery for your business needs, including product shots, team headshots, website content, and branding campaigns to elevate your presence.</p>
+                                <p>Elevate your brand with compelling visual assets. From polished product photography and corporate headshots to dynamic website imagery and marketing campaign content, I deliver results that align with your business goals.</p>
                             </div>
-                            <a href="contact.html?service=Commercial" class="cta-button cta-secondary">Discuss Your Project</a>
+                             <div class="cta-container">
+                                <a href="contact.html?service=Commercial" class="cta-button cta-secondary">Elevate Your Brand Image</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="service-card">
-                         <img src="https://placehold.co/600x375/d6d3d1/44403c?text=Real+Estate" alt="Real estate photography example" class="w-full h-auto" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/600x375/cccccc/ffffff?text=Real+Estate'; this.alt='Placeholder for real estate photography service';">
+                    </article>
+
+                    <article class="service-card fade-in-section" style="transition-delay: 0.15s;">
+                         <picture>
+                            <source srcset="assets/images/services/service-realestate.webp" type="image/webp">
+                            <source srcset="assets/images/services/service-realestate.jpg" type="image/jpeg">
+                            <img src="assets/images/services/service-realestate.jpg" alt="Bright and airy interior photograph of a modern Adelaide home for real estate listing."
+                                 loading="lazy" decoding="async" width="600" height="375"
+                                 onerror="this.onerror=null; this.src='https://placehold.co/600x375/cccccc/1c1917?text=Real+Estate'; this.alt='Placeholder image for real estate photography';">
+                        </picture>
                         <div class="service-card-content">
-                             <div>
+                            <div>
                                 <h3 class="text-2xl font-bold">Real Estate Photography</h3>
-                                <p>Showcasing properties at their best with professional photos capturing interiors, exteriors, and key features to attract potential buyers or renters.</p>
-                             </div>
-                            <a href="contact.html?service=RealEstate" class="cta-button cta-secondary">Get a Property Quote</a>
+                                <p>Make your property listings stand out. Professional, high-resolution photos highlighting key features, maximizing natural light, and showcasing the true potential of residential or commercial spaces.</p>
+                            </div>
+                             <div class="cta-container">
+                                <a href="contact.html?service=RealEstate" class="cta-button cta-secondary">Get a Property Quote</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="service-card">
-                         <img src="https://placehold.co/600x375/d6d3d1/44403c?text=Food+Photography" alt="Food photography example" class="w-full h-auto" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/600x375/cccccc/ffffff?text=Food'; this.alt='Placeholder for food photography service';">
+                    </article>
+
+                    <article class="service-card fade-in-section" style="transition-delay: 0.2s;">
+                         <picture>
+                            <source srcset="assets/images/services/service-food.webp" type="image/webp">
+                            <source srcset="assets/images/services/service-food.jpg" type="image/jpeg">
+                            <img src="assets/images/services/service-food.jpg" alt="Delicious-looking gourmet dish professionally styled and photographed for a restaurant menu."
+                                 loading="lazy" decoding="async" width="600" height="375"
+                                 onerror="this.onerror=null; this.src='https://placehold.co/600x375/cccccc/1c1917?text=Food'; this.alt='Placeholder image for food photography';">
+                        </picture>
                         <div class="service-card-content">
                             <div>
                                 <h3 class="text-2xl font-bold">Food Photography</h3>
-                                <p>Mouth-watering images for restaurants, cafes, caterers, and food bloggers. Capturing the texture, colour, and appeal of your culinary creations.</p>
+                                <p>Tantalizing imagery designed to make mouths water. Perfect for menus, websites, social media, and marketing materials for restaurants, cafes, food producers, and bloggers.</p>
                             </div>
-                            <a href="contact.html?service=Food" class="cta-button cta-secondary">Request Food Photography</a>
+                             <div class="cta-container">
+                                <a href="contact.html?service=Food" class="cta-button cta-secondary">Showcase Your Cuisine</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="service-card">
-                         <img src="https://placehold.co/600x375/d6d3d1/44403c?text=Events+&+Journalism" alt="Event photography example" class="w-full h-auto" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/600x375/cccccc/ffffff?text=Events'; this.alt='Placeholder for event photography service';">
+                    </article>
+
+                    <article class="service-card fade-in-section" style="transition-delay: 0.25s;">
+                         <picture>
+                            <source srcset="assets/images/services/service-event.webp" type="image/webp">
+                            <source srcset="assets/images/services/service-event.jpg" type="image/jpeg">
+                            <img src="assets/images/services/service-event.jpg" alt="Candid photograph capturing the atmosphere of a corporate event in Adelaide."
+                                 loading="lazy" decoding="async" width="600" height="375"
+                                 onerror="this.onerror=null; this.src='https://placehold.co/600x375/cccccc/1c1917?text=Events'; this.alt='Placeholder image for event photography';">
+                        </picture>
                         <div class="service-card-content">
                             <div>
                                 <h3 class="text-2xl font-bold">Events & Photojournalism</h3>
-                                <p>Documentary-style coverage for corporate events, conferences, parties, or editorial assignments, capturing the key moments and atmosphere.</p>
+                                <p>Discreet and professional coverage capturing the key moments, interactions, and overall atmosphere of your corporate functions, conferences, parties, or editorial assignments.</p>
                             </div>
-                            <a href="contact.html?service=Event" class="cta-button cta-secondary">Cover Your Event</a>
+                            <div class="cta-container">
+                                <a href="contact.html?service=Event" class="cta-button cta-secondary">Document Your Event</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="service-card">
-                         <img src="https://placehold.co/600x375/d6d3d1/44403c?text=Industrial+Photography" alt="Industrial photography example" class="w-full h-auto" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/600x375/cccccc/ffffff?text=Industrial'; this.alt='Placeholder for industrial photography service';">
+                    </article>
+
+                    <article class="service-card fade-in-section" style="transition-delay: 0.3s;">
+                         <picture>
+                            <source srcset="assets/images/services/service-industrial.webp" type="image/webp">
+                            <source srcset="assets/images/services/service-industrial.jpg" type="image/jpeg">
+                            <img src="assets/images/services/service-industrial.jpg" alt="Photograph of complex machinery operating within an industrial facility."
+                                 loading="lazy" decoding="async" width="600" height="375"
+                                 onerror="this.onerror=null; this.src='https://placehold.co/600x375/cccccc/1c1917?text=Industrial'; this.alt='Placeholder image for industrial photography';">
+                        </picture>
                         <div class="service-card-content">
                             <div>
                                 <h3 class="text-2xl font-bold">Industrial Photography</h3>
-                                <p>Documenting industrial sites, processes, machinery, and infrastructure. Experienced in working safely within operational environments and adhering to site WHS requirements.</p>
+                                <p>Expertly documenting industrial sites, complex processes, heavy machinery, and critical infrastructure for reports, marketing, or archival purposes. Safety and site protocols are paramount.</p>
+                                <p class="compliance-note">Extensive experience working safely within operational environments and adhering to strict site WHS requirements.</p>
                             </div>
-                            <a href="contact.html?service=Industrial" class="cta-button cta-secondary">Discuss Industrial Projects</a>
+                            <div class="cta-container">
+                                <a href="contact.html?service=Industrial" class="cta-button cta-secondary">Secure Your Industrial Shoot</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="service-card">
-                         <img src="https://placehold.co/600x375/d6d3d1/44403c?text=Defence+&+Tech" alt="Defence and Technology photography example" class="w-full h-auto" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/600x375/cccccc/ffffff?text=Defence'; this.alt='Placeholder for defence and technology photography';">
+                    </article>
+
+                    <article class="service-card fade-in-section" style="transition-delay: 0.35s;">
+                         <picture>
+                            <source srcset="assets/images/services/service-defence.webp" type="image/webp">
+                            <source srcset="assets/images/services/service-defence.jpg" type="image/jpeg">
+                            <img src="assets/images/services/service-defence.jpg" alt="Photograph showcasing advanced technology within a secure defence environment."
+                                 loading="lazy" decoding="async" width="600" height="375"
+                                 onerror="this.onerror=null; this.src='https://placehold.co/600x375/cccccc/1c1917?text=Defence'; this.alt='Placeholder image for defence photography';">
+                        </picture>
                         <div class="service-card-content">
                             <div>
                                 <h3 class="text-2xl font-bold">Defence & Technology</h3>
-                                <p>Specialised photography for the defence and technology sectors, capturing equipment, personnel, and facilities with discretion and precision.</p>
-                                <p class="compliance-note">AGSVA clearance held. Strict adherence to security protocols and WHS Operational Procedures.</p>
+                                <p>Providing specialized, high-security photographic services for the defence and technology sectors. Capturing sensitive equipment, personnel, and facilities with utmost discretion and precision.</p>
+                                <p class="compliance-note">Current AGSVA clearance held. Strict adherence to all security protocols and WHS Operational Procedures guaranteed.</p>
                             </div>
-                            <a href="contact.html?service=DefenceTech" class="cta-button cta-secondary">Enquire (Defence/Tech)</a>
+                            <div class="cta-container">
+                                <a href="contact.html?service=DefenceTech" class="cta-button cta-secondary">Enquire (Defence/Tech)</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="service-card">
-                         <img src="https://placehold.co/600x375/d6d3d1/44403c?text=Aerial+Photography" alt="Aerial photography example" class="w-full h-auto" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/600x375/cccccc/ffffff?text=Aerial'; this.alt='Placeholder for aerial photography service';">
+                    </article>
+
+                    <article class="service-card fade-in-section" style="transition-delay: 0.4s;">
+                         <picture>
+                            <source srcset="assets/images/services/service-aerial.webp" type="image/webp">
+                            <source srcset="assets/images/services/service-aerial.jpg" type="image/jpeg">
+                            <img src="assets/images/services/service-aerial.jpg" alt="Stunning aerial drone photograph overlooking an Adelaide landscape or property."
+                                 loading="lazy" decoding="async" width="600" height="375"
+                                 onerror="this.onerror=null; this.src='https://placehold.co/600x375/cccccc/1c1917?text=Aerial'; this.alt='Placeholder image for aerial photography';">
+                        </picture>
                         <div class="service-card-content">
                             <div>
                                 <h3 class="text-2xl font-bold">Aerial Photography</h3>
-                                <p>Providing stunning aerial perspectives using professional drones (CASA certified) or manned aircraft for real estate, industrial sites, events, and creative projects.</p>
+                                <p>Capture breathtaking perspectives with professional aerial imagery. Utilising CASA certified drone operations or manned aircraft for real estate, construction progress, industrial surveys, events, and unique creative projects.</p>
                             </div>
-                            <a href="contact.html?service=Aerial" class="cta-button cta-secondary">Request Aerial Services</a>
+                             <div class="cta-container">
+                                <a href="contact.html?service=Aerial" class="cta-button cta-secondary">Request Aerial Services</a>
+                            </div>
                         </div>
-                    </div>
-                </div>
+                    </article>
 
-                 <div class="text-center mt-16 md:mt-24 pt-10 border-t border-stone-200 bg-white py-16 rounded-sm shadow-sm">
-                    <h2 class="text-3xl font-bold text-stone-900 mb-6">Need Something Different?</h2>
-                    <p class="text-lg text-stone-600 mb-8 max-w-2xl mx-auto">
-                        If your project doesn't fit neatly into the categories above, don't hesitate to reach out. I'm happy to discuss custom packages tailored to your specific requirements.
-                    </p>
-                    <a href="contact.html" class="cta-button cta-primary">Request a Custom Quote</a>
+                </div> <div class="text-center mt-16 md:mt-24 pt-12 md:pt-16 border-t border-stone-300 bg-white py-16 rounded-md shadow-sm fade-in-section">
+                     <h2 class="text-3xl font-bold text-stone-900 mb-6">Have a Unique Project?</h2>
+                     <p class="text-lg text-stone-600 mb-8 max-w-2xl mx-auto">
+                         If your photography needs fall outside these categories, or you require a bespoke package, I thrive on creative challenges. Let's discuss how we can bring your specific vision to life.
+                     </p>
+                     <a href="contact.html?service=Other" class="cta-button cta-primary">Request a Custom Quote</a>
                  </div>
-            </div>
-        </section>
+
+            </div> </section>
     </main>
 
-    <footer class="bg-stone-900 text-stone-400 py-10">
+    <footer class="bg-stone-900 text-stone-400 py-10 mt-16">
         <div class="container mx-auto px-6 text-center">
-            <div class="mb-6 space-x-4 md:space-x-6 uppercase tracking-wider text-sm">
-                 <a href="index.html" class="hover:text-white transition duration-300" data-page="index">Home</a>
-                 <a href="portfolio.html" class="hover:text-white transition duration-300" data-page="portfolio">Portfolio</a>
-                 <a href="about.html" class="hover:text-white transition duration-300" data-page="about">About</a>
-                 <a href="services.html" class="hover:text-white transition duration-300" data-page="services">Services</a>
-                 <a href="contact.html" class="hover:text-white transition duration-300" data-page="contact">Contact</a>
+            <div class="mb-6 space-x-4 md:space-x-6">
+                 <a href="index.html" class="footer-link" data-page="index">Home</a>
+                 <a href="portfolio.html" class="footer-link" data-page="portfolio">Portfolio</a>
+                 <a href="about.html" class="footer-link" data-page="about">About</a>
+                 <a href="services.html" class="footer-link" data-page="services">Services</a>
+                 <a href="contact.html" class="footer-link" data-page="contact">Contact</a>
             </div>
-             <div class="mb-6 space-x-5">
-                 <a href="#" aria-label="Ven Perov on Instagram" class="hover:text-white transition duration-300 text-xl"><i class="fab fa-instagram"></i></a>
-                 <a href="#" aria-label="Ven Perov on Facebook" class="hover:text-white transition duration-300 text-xl"><i class="fab fa-facebook-f"></i></a>
-             </div>
-            <p class="text-sm text-stone-500">&copy; <span id="current-year"></span> Ven Perov Photography. All Rights Reserved.</p>
-            <p class="text-sm text-stone-500 mt-1">Adelaide Photographer, South Australia</p>
+            <div class="mb-6 space-x-5">
+                 <a href="#" aria-label="Ven Perov on Instagram" class="social-link"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                 <a href="https://www.facebook.com/venperovphotography" aria-label="Ven Perov on Facebook" class="social-link"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+            </div>
+            <p class="text-sm text-stone-500">© <span id="current-year"></span> Ven Perov Photography. All Rights Reserved.</p>
+            <p class="text-sm text-stone-500 mt-1">Based in Elizabeth South, Adelaide Photographer, South Australia</p>
         </div>
     </footer>
 
     <script>
-        // Javascript remains the same
+        // Using the same consistent JS block from previous professional versions
         document.addEventListener('DOMContentLoaded', () => {
+            // --- Mobile Menu Toggle (Consistent) ---
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
-            const navLinksMobile = mobileMenu.querySelectorAll('.nav-link');
-            mobileMenuButton.addEventListener('click', () => { const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true'; mobileMenu.classList.toggle('hidden'); mobileMenuButton.setAttribute('aria-expanded', !isExpanded); });
-            navLinksMobile.forEach(link => { link.addEventListener('click', () => { mobileMenu.classList.add('hidden'); mobileMenuButton.setAttribute('aria-expanded', 'false'); }); });
+            const navLinksMobile = mobileMenu ? mobileMenu.querySelectorAll('.nav-link') : [];
+            if (mobileMenuButton && mobileMenu) { /* ... JS same as previous ... */
+                const menuIcon = `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>`;
+                const closeIcon = `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>`;
+                const toggleMenu = (show) => { const isExpanded = show; mobileMenu.classList.toggle('hidden', !isExpanded); mobileMenuButton.setAttribute('aria-expanded', isExpanded); mobileMenuButton.innerHTML = isExpanded ? closeIcon : menuIcon; };
+                mobileMenuButton.addEventListener('click', () => { const isCurrentlyExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true'; toggleMenu(!isCurrentlyExpanded); });
+                navLinksMobile.forEach(link => { link.addEventListener('click', () => { toggleMenu(false); }); });
+            } else { console.warn("Mobile menu elements not found."); }
+
+
+            // --- Active Navigation Link Highlighting (Consistent) ---
             const navLinks = document.querySelectorAll('.nav-link');
-            const currentPage = window.location.pathname.substring(window.location.pathname.lastIndexOf('/') + 1) || 'index.html';
-            navLinks.forEach(link => { const linkHref = link.getAttribute('href'); const linkPage = linkHref.substring(linkHref.lastIndexOf('/') + 1) || 'index.html'; const linkDataPage = link.getAttribute('data-page'); if (linkDataPage === currentPage.replace('.html', '')) { link.classList.add('nav-active'); link.setAttribute('aria-current', 'page'); } else if ((currentPage === 'index.html' || currentPage === '') && (linkPage === 'index.html' || linkDataPage === 'index')) { if (linkDataPage === 'index' || linkPage === 'index.html') { link.classList.add('nav-active'); link.setAttribute('aria-current', 'page'); } } else if (linkPage === currentPage && currentPage !== 'index.html' && currentPage !== '') { link.classList.add('nav-active'); link.setAttribute('aria-current', 'page'); } else { link.classList.remove('nav-active'); link.removeAttribute('aria-current'); } });
-            const currentYearSpan = document.getElementById('current-year'); if (currentYearSpan) { currentYearSpan.textContent = new Date().getFullYear(); }
+            const path = window.location.pathname;
+            const pageName = path.substring(path.lastIndexOf('/') + 1) || 'index.html';
+            const currentPageIdentifier = pageName.replace('.html', '');
+            navLinks.forEach(link => { const linkDataPage = link.getAttribute('data-page'); if (linkDataPage === currentPageIdentifier) { link.classList.add('nav-active'); link.setAttribute('aria-current', 'page'); } else { link.classList.remove('nav-active'); link.removeAttribute('aria-current'); } });
+
+            // --- Footer: Update Copyright Year (Consistent) ---
+            const currentYearSpan = document.getElementById('current-year');
+            if (currentYearSpan) { currentYearSpan.textContent = new Date().getFullYear(); }
+
+            // --- Fade-in Animation on Scroll (Consistent) ---
+            const fadeSections = document.querySelectorAll('.fade-in-section');
+            if (fadeSections.length > 0 && 'IntersectionObserver' in window) {
+                const sectionObserver = new IntersectionObserver((entries, observer) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('is-visible'); observer.unobserve(entry.target); } }); }, { threshold: 0.1 });
+                fadeSections.forEach(section => { sectionObserver.observe(section); });
+            }
         });
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService", // Or Photographer / LocalBusiness
+      "name": "Ven Perov Photography",
+      "url": "https://a1780238.github.io/VenPerovPhotography/services.html", // Replace with live URL
+      "description": "Professional photography services in Adelaide, SA, specializing in weddings, portraits, commercial, industrial, defence, and aerial photography.",
+      "provider": {
+        "@type": "Person",
+        "name": "Ven Perov"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "South Australia"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Photography Services",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Wedding Storytelling", "description": "Candid, documentary-style wedding photography capturing authentic moments." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Authentic Portraits", "description": "Professional headshots, family photos, and personal branding portraits." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial & Branding Photography", "description": "High-impact imagery for products, websites, marketing, and corporate needs." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Real Estate Photography", "description": "Professional photos showcasing residential and commercial properties." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Food Photography", "description": "Mouth-watering images for menus, websites, and culinary marketing." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Events & Photojournalism", "description": "Documentary coverage for corporate events, conferences, and parties." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Industrial Photography", "description": "Documenting industrial sites, processes, and machinery safely and effectively." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Defence & Technology Photography", "description": "Specialized, high-security photography for defence and tech sectors (AGSVA cleared)." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Aerial Photography", "description": "Stunning aerial perspectives via drone or manned aircraft (CASA certified)." } }
+        ]
+      }
+    }
     </script>
 
 </body>
