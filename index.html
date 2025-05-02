@@ -1,203 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ven Perov Photography | Adelaide Wedding & Commercial Photographer</title>
-    <meta name="description" content="Ven Perov Photography: Award-winning Adelaide photographer crafting authentic wedding stories and high-impact commercial imagery. See the difference decade+ experience makes.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ven Perov Photography | Adelaide Wedding & Commercial Photographer</title>
+  <meta name="description" content="Award-winning Adelaide photographer crafting authentic wedding stories and high-impact commercial imagery. Over a decade of experience.">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1c1917">
 
-    <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <link rel="icon" href="/favicon.ico" sizes="any">
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="stylesheet" href="css/style.css">
-    
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 </head>
 <body class="text-stone-700 bg-stone-100">
-
-    <header class="bg-stone-800 shadow-md sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="index.html" class="flex items-center rounded-sm" title="Ven Perov Photography - Homepage">
-                 <img src="assets/images/global/VPLOGO.png" alt="Ven Perov Photography Logo - Link to Homepage" class="h-10 w-auto" onerror="this.onerror=null; this.src='https://placehold.co/120x40/292524/f5f5f4?text=VP'; this.alt='VP Logo Placeholder';">
-            </a>
-            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-stone-300 hover:text-white hover:bg-stone-700" aria-label="Toggle Menu" aria-expanded="false" aria-controls="mobile-menu">
-                <span class="sr-only">Open main menu</span>
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            </button>
-            <ul id="desktop-menu" class="hidden md:flex space-x-8 items-center">
-                <li><a href="index.html" class="nav-link" data-page="index">Home</a></li>
-                <li><a href="portfolio.html" class="nav-link" data-page="portfolio">Portfolio</a></li>
-                <li><a href="about.html" class="nav-link" data-page="about">About</a></li>
-                <li><a href="services.html" class="nav-link" data-page="services">Services</a></li>
-                <li><a href="contact.html" class="nav-link" data-page="contact">Contact</a></li>
-            </ul>
-        </nav>
-        <div id="mobile-menu" class="hidden md:hidden bg-stone-800 border-t border-stone-700 shadow-lg">
-            <ul class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <li><a href="index.html" class="nav-link" data-page="index">Home</a></li>
-                <li><a href="portfolio.html" class="nav-link" data-page="portfolio">Portfolio</a></li>
-                <li><a href="about.html" class="nav-link" data-page="about">About</a></li>
-                <li><a href="services.html" class="nav-link" data-page="services">Services</a></li>
-                <li><a href="contact.html" class="nav-link" data-page="contact">Contact</a></li>
-            </ul>
-        </div>
-    </header>
-
-    <main>
-        <section id="home-hero" class="section-padding text-center">
-            <div class="container mx-auto px-6 fade-in-section">
-                 <h1 class="text-4xl md:text-6xl font-bold mb-4">Adelaide Wedding & Commercial Photography</h1>
-                <p class="text-xl md:text-2xl text-stone-700 mb-10 max-w-3xl mx-auto font-medium">
-                    Crafting authentic visual stories with over a decade of experience. <br class="hidden md:block"> See your moments through a lens focused on energy, emotion, and impact.
-                </p>
-                <div class="space-y-4 md:space-y-0 md:space-x-4">
-                    <a href="portfolio.html#weddings" class="cta-button cta-primary">Explore Wedding Stories</a> <a href="portfolio.html#commercial" class="cta-button cta-secondary">View Commercial Work</a>
-                    <a href="contact.html" class="cta-button cta-secondary">Discuss Your Project</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="featured-work" class="section-padding section-content">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Signature Styles</h2>
-                <p class="text-lg text-center text-stone-600 mb-16 max-w-2xl mx-auto fade-in-section">
-                    A glimpse into the key areas where I bring stories to life. Click to explore full galleries.
-                </p>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-                    <div class="featured-item fade-in-section">
-                        <figure>
-                            <a href="portfolio.html#weddings" class="block group" aria-label="View Wedding Photography Portfolio">
-                                <picture>
-                                    <source srcset="assets/images/featured/featured-wedding.webp" type="image/webp">
-                                    <source srcset="assets/images/featured/featured-wedding.jpg" type="image/jpeg">
-                                    <img src="assets/images/featured/featured-wedding.jpg" alt="Joyful bride and groom walking outdoors after wedding ceremony."
-                                         class="aspect-[4/5] object-cover" loading="lazy" decoding="async" width="400" height="500"
-                                         onerror="this.onerror=null; this.src='https://placehold.co/400x500/cccccc/1c1917?text=Weddings'; this.alt='Placeholder for wedding photography';">
-                                </picture>
-                                <figcaption>Candid Wedding Storytelling</figcaption>
-                            </a>
-                        </figure>
-                    </div>
-                    <div class="featured-item fade-in-section" style="transition-delay: 0.1s;">
-                         <figure>
-                            <a href="portfolio.html#portraits" class="block group" aria-label="View Portrait Photography Portfolio">
-                                <picture>
-                                    <source srcset="assets/images/featured/featured-portrait.webp" type="image/webp">
-                                    <source srcset="assets/images/featured/featured-portrait.jpg" type="image/jpeg">
-                                    <img src="assets/images/featured/featured-portrait.jpg" alt="Expressive portrait of a man with dramatic lighting."
-                                         class="aspect-[4/5] object-cover" loading="lazy" decoding="async" width="400" height="500"
-                                         onerror="this.onerror=null; this.src='https://placehold.co/400x500/cccccc/1c1917?text=Portraits'; this.alt='Placeholder for portrait photography';">
-                                </picture>
-                                <figcaption>Authentic Portraits</figcaption>
-                            </a>
-                        </figure>
-                    </div>
-                    <div class="featured-item fade-in-section" style="transition-delay: 0.2s;">
-                         <figure>
-                            <a href="portfolio.html#commercial" class="block group" aria-label="View Commercial Photography Portfolio">
-                                <picture>
-                                    <source srcset="assets/images/featured/featured-commercial.webp" type="image/webp">
-                                    <source srcset="assets/images/featured/featured-commercial.jpg" type="image/jpeg">
-                                    <img src="assets/images/featured/featured-commercial.jpg" alt="Dynamic shot of a product in a commercial setting."
-                                         class="aspect-[4/5] object-cover" loading="lazy" decoding="async" width="400" height="500"
-                                         onerror="this.onerror=null; this.src='https://placehold.co/400x500/cccccc/1c1917?text=Commercial'; this.alt='Placeholder for commercial photography';">
-                                </picture>
-                                <figcaption>High-Impact Commercial Imagery</figcaption>
-                            </a>
-                        </figure>
-                    </div>
-                </div>
-                 <div class="text-center mt-16 fade-in-section">
-                      <a href="portfolio.html" class="cta-button cta-secondary">Explore All Portfolios</a>
-                 </div>
-              </div>
-        </section>
-
-        <section id="testimonials" class="section-padding">
-            <div class="container mx-auto px-6">
-                 <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Client Experiences</h2>
-                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                    <div class="testimonial-card fade-in-section">
-                        <blockquote>
-                          "Working with Ven was a wonderful experience... He has a good eye and the photos speak for themselves. I would work with him again." </blockquote>
-                        <cite>
-                            Jasmine McWatters
-                            <span>Actress - Headshot Session</span> </cite>
-                    </div>
-                     <div class="testimonial-card fade-in-section" style="transition-delay: 0.1s;">
-                        <blockquote>
-                          "Ven is such a talented photographer... He's very professional, passionate, and creative, making him very easy to work with"
-                        </blockquote>
-                        <cite>
-                            Yasya King
-                            <span>Miss World Australia Nominee - Portfolio Shoot</span>
-                        </cite>
-                    </div>
-                     <div class="testimonial-card fade-in-section" style="transition-delay: 0.2s;">
-                        <blockquote>
-                          "He has got skills to capture right photo at the the right moment. Very happy with the commercial shots for our farm." </blockquote>
-                        <cite>
-                            Ivan
-                            <span>Farmer - Commercial Photography</span>
-                        </cite>
-                    </div>
-                 </div>
-                 <div class="text-center mt-16 fade-in-section">
-                    <a href="contact.html" class="cta-button cta-primary">Share Your Project Idea</a>
-                 </div>
-              </div>
-        </section>
-    </main>
-
-    <footer class="bg-stone-900 text-stone-400 py-10 mt-16">
-        <div class="container mx-auto px-6 text-center">
-            <div class="mb-6 space-x-4 md:space-x-6">
-                 <a href="index.html" class="footer-link" data-page="index">Home</a>
-                 <a href="portfolio.html" class="footer-link" data-page="portfolio">Portfolio</a>
-                 <a href="about.html" class="footer-link" data-page="about">About</a>
-                 <a href="services.html" class="footer-link" data-page="services">Services</a>
-                 <a href="contact.html" class="footer-link" data-page="contact">Contact</a>
-            </div>
-            <div class="mb-6 space-x-5">
-                 <a href="#" aria-label="Ven Perov on Instagram" class="social-link"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-                 <a href="https://www.facebook.com/venperovphotography" aria-label="Ven Perov on Facebook" class="social-link"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-            </div>
-            <p class="text-sm text-stone-500">© <span id="current-year"></span> Ven Perov Photography. All Rights Reserved.</p>
-            <p class="text-sm text-stone-500 mt-1">Based in Elizabeth South, Adelaide Photographer, South Australia</p>
-        </div>
-    </footer>
-
-    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="lightbox-alt">
-        <button class="lightbox-close" id="lightbox-close" aria-label="Close lightbox" tabindex="0">&times;</button>
-        <div class="lightbox-content">
-            <img id="lightbox-img" src="" alt="">
-            <span id="lightbox-alt" class="sr-only">Enlarged image view</span>
-        </div>
+  <header class="bg-stone-800 shadow-md sticky top-0 z-50">
+    <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+      <a href="index.html" class="flex items-center rounded-sm" title="Homepage">
+        <img src="assets/images/global/VPLOGO.svg" alt="Ven Perov Photography Logo" class="h-10 w-auto">
+      </a>
+      <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-stone-300 hover:text-white hover:bg-stone-700 transition" aria-label="Toggle Menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+      </button>
+      <ul id="desktop-menu" class="hidden md:flex space-x-8 items-center">
+        <li><a href="index.html" class="nav-link" data-page="index">Home</a></li>
+        <li><a href="portfolio.html" class="nav-link" data-page="portfolio">Portfolio</a></li>
+        <li><a href="about.html" class="nav-link" data-page="about">About</a></li>
+        <li><a href="services.html" class="nav-link" data-page="services">Services</a></li>
+        <li><a href="contact.html" class="nav-link" data-page="contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div id="mobile-menu" class="hidden md:hidden bg-stone-800 border-t border-stone-700 shadow-lg transition duration-300 ease-in-out">
+      <ul class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <li><a href="index.html" class="nav-link" data-page="index">Home</a></li>
+        <li><a href="portfolio.html" class="nav-link" data-page="portfolio">Portfolio</a></li>
+        <li><a href="about.html" class="nav-link" data-page="about">About</a></li>
+        <li><a href="services.html" class="nav-link" data-page="services">Services</a></li>
+        <li><a href="contact.html" class="nav-link" data-page="contact">Contact</a></li>
+      </ul>
     </div>
+  </header>
 
-    <script src="path/to/imagesloaded.pkgd.min.js" defer></script>
-<script src="path/to/isotope.pkgd.min.js" defer></script>
+  <main>
+    <section id="home-hero" class="section-padding text-center fade-in-section">
+      <div class="container mx-auto px-6">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4">Adelaide Wedding & Commercial Photography</h1>
+        <p class="text-xl md:text-2xl text-stone-700 mb-10 max-w-3xl mx-auto font-medium">
+          Authentic stories captured with clarity, emotion, and over a decade of technical mastery.
+        </p>
+        <div class="space-y-4 md:space-y-0 md:space-x-4">
+          <a href="portfolio.html#weddings" class="cta-button cta-primary">Explore Wedding Stories</a>
+          <a href="portfolio.html#commercial" class="cta-button cta-secondary">View Commercial Work</a>
+          <a href="contact.html" class="cta-button cta-secondary">Discuss Your Project</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-<script src="path/to/photoswipe.umd.min.js" defer></script>
-<script src="path/to/photoswipe-lightbox.umd.min.js" defer></script>
-<script src="js/main.js" defer></script>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.3/photoswipe.min.css" integrity="sha512-L1eozaq+2vKqFwiH5ZLqV1ILWKlN777+QJf+KYFj7OQSLQNSQKtGfWjCqG4epauU7ir9kqL0NgrSj+hP7hGv+g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js" integrity="sha512-kfs3Dt9u9YcREKag+FMvZo53LKLHCSeWikJZeELWQsccBY7hgJh6DnTBZfNqcunZTL2msJRTgh8MyK2BPtrVmA==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.3/photoswipe.umd.min.js" integrity="sha512-QcQod5q+507klXkL0L8qYJAUXV7+ZW+fiG/GNDQXzpkK9oWBHcCkPFtQ+6Te3FkRzrq99zr9jQo/5U6GYGwf8Q==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.3/photoswipe-lightbox.umd.min.js" integrity="sha512-/cP8lC5rRz+I2F9X0+z5X5n0cgq7lZ8f/0k3oD5Jz+KI4Qp2s8YyQG6rYhNn97+v9l0/rP9Rbpj5EQ==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
-
-<script src="js/main.js" defer></script>
-
+  <script src="js/main.js" defer></script>
 </body>
 </html>
+
