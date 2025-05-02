@@ -1,147 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Ven Perov | Adelaide Photographer | My Story & Style</title>
-    <meta name="description" content="Meet Ven Perov, Adelaide photographer specializing in adventurous, candid storytelling for weddings and brands. Discover my decade of experience and commitment to capturing authentic moments.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Ven Perov | Adelaide Photographer | Story & Style</title>
+  <meta name="description" content="Meet Ven Perov, Adelaide-based photographer. Discover his decade-long journey, unique storytelling approach, and why his visual style resonates across South Australia.">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1c1917">
 
-    <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <link rel="icon" href="/favicon.ico" sizes="any">
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="stylesheet" href="css/style.css">
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 </head>
 <body class="text-stone-700 bg-stone-100">
+  <header class="bg-stone-800 shadow-md sticky top-0 z-50">
+    <nav class="container mx-auto px-6 py-3 flex justify-between items-center" aria-label="Main navigation">
+      <a href="index.html" class="flex items-center rounded-sm" title="Homepage">
+        <img src="assets/images/global/VPLOGO.svg" alt="Ven Perov Photography Logo" class="h-10 w-auto">
+      </a>
+      <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-stone-300 hover:text-white hover:bg-stone-700 transition" aria-label="Toggle Menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+      </button>
+      <ul id="desktop-menu" class="hidden md:flex space-x-8 items-center">
+        <li><a href="index.html" class="nav-link" data-page="index">Home</a></li>
+        <li><a href="portfolio.html" class="nav-link" data-page="portfolio">Portfolio</a></li>
+        <li><a href="about.html" class="nav-link nav-active" data-page="about" aria-current="page">About</a></li>
+        <li><a href="services.html" class="nav-link" data-page="services">Services</a></li>
+        <li><a href="contact.html" class="nav-link" data-page="contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div id="mobile-menu" class="hidden md:hidden bg-stone-800 border-t border-stone-700 shadow-lg transition duration-300 ease-in-out">
+      <ul class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <li><a href="index.html" class="nav-link" data-page="index">Home</a></li>
+        <li><a href="portfolio.html" class="nav-link" data-page="portfolio">Portfolio</a></li>
+        <li><a href="about.html" class="nav-link nav-active" data-page="about" aria-current="page">About</a></li>
+        <li><a href="services.html" class="nav-link" data-page="services">Services</a></li>
+        <li><a href="contact.html" class="nav-link" data-page="contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
 
-    <header class="bg-stone-800 shadow-md sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="index.html" class="flex items-center rounded-sm" title="Ven Perov Photography - Homepage">
-                <img src="assets/images/global/VPLOGO.png" alt="Ven Perov Photography Logo - Link to Homepage" class="h-10 w-auto" onerror="this.onerror=null; this.src='https://placehold.co/120x40/292524/f5f5f4?text=VP'; this.alt='VP Logo Placeholder';">
-            </a>
-            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-stone-300 hover:text-white hover:bg-stone-700" aria-label="Toggle Menu" aria-expanded="false" aria-controls="mobile-menu">
-                <span class="sr-only">Open main menu</span>
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            </button>
-            <ul id="desktop-menu" class="hidden md:flex space-x-8 items-center">
-                <li><a href="index.html" class="nav-link" data-page="index">Home</a></li>
-                <li><a href="portfolio.html" class="nav-link" data-page="portfolio">Portfolio</a></li>
-                <li><a href="about.html" class="nav-link" data-page="about">About</a></li>
-                <li><a href="services.html" class="nav-link" data-page="services">Services</a></li>
-                <li><a href="contact.html" class="nav-link" data-page="contact">Contact</a></li>
-            </ul>
-        </nav>
-        <div id="mobile-menu" class="hidden md:hidden bg-stone-800 border-t border-stone-700 shadow-lg">
-            <ul class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <li><a href="index.html" class="nav-link" data-page="index">Home</a></li>
-                <li><a href="portfolio.html" class="nav-link" data-page="portfolio">Portfolio</a></li>
-                <li><a href="about.html" class="nav-link" data-page="about">About</a></li>
-                <li><a href="services.html" class="nav-link" data-page="services">Services</a></li>
-                <li><a href="contact.html" class="nav-link" data-page="contact">Contact</a></li>
-            </ul>
+  <main>
+    <section id="about-intro" class="section-padding bg-stone-100 overflow-hidden fade-in-section">
+      <div class="container mx-auto px-6">
+        <h1 class="text-4xl md:text-5xl font-bold text-center mb-12 md:mb-20">Capturing Adelaide's Authentic Stories</h1>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-7xl mx-auto">
+          <div class="about-image-container lg:order-last">
+            <picture>
+              <source srcset="assets/images/about/ven-perov-headshot.avif" type="image/avif">
+              <source srcset="assets/images/about/ven-perov-headshot.webp" type="image/webp">
+              <img src="assets/images/about/ven-perov-headshot.jpg" alt="Portrait of Ven Perov, smiling outdoors in Adelaide" width="400" height="500" class="about-image mx-auto" loading="lazy" decoding="async">
+            </picture>
+          </div>
+          <div class="lg:order-first">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ven Perov: More Than Just Photos</h2>
+            <div class="text-lg text-stone-700 content-text space-y-6 leading-relaxed">
+              <p>G'day! I'm Ven, a South Australian photographer with <strong>over a decade of experience</strong> turning fleeting moments into lasting visual stories. What began as teenage curiosity turned into a passion for authentic emotion and storytelling.</p>
+              <p>My work is rooted in <strong>candid connection and an adventurous spirit</strong>. Whether shooting a wedding, personal portrait, or a commercial brief, I focus on capturing the unposed, the spontaneous — the real. No stiff grins or generic setups. Just real people and real energy.</p>
+              <h3 class="text-2xl font-bold mt-10 mb-4">Why Choose Me? Trust, Focus & Grit</h3>
+              <p>My judo background and endurance sports have taught me resilience — a trait I bring to every assignment. Clients value my calm under pressure, especially during high-stakes or high-speed events. I adapt quickly, move quietly, and stay alert for that decisive moment.</p>
+              <p>Based in Elizabeth South, I champion visual stories from <strong>Adelaide and regional South Australia</strong>. If you're after a photographer who combines technical precision with personality and heart, I’m all ears — and lenses.</p>
+            </div>
+            <div class="mt-10 text-center lg:text-left">
+              <a href="portfolio.html" class="cta-button cta-secondary" aria-label="View my portfolio">View My Storytelling Portfolio</a>
+              <a href="contact.html" class="cta-button cta-primary" aria-label="Start a project with Ven">Start Your Project Today</a>
+            </div>
+          </div>
         </div>
-    </header>
+      </div>
+    </section>
 
-    <main>
-        <section id="about-intro" class="section-padding bg-stone-100 overflow-hidden"> <div class="container mx-auto px-6">
-                <h1 class="text-4xl md:text-5xl font-bold text-center mb-12 md:mb-20">Capturing Adelaide's Authentic Stories</h1>
-
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-7xl mx-auto">
-                    <div class="about-image-container lg:order-last fade-in-section">
-                        <picture>
-                            <source srcset="assets/images/about/ven-perov-headshot.webp" type="image/webp">
-                            <source srcset="assets/images/about/ven-perov-headshot.jpg" type="image/jpeg">
-                            <img src="assets/images/about/ven-perov-headshot.jpg"
-                                 alt="Ven Perov, professional Adelaide photographer, smiling outdoors."
-                                 class="about-image mx-auto"
-                                 width="400" height="500" /* Intrinsic size */
-                                 onerror="this.onerror=null; this.src='https://placehold.co/400x500/cccccc/1c1917?text=Ven+Perov'; this.alt='Placeholder headshot of Ven Perov';">
-                        </picture>
-                    </div>
-
-                    <div class="lg:order-first fade-in-section">
-                        <h2 class="text-3xl md:text-4xl font-bold mb-6">Ven Perov: More Than Just Photos</h2>
-                        <div class="text-lg text-stone-700 content-text space-y-6 leading-relaxed">
-                            <p>
-                                G'day! I'm Ven, an Adelaide-based photographer with <strong>over a decade of experience</strong> turning fleeting moments into lasting visual stories. My journey started like many – a teenager fascinated by the camera's power. But it quickly evolved into a relentless pursuit: capturing the raw energy and authentic emotion that makes South Australia, and its people, so unique.
-                            </p>
-                            <p>
-                                My approach? Think <strong>candid storytelling meets adventurous spirit</strong>. Forget stiff poses and forced smiles. I thrive on genuine interactions, anticipating the laugh, the glance, the subtle detail that speaks volumes. Whether I'm navigating a bustling wedding day, finding the perfect light for a portrait, or tackling a challenging commercial brief, my goal is unwavering: to deliver vibrant, compelling images that don't just look good, but *feel* right.
-                            </p>
-                             <h3 class="text-2xl font-bold !mt-10 !mb-4 normal-case tracking-normal">Why Choose Me? It's About Trust & Tenacity.</h3>
-                             <p>
-                                Clients often tell me they appreciate my calm focus, especially during high-energy events. Years competing in judo and pushing personal limits through marathons and adventure sports have ingrained in me a dedication and resilience that translates directly to my work. It means I'm comfortable thinking on my feet, adapting to any situation, and yes, sometimes going that extra mile (literally!) to get the shot that truly matters.
-                            </p>
-                            <p>
-                                I believe exceptional photography comes from collaboration. I take the time to understand <strong>your vision, your brand, your story</strong>. Based right here in Elizabeth South, I'm passionate about showcasing the best of Adelaide and beyond. If you're looking for a photographer who combines technical skill with genuine enthusiasm and a commitment to authenticity, let's connect.
-                            </p>
-                        </div>
-                        <div class="mt-10 text-center lg:text-left">
-                            <a href="portfolio.html" class="cta-button cta-secondary">View My Storytelling Portfolio</a>
-                            <a href="contact.html" class="cta-button cta-primary">Start Your Project Today</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="process" class="section-padding section-content">
-            <div class="container mx-auto px-6 max-w-4xl text-center">
-                 <h2 class="text-3xl md:text-4xl font-bold mb-12">My Collaborative Process</h2>
-                 <div class="text-lg text-stone-700 space-y-5 leading-relaxed max-w-3xl mx-auto content-text fade-in-section">
-                    <p>
-                       <strong>1. Consultation:</strong> We start with a conversation to understand your needs, style, and goals. <br>
-                       <strong>2. Planning:</strong> We outline the shoot details, locations, and key moments. <br>
-                       <strong>3. The Shoot:</strong> Relaxed, natural direction ensures authentic results. <br>
-                       <strong>4. Editing & Delivery:</strong> Meticulous post-processing and timely delivery of your stunning images via an online gallery.
-                    </p>
-                 </div>
-                 <div class="mt-10 fade-in-section">
-                    <a href="services.html" class="cta-button cta-secondary">Learn About Specific Services</a>
-                 </div>
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="bg-stone-900 text-stone-400 py-10 mt-16">
-        <div class="container mx-auto px-6 text-center">
-            <div class="mb-6 space-x-4 md:space-x-6">
-                 <a href="index.html" class="footer-link" data-page="index">Home</a>
-                 <a href="portfolio.html" class="footer-link" data-page="portfolio">Portfolio</a>
-                 <a href="about.html" class="footer-link" data-page="about">About</a>
-                 <a href="services.html" class="footer-link" data-page="services">Services</a>
-                 <a href="contact.html" class="footer-link" data-page="contact">Contact</a>
-            </div>
-            <div class="mb-6 space-x-5">
-                 <a href="#" aria-label="Ven Perov on Instagram" class="social-link"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-                 <a href="https://www.facebook.com/venperovphotography" aria-label="Ven Perov on Facebook" class="social-link"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-            </div>
-            <p class="text-sm text-stone-500">© <span id="current-year"></span> Ven Perov Photography. All Rights Reserved.</p>
-            <p class="text-sm text-stone-500 mt-1">Based in Elizabeth South, Adelaide Photographer, South Australia</p>
+    <section id="process" class="section-padding section-content fade-in-section">
+      <div class="container mx-auto px-6 max-w-4xl text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-12">My Collaborative Process</h2>
+        <div class="text-lg text-stone-700 space-y-5 leading-relaxed max-w-3xl mx-auto content-text">
+          <p><strong>1. Consultation:</strong> We'll talk through your vision, context, and story — not just the deliverables.</p>
+          <p><strong>2. Strategy:</strong> I plan logistics, locations, shot list, and contingency — no guesswork.
+          <p><strong>3. Shoot Day:</strong> Calm, efficient, prepared. I adapt to energy, weather, and mood.
+          <p><strong>4. Post-Production:</strong> Clean color, consistent tone, and emotion-preserving edits.
+          <p><strong>5. Delivery:</strong> On time, beautifully packaged, and ready to use or print.
         </div>
-    </footer>
+      </div>
+    </section>
+  </main>
 
-    <script src="path/to/imagesloaded.pkgd.min.js" defer></script>
-<script src="path/to/isotope.pkgd.min.js" defer></script>
-
-<script src="path/to/photoswipe.umd.min.js" defer></script>
-<script src="path/to/photoswipe-lightbox.umd.min.js" defer></script>
-<script src="js/main.js" defer></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.3/photoswipe.min.css" integrity="sha512-L1eozaq+2vKqFwiH5ZLqV1ILWKlN777+QJf+KYFj7OQSLQNSQKtGfWjCqG4epauU7ir9kqL0NgrSj+hP7hGv+g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js" integrity="sha512-kfs3Dt9u9YcREKag+FMvZo53LKLHCSeWikJZeELWQsccBY7hgJh6DnTBZfNqcunZTL2msJRTgh8MyK2BPtrVmA==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.3/photoswipe.umd.min.js" integrity="sha512-QcQod5q+507klXkL0L8qYJAUXV7+ZW+fiG/GNDQXzpkK9oWBHcCkPFtQ+6Te3FkRzrq99zr9jQo/5U6GYGwf8Q==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.3/photoswipe-lightbox.umd.min.js" integrity="sha512-/cP8lC5rRz+I2F9X0+z5X5n0cgq7lZ8f/0k3oD5Jz+KI4Qp2s8YyQG6rYhNn97+v9l0/rP9Rbpj5EQ==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
-
-<script src="js/main.js" defer></script>
-
+  <script src="js/main.js" defer></script>
 </body>
 </html>
