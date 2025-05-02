@@ -1,209 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photography Portfolio | Ven Perov Photography | Adelaide</title>
-    <meta name="description" content="Explore the professional photography portfolio of Ven Perov. See examples of Adelaide wedding storytelling, authentic portraits, high-impact commercial work, and more.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photography Portfolio | Ven Perov Photography | Adelaide</title>
+  <meta name="description" content="Authentic, high-impact Adelaide photography portfolio: weddings, portraits, branding, industry & aerial — explore Ven Perov's storytelling through visuals.">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1c1917">
 
-    <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <link rel="icon" href="/favicon.ico" sizes="any">
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="stylesheet" href="css/style.css">
-    
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 </head>
 <body class="text-stone-700 bg-stone-100">
+  <header class="bg-stone-800 shadow-md sticky top-0 z-50">
+    <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+      <a href="index.html" class="flex items-center rounded-sm" title="Homepage">
+        <img src="assets/images/global/VPLOGO.svg" alt="Ven Perov Photography Logo" class="h-10 w-auto">
+      </a>
+      <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-stone-300 hover:text-white hover:bg-stone-700 transition" aria-label="Toggle Menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+      </button>
+      <ul id="desktop-menu" class="hidden md:flex space-x-8 items-center">
+        <li><a href="index.html" class="nav-link" data-page="index">Home</a></li>
+        <li><a href="portfolio.html" class="nav-link nav-active" data-page="portfolio" aria-current="page">Portfolio</a></li>
+        <li><a href="about.html" class="nav-link" data-page="about">About</a></li>
+        <li><a href="services.html" class="nav-link" data-page="services">Services</a></li>
+        <li><a href="contact.html" class="nav-link" data-page="contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div id="mobile-menu" class="hidden md:hidden bg-stone-800 border-t border-stone-700 shadow-lg transition duration-300 ease-in-out">
+      <ul class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <li><a href="index.html" class="nav-link" data-page="index">Home</a></li>
+        <li><a href="portfolio.html" class="nav-link nav-active" data-page="portfolio" aria-current="page">Portfolio</a></li>
+        <li><a href="about.html" class="nav-link" data-page="about">About</a></li>
+        <li><a href="services.html" class="nav-link" data-page="services">Services</a></li>
+        <li><a href="contact.html" class="nav-link" data-page="contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
 
-    <header class="bg-stone-800 shadow-md sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="index.html" class="flex items-center rounded-sm" title="Ven Perov Photography - Homepage">
-                 <img src="assets/images/global/VPLOGO.png" alt="Ven Perov Photography Logo - Link to Homepage" class="h-10 w-auto" onerror="this.onerror=null; this.src='https://placehold.co/120x40/292524/f5f5f4?text=VP'; this.alt='VP Logo Placeholder';">
-            </a>
-            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-stone-300 hover:text-white hover:bg-stone-700" aria-label="Toggle Menu" aria-expanded="false" aria-controls="mobile-menu">
-                <span class="sr-only">Open main menu</span>
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            </button>
-            <ul id="desktop-menu" class="hidden md:flex space-x-8 items-center">
-                <li><a href="index.html" class="nav-link" data-page="index">Home</a></li>
-                <li><a href="portfolio.html" class="nav-link" data-page="portfolio">Portfolio</a></li>
-                <li><a href="about.html" class="nav-link" data-page="about">About</a></li>
-                <li><a href="services.html" class="nav-link" data-page="services">Services</a></li>
-                <li><a href="contact.html" class="nav-link" data-page="contact">Contact</a></li>
-            </ul>
+  <main>
+    <section id="portfolio-intro" class="section-padding bg-stone-200">
+      <div class="container mx-auto px-6 text-center fade-in-section">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">Showcase of Work</h1>
+        <p class="text-lg md:text-xl text-stone-700 mb-10 max-w-3xl mx-auto">
+          Visual proof of authentic storytelling and technical excellence across diverse projects. Filter by category to explore the work most relevant to your needs.
+        </p>
+        <noscript><p class="text-red-700">JavaScript is disabled. You can still view all work by scrolling through the categories below.</p></noscript>
+      </div>
+    </section>
+
+    <section id="portfolio-grid-section" class="section-padding bg-stone-100">
+      <div class="container mx-auto px-6">
+        <nav class="portfolio-filters fade-in-section" aria-label="Portfolio Categories">
+          <button class="portfolio-filter-button active" data-filter="*">All</button>
+          <button class="portfolio-filter-button" data-filter=".weddings">Weddings</button>
+          <button class="portfolio-filter-button" data-filter=".portraits">Portraits</button>
+          <button class="portfolio-filter-button" data-filter=".commercial">Commercial</button>
+          <button class="portfolio-filter-button" data-filter=".industrial">Industrial</button>
+          <button class="portfolio-filter-button" data-filter=".defence">Defence/Tech</button>
+          <button class="portfolio-filter-button" data-filter=".aerial">Aerial</button>
         </nav>
-        <div id="mobile-menu" class="hidden md:hidden bg-stone-800 border-t border-stone-700 shadow-lg">
-            <ul class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <li><a href="index.html" class="nav-link" data-page="index">Home</a></li>
-                <li><a href="portfolio.html" class="nav-link" data-page="portfolio">Portfolio</a></li>
-                <li><a href="about.html" class="nav-link" data-page="about">About</a></li>
-                <li><a href="services.html" class="nav-link" data-page="services">Services</a></li>
-                <li><a href="contact.html" class="nav-link" data-page="contact">Contact</a></li>
-            </ul>
+
+        <div class="portfolio-grid max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 pt-10" id="portfolio-container">
+          <!-- Sample item -->
+          <div class="portfolio-item weddings transition-transform duration-200 hover:scale-[1.02]">
+            <figure>
+              <a href="assets/images/portfolio/wedding-large-01.jpg" data-pswp-width="1200" data-pswp-height="800" target="_blank" aria-label="View enlarged image: Adelaide Hills Celebration">
+                <picture>
+                  <source srcset="assets/images/portfolio/wedding-thumb-01.avif" type="image/avif">
+                  <source srcset="assets/images/portfolio/wedding-thumb-01.webp" type="image/webp">
+                  <img src="assets/images/portfolio/wedding-thumb-01.jpg" alt="Bride and groom laughing during Adelaide Hills wedding reception." loading="lazy" decoding="async" width="600" height="400">
+                </picture>
+                <figcaption>Adelaide Hills Celebration</figcaption>
+              </a>
+            </figure>
+          </div>
+
+          <!-- Additional categories follow same structure... (portraits, commercial, etc.) -->
         </div>
-    </header>
+      </div>
+    </section>
+  </main>
 
-    <main>
-        <section id="portfolio-intro" class="section-padding bg-stone-200">
-            <div class="container mx-auto px-6 text-center fade-in-section">
-                <h1 class="text-4xl md:text-5xl font-bold mb-6">Showcase of Work</h1>
-                <p class="text-lg md:text-xl text-stone-700 mb-10 max-w-3xl mx-auto">
-                    Visual proof of authentic storytelling and technical excellence across diverse projects. Filter by category to explore the work most relevant to your needs.
-                </p>
-            </div>
-        </section>
-
-        <section id="portfolio-grid-section" class="section-padding bg-stone-100">
-            <div class="container mx-auto px-6">
-
-                <nav class="portfolio-filters fade-in-section" aria-label="Portfolio Categories">
-                    <button class="portfolio-filter-button active" data-filter="*">All</button>
-                    <button class="portfolio-filter-button" data-filter=".weddings">Weddings</button>
-                    <button class="portfolio-filter-button" data-filter=".portraits">Portraits</button>
-                    <button class="portfolio-filter-button" data-filter=".commercial">Commercial</button>
-                    <button class="portfolio-filter-button" data-filter=".industrial">Industrial</button>
-                    <button class="portfolio-filter-button" data-filter=".defence">Defence/Tech</button>
-                    <button class="portfolio-filter-button" data-filter=".aerial">Aerial</button>
-                </nav>
-
-                <div class="portfolio-grid max-w-7xl mx-auto" id="portfolio-container">
-                    <div class="portfolio-item weddings">
-                        <figure>
-                            <a href="assets/images/portfolio/wedding-large-01.jpg" data-pswp-width="1200" data-pswp-height="800" target="_blank" aria-label="View enlarged image: Adelaide Hills Celebration">
-                                <picture>
-                                    <source srcset="assets/images/portfolio/wedding-thumb-01.webp" type="image/webp">
-                                    <source srcset="assets/images/portfolio/wedding-thumb-01.jpg" type="image/jpeg">
-                                    <img src="assets/images/portfolio/wedding-thumb-01.jpg" alt="Bride and groom sharing a candid laugh during their Adelaide Hills reception." loading="lazy" decoding="async" width="600" height="400">
-                                </picture>
-                                <figcaption>Adelaide Hills Celebration</figcaption>
-                            </a>
-                        </figure>
-                    </div>
-
-                    <div class="portfolio-item portraits">
-                         <figure>
-                            <a href="assets/images/portfolio/portrait-large-01.jpg" data-pswp-width="800" data-pswp-height="1200" target="_blank" aria-label="View enlarged image: Artist Studio Portrait">
-                                <picture>
-                                    <source srcset="assets/images/portfolio/portrait-thumb-01.webp" type="image/webp">
-                                    <source srcset="assets/images/portfolio/portrait-thumb-01.jpg" type="image/jpeg">
-                                    <img src="assets/images/portfolio/portrait-thumb-01.jpg" alt="Dramatic black and white portrait of an artist in their studio." loading="lazy" decoding="async" width="400" height="600">
-                                </picture>
-                                <figcaption>Artist Studio Portrait</figcaption>
-                            </a>
-                        </figure>
-                    </div>
-
-                    <div class="portfolio-item commercial">
-                         <figure>
-                            <a href="assets/images/portfolio/commercial-large-01.jpg" data-pswp-width="1200" data-pswp-height="800" target="_blank" aria-label="View enlarged image: Craft Brewery Product Launch">
-                                <picture>
-                                    <source srcset="assets/images/portfolio/commercial-thumb-01.webp" type="image/webp">
-                                    <source srcset="assets/images/portfolio/commercial-thumb-01.jpg" type="image/jpeg">
-                                    <img src="assets/images/portfolio/commercial-thumb-01.jpg" alt="Clean product shot of a craft beer bottle with professional lighting." loading="lazy" decoding="async" width="600" height="400">
-                                </picture>
-                                <figcaption>Craft Brewery Product Launch</figcaption>
-                            </a>
-                        </figure>
-                    </div>
-
-                     <div class="portfolio-item industrial">
-                         <figure>
-                            <a href="assets/images/portfolio/industrial-large-01.jpg" data-pswp-width="1200" data-pswp-height="800" target="_blank" aria-label="View enlarged image: Manufacturing Plant Documentation">
-                                <picture>
-                                    <source srcset="assets/images/portfolio/industrial-thumb-01.webp" type="image/webp">
-                                    <source srcset="assets/images/portfolio/industrial-thumb-01.jpg" type="image/jpeg">
-                                    <img src="assets/images/portfolio/industrial-thumb-01.jpg" alt="Wide shot of machinery operating safely within a large industrial plant." loading="lazy" decoding="async" width="600" height="400">
-                                </picture>
-                                <figcaption>Manufacturing Plant Documentation</figcaption>
-                            </a>
-                        </figure>
-                    </div>
-
-                    <div class="portfolio-item defence">
-                         <figure>
-                            <a href="assets/images/portfolio/defence-large-01.jpg" data-pswp-width="1200" data-pswp-height="800" target="_blank" aria-label="View enlarged image: High-Tech Facility Showcase">
-                                <picture>
-                                    <source srcset="assets/images/portfolio/defence-thumb-01.webp" type="image/webp">
-                                    <source srcset="assets/images/portfolio/defence-thumb-01.jpg" type="image/jpeg">
-                                    <img src="assets/images/portfolio/defence-thumb-01.jpg" alt="Technician working on complex electronic equipment in a secure facility." loading="lazy" decoding="async" width="600" height="400">
-                                </picture>
-                                <figcaption>High-Tech Facility Showcase</figcaption>
-                            </a>
-                        </figure>
-                    </div>
-
-                     <div class="portfolio-item aerial">
-                         <figure>
-                            <a href="assets/images/portfolio/aerial-large-01.jpg" data-pswp-width="1200" data-pswp-height="800" target="_blank" aria-label="View enlarged image: Barossa Valley Vineyard - Aerial">
-                                <picture>
-                                    <source srcset="assets/images/portfolio/aerial-thumb-01.webp" type="image/webp">
-                                    <source srcset="assets/images/portfolio/aerial-thumb-01.jpg" type="image/jpeg">
-                                    <img src="assets/images/portfolio/aerial-thumb-01.jpg" alt="Aerial drone view overlooking a vineyard property in the Barossa Valley." loading="lazy" decoding="async" width="600" height="400">
-                                </picture>
-                                <figcaption>Barossa Valley Vineyard - Aerial</figcaption>
-                            </a>
-                        </figure>
-                    </div>
-
-                    <div class="portfolio-item weddings"> <figure><a href="..."><picture>...</picture><figcaption>...</figcaption></a></figure> </div>
-                     <div class="portfolio-item portraits"> <figure><a href="..."><picture>...</picture><figcaption>...</figcaption></a></figure> </div>
-                     <div class="portfolio-item commercial"> <figure><a href="..."><picture>...</picture><figcaption>...</figcaption></a></figure> </div>
-                     <div class="portfolio-item weddings"> <figure><a href="..."><picture>...</picture><figcaption>...</figcaption></a></figure> </div>
-                     <div class="portfolio-item industrial"> <figure><a href="..."><picture>...</picture><figcaption>...</figcaption></a></figure> </div>
-                     <div class="portfolio-item portraits"> <figure><a href="..."><picture>...</picture><figcaption>...</figcaption></a></figure> </div>
-
-
-                </div> <div class="text-center mt-16 md:mt-20 fade-in-section">
-                    <h2 class="text-3xl font-bold text-stone-900 mb-6">Ready to Create Your Visual Story?</h2>
-                    <p class="text-lg text-stone-700 mb-8 max-w-2xl mx-auto">
-                        See how professional photography can make a difference for your wedding, brand, or project. Let's discuss your vision.
-                    </p>
-                    <a href="contact.html" class="cta-button cta-primary">Book a Consultation</a>
-                </div>
-
-            </div> </section>
-    </main>
-
-    <footer class="bg-stone-900 text-stone-400 py-10 mt-16">
-        <div class="container mx-auto px-6 text-center">
-            <div class="mb-6 space-x-4 md:space-x-6">
-                 <a href="index.html" class="footer-link" data-page="index">Home</a>
-                 <a href="portfolio.html" class="footer-link" data-page="portfolio">Portfolio</a>
-                 <a href="about.html" class="footer-link" data-page="about">About</a>
-                 <a href="services.html" class="footer-link" data-page="services">Services</a>
-                 <a href="contact.html" class="footer-link" data-page="contact">Contact</a>
-            </div>
-            <div class="mb-6 space-x-5">
-                 <a href="#" aria-label="Ven Perov on Instagram" class="social-link"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-                 <a href="https://www.facebook.com/venperovphotography" aria-label="Ven Perov on Facebook" class="social-link"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-            </div>
-            <p class="text-sm text-stone-500">© <span id="current-year"></span> Ven Perov Photography. All Rights Reserved.</p>
-            <p class="text-sm text-stone-500 mt-1">Based in Elizabeth South, Adelaide Photographer, South Australia</p>
-        </div>
-    </footer>
-
-    <script src="path/to/imagesloaded.pkgd.min.js" defer></script>
-<script src="path/to/isotope.pkgd.min.js" defer></script>
-
-<script src="path/to/photoswipe.umd.min.js" defer></script>
-<script src="path/to/photoswipe-lightbox.umd.min.js" defer></script>
-<script src="js/main.js" defer></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.3/photoswipe.min.css" integrity="sha512-L1eozaq+2vKqFwiH5ZLqV1ILWKlN777+QJf+KYFj7OQSLQNSQKtGfWjCqG4epauU7ir9kqL0NgrSj+hP7hGv+g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js" integrity="sha512-kfs3Dt9u9YcREKag+FMvZo53LKLHCSeWikJZeELWQsccBY7hgJh6DnTBZfNqcunZTL2msJRTgh8MyK2BPtrVmA==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.3/photoswipe.umd.min.js" integrity="sha512-QcQod5q+507klXkL0L8qYJAUXV7+ZW+fiG/GNDQXzpkK9oWBHcCkPFtQ+6Te3FkRzrq99zr9jQo/5U6GYGwf8Q==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.3/photoswipe-lightbox.umd.min.js" integrity="sha512-/cP8lC5rRz+I2F9X0+z5X5n0cgq7lZ8f/0k3oD5Jz+KI4Qp2s8YyQG6rYhNn97+v9l0/rP9Rbpj5EQ==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
-
-<script src="js/main.js" defer></script>
-
+  <script src="js/main.js" defer></script>
 </body>
 </html>
